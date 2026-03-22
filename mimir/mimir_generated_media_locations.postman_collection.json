@@ -1,0 +1,53 @@
+{
+  "info": {
+    "name": "Mimir - Generated Media Locations",
+    "_postman_id": "mimir-generated-media-locations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET All Generated Media Locations",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-mimir-cognito-id-token",
+            "value": "Bearer {{api_key}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "https://us.mjoll.no/ingest/api/v1/generatedMediaLocations",
+          "protocol": "https",
+          "host": ["us", "mjoll", "no"],
+          "path": ["ingest", "api", "v1", "generatedMediaLocations"]
+        }
+      }
+    },
+    {
+      "name": "GET Generated Media Location by ID (WBFF)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-mimir-cognito-id-token",
+            "value": "Bearer {{api_key}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "https://us.mjoll.no/ingest/api/v1/generatedMediaLocations/mimir-kelda-wbff-2628-us-east-1%2Ffeeds%2F",
+          "protocol": "https",
+          "host": ["us", "mjoll", "no"],
+          "path": ["ingest", "api", "v1", "generatedMediaLocations", "mimir-kelda-wbff-2628-us-east-1%2Ffeeds%2F"]
+        }
+      }
+    }
+  ]
+}
