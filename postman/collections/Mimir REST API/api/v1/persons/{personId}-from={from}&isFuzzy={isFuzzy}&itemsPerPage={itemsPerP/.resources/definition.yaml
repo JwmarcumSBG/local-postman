@@ -1,0 +1,3 @@
+$kind: collection
+name: "{personId}?from={from}&isFuzzy={isFuzzy}&itemsPerPage={itemsPerPage}&rangeEnd={rangeEnd}&rangeStart={rangeStart}&searchString={searchString}&timeZone={timeZone}"
+order: 1000

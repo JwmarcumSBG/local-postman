@@ -1,0 +1,36 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/ingest/api/v1/generatedMediaLocations/:id"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "bucketName": "<string>",
+        "accessKey": "<string>",
+        "secretKey": "<string>",
+        "uploadGeneratedMedia": "<boolean>",
+        "deleteEnabled": "<boolean>",
+        "storageProvider": "s3_clone",
+        "sourceEndpoint": "<string>"
+      }
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

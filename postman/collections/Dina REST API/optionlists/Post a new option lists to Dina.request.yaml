@@ -1,0 +1,29 @@
+$kind: http-request
+description: Create new option lists in Dina
+url: "{{baseUrl}}/optionlists"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "label": "<string>",
+      "id": "<string>",
+      "description": "<string>",
+      "alternatives": [
+        {
+          "id": "<string>",
+          "label": "<string>",
+          "value": "<string>"
+        },
+        {
+          "id": "<string>",
+          "label": "<string>",
+          "value": "<string>"
+        }
+      ]
+    }
+examples: ./.resources/Post a new option lists to Dina.resources/examples
+order: 2000

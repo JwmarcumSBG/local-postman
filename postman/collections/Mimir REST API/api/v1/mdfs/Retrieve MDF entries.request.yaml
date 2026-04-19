@@ -1,0 +1,9 @@
+$kind: http-request
+description: |
+  Retrieve lightweight versions of the MDF entries of the tenant, without the field definitions
+url: "{{baseUrl}}/api/v1/mdfs"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Retrieve MDF entries.resources/examples
+order: 2000

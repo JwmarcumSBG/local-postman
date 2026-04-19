@@ -1,0 +1,19 @@
+$kind: http-example
+name: User deactivation status was retrieved successfully.
+request:
+  url: "{{baseUrl}}/auth/api/v1/user/status"
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "isDeactivated": "<boolean>"
+      }
+order: 1000

@@ -1,0 +1,12 @@
+$kind: http-request
+description: Retrieve all order forms for a specific space
+url: "{{baseUrl}}/spaces/:id/orderforms"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) The space identifier, unique identifier
+examples: ./.resources/Retrieve all order forms for a specific space.resources/examples
+order: 2000

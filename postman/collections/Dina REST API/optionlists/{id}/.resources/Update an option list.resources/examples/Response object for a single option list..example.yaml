@@ -1,0 +1,55 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/optionlists/:id"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "label": "<string>",
+        "id": "<string>",
+        "description": "<string>",
+        "alternatives": [
+          {
+            "id": "<string>",
+            "label": "<string>",
+            "value": "<string>"
+          },
+          {
+            "id": "<string>",
+            "label": "<string>",
+            "value": "<string>"
+          }
+        ]
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "label": "<string>",
+        "id": "<string>",
+        "description": "<string>",
+        "alternatives": [
+          {
+            "id": "<string>",
+            "label": "<string>",
+            "value": "<string>"
+          },
+          {
+            "id": "<string>",
+            "label": "<string>",
+            "value": "<string>"
+          }
+        ]
+      }
+order: 1000

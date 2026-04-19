@@ -1,0 +1,14 @@
+$kind: http-example
+name: Storage entry has been deleted.
+request:
+  url: "{{baseUrl}}/config/api/v1/storages/:storageId"
+  method: DELETE
+  pathVariables:
+    storageId: ""
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

@@ -1,0 +1,34 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/folders/metadata/:folderId"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    folderId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "metadataDelta": {
+          "formId": "<string>",
+          "formData": {}
+        }
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "metadata": {
+          "formId": "<string>",
+          "formData": {}
+        }
+      }
+order: 1000

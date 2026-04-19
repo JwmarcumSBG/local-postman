@@ -1,0 +1,44 @@
+$kind: http-example
+name: Tenant Config was retrieved.
+request:
+  url: "{{baseUrl}}/ingest/api/v1/generatedMediaLocations"
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "accessKey": "<string>",
+          "autoCreateItems": "<boolean>",
+          "backup": "<boolean>",
+          "bucketName": "<string>",
+          "id": "<string>",
+          "pathPrefix": "<string>",
+          "secretKey": "<string>",
+          "uploadGeneratedMedia": "<boolean>",
+          "deleteEnabled": "<boolean>",
+          "storageProvider": "s3_native",
+          "sourceEndpoint": "<string>"
+        },
+        {
+          "accessKey": "<string>",
+          "autoCreateItems": "<boolean>",
+          "backup": "<boolean>",
+          "bucketName": "<string>",
+          "id": "<string>",
+          "pathPrefix": "<string>",
+          "secretKey": "<string>",
+          "uploadGeneratedMedia": "<boolean>",
+          "deleteEnabled": "<boolean>",
+          "storageProvider": "s3_native",
+          "sourceEndpoint": "<string>"
+        }
+      ]
+order: 1000

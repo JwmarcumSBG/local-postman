@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{baseUrl}}/assets/:id/sync"
+method: PUT
+headers:
+  Content-Type: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Asset id (mRefId)
+body:
+  type: json
+  content: "{}"
+examples: ./.resources/Updates synchronize properties of an asset.resources/examples
+order: 2000

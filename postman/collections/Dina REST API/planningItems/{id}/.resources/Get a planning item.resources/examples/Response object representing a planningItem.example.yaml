@@ -1,0 +1,32 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/planningItems/:id"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "hostId": "<string>",
+        "hostType": "instance",
+        "type": "block",
+        "mdfId": "<string>",
+        "title": "<string>",
+        "commandId": "<string>",
+        "resourceId": "<string>",
+        "metadata": {
+          "in_99": -18275906.04929559,
+          "culpa_84b": 14392084,
+          "nostrud_3": -3143167
+        }
+      }
+order: 1000

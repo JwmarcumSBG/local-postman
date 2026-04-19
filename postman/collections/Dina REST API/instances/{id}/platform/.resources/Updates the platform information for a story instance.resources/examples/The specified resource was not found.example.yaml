@@ -1,0 +1,45 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/instances/:id/platform"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "provider": {
+          "requestId": "<string>",
+          "state": "<string>",
+          "message": "<string>",
+          "embeddedEndpoint": "<string>",
+          "previewEndpoint": "<string>",
+          "updateEndpoint": "<string>"
+        },
+        "update": [
+          {
+            "key": "<string>",
+            "value": "<string>"
+          },
+          {
+            "key": "<string>",
+            "value": "<string>"
+          }
+        ]
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 2000

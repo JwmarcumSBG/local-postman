@@ -1,0 +1,19 @@
+$kind: http-request
+name: Ingest file in an external storage into Mimir.
+description: |
+  Ingest file in an external storage into Mimir.
+url: "{{baseUrl}}/ingest/api/v1/ingestFile"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "configId": "<string>",
+      "srcKey": "<string>",
+      "placeholderId": "<string>"
+    }
+examples: ./.resources/Ingest file in an external storage into Mimir-.resources/examples
+order: 1000

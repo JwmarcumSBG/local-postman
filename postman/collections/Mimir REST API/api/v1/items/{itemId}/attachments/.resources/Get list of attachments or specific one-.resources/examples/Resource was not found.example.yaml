@@ -1,0 +1,26 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/attachments?attachment="
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: attachment
+      value: ""
+      description: The file name of a specific attachment
+  pathVariables:
+    itemId: ""
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 3000

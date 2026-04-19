@@ -1,0 +1,24 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/uploadSign?datetime=<string>&to_sign=<string>"
+  method: POST
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: datetime
+      value: <string>
+      description: (Required) Timestamp of the signing request
+    - key: to_sign
+      value: <string>
+      description: (Required) The string to sign
+  pathVariables:
+    itemId: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: <string>
+order: 1000

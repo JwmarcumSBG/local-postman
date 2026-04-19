@@ -1,0 +1,19 @@
+$kind: http-request
+description: Create a restore request in Glacier for a media
+url: "{{baseUrl}}/auxiliary/api/v1/items/:itemId/restoreMedia"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  itemId: ""
+body:
+  type: json
+  content: |-
+    {
+      "tier": "<string>",
+      "retentionDays": "<number>",
+      "itemId": 69453378
+    }
+examples: ./.resources/Create a restore request in Glacier for a media.resources/examples
+order: 1000

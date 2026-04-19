@@ -1,0 +1,9 @@
+$kind: http-request
+description: >
+  Convenience request so the current signed URL is visible in Postman after
+  `Create Upload Lock For Text File`. This is not meant to be sent.
+url: "{{mimir_upload_signed_url}}"
+method: GET
+headers:
+  Accept: application/json
+order: 5000

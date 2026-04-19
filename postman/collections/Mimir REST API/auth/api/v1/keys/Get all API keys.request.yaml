@@ -1,0 +1,9 @@
+$kind: http-request
+description: |
+  Returns a list of API keys created by the user making the request. **NOTE:** The keys returned only contain information about the keys, not the full authentication tokens. The full token can only be retrieved once the very first time the key is created.
+url: "{{baseUrl}}/auth/api/v1/keys"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Get all API keys.resources/examples
+order: 2000

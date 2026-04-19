@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/mdfs/:mdfId"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  - key: mdfId
+    value: <string>
+    description: (Required) The ID of the MDF model
+examples: ./.resources/Delete an MDF entry.resources/examples
+order: 3000

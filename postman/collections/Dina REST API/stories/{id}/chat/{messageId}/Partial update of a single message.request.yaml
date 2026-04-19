@@ -1,0 +1,22 @@
+$kind: http-request
+description: Allows updating message
+url: "{{baseUrl}}/stories/:id/chat/:messageId"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Story id
+  - key: messageId
+    value: <uuid>
+    description: (Required) message id
+body:
+  type: json
+  content: |-
+    {
+      "content": "<string>"
+    }
+examples: ./.resources/Partial update of a single message.resources/examples
+order: 1000

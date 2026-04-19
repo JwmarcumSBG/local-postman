@@ -1,0 +1,14 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/spaces/:id/orderforms/:formId"
+  method: DELETE
+  pathVariables:
+    id: ""
+    formId: ""
+response:
+  statusCode: 204
+  statusText: No Content
+  body:
+    type: text
+    content: ""
+order: 1000

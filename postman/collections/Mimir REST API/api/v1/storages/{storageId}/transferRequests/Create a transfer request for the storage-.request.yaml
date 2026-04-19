@@ -1,0 +1,23 @@
+$kind: http-request
+name: Create a transfer request for the storage.
+description: Create a transfer request for the storage. <br /><b>Note:</b> the API tries to ensure that for a given item, storage, artefact and 'targetFileName' there'll be one active request at a time, so that multiple 'Storage Manager' | processes don't try to write to the same file path at the same time. However, if 'targetFileName' is specified and depending on how the storage is configured, the destination file name might | vary, so it isn't always guaranteed there won't be duplicate requests.'
+url: "{{baseUrl}}/api/v1/storages/:storageId/transferRequests"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: storageId
+    value: <string>
+    description: (Required) Id of storage to create the request for
+body:
+  type: json
+  content: |-
+    {
+      "itemId": "<string>",
+      "artefact": "highres",
+      "targetFileName": "<string>",
+      "createLinkForTargetFileName": "<boolean>"
+    }
+examples: ./.resources/Create a transfer request for the storage-.resources/examples
+order: 2000

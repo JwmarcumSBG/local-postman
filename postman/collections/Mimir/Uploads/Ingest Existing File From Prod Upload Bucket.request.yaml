@@ -1,0 +1,26 @@
+$kind: http-request
+description: >
+  Use this when the file already exists in the upload bucket and you want Mimir
+  to ingest it. This matches your `ingestSourceFullPath` example.
+url: "https://us.mjoll.no/ingest/api/v1/ingestFile"
+method: POST
+headers:
+  x-mimir-cognito-id-token: Bearer {{api_key}}
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "configId": "{{mimir_upload_location_id}}",
+      "srcKey": "{{mimir_upload_src_key}}"
+    }
+scripts:
+  - type: afterResponse
+    code: >-
+      pm.test('Status 200', function () { pm.response.to.have.status(200); });
+
+      try { const body = pm.response.json(); if (body && body.id) {
+      pm.environment.set('item_id', body.id); } } catch (e) {}
+    language: text/javascript
+order: 2000

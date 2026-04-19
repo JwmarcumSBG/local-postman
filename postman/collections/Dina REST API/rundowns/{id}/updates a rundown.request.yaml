@@ -1,0 +1,36 @@
+$kind: http-request
+description: Updates a rundown
+url: "{{baseUrl}}/rundowns/:id"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Rundown id
+body:
+  type: json
+  content: |-
+    {
+      "title": "<string>",
+      "publishingTime": "<string>",
+      "metadata": {},
+      "operation": {
+        "action": "remove",
+        "source": "ready",
+        "destination": "ready",
+        "items": [
+          {
+            "id": "<string>",
+            "index": "<string>"
+          },
+          {
+            "id": "<string>",
+            "index": "<string>"
+          }
+        ]
+      }
+    }
+examples: ./.resources/updates a rundown.resources/examples
+order: 6000

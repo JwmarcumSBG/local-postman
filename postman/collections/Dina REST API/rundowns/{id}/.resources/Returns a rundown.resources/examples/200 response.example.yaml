@@ -1,0 +1,173 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/rundowns/:id?orderType=ready"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: orderType
+      value: ready
+      description: ready or preparing instances list. default is ready for linear instances
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "title": "<string>",
+        "type": "rundowntemplate",
+        "publishingTime": "<dateTime>",
+        "updatedById": "<string>",
+        "createdAt": "<dateTime>",
+        "updatedAt": "<dateTime>",
+        "version": "<integer>",
+        "ready": {
+          "state": "active",
+          "plannedDuration": "<integer>",
+          "instances": [
+            {
+              "id": "<string>",
+              "title": "<string>",
+              "publishingAt": "<dateTime>",
+              "state": "<string>",
+              "createdAt": "<dateTime>",
+              "updatedAt": "<dateTime>",
+              "updatedById": "<string>",
+              "platformInfo": {
+                "platform": "linear",
+                "platformKind": "<string>",
+                "account": {
+                  "accountId": "<string>",
+                  "accountTitle": "<string>"
+                }
+              },
+              "version": "<integer>",
+              "isPlaceholder": "<boolean>",
+              "metadata": {
+                "non_27": "qui aliqua Duis"
+              },
+              "mMetaData": [
+                {
+                  "key": "<string>",
+                  "value": "<string>"
+                },
+                {
+                  "key": "<string>",
+                  "value": "<string>"
+                }
+              ]
+            },
+            {
+              "id": "<string>",
+              "title": "<string>",
+              "publishingAt": "<dateTime>",
+              "state": "<string>",
+              "createdAt": "<dateTime>",
+              "updatedAt": "<dateTime>",
+              "updatedById": "<string>",
+              "platformInfo": {
+                "platform": "linear",
+                "platformKind": "<string>",
+                "account": {
+                  "accountId": "<string>",
+                  "accountTitle": "<string>"
+                }
+              },
+              "version": "<integer>",
+              "isPlaceholder": "<boolean>",
+              "metadata": {
+                "magnaa7": -81440476,
+                "ipsum_910": "adipisicing"
+              },
+              "mMetaData": [
+                {
+                  "key": "<string>",
+                  "value": "<string>"
+                },
+                {
+                  "key": "<string>",
+                  "value": "<string>"
+                }
+              ]
+            }
+          ]
+        },
+        "preparing": {
+          "state": "active",
+          "plannedDuration": "<integer>",
+          "instances": [
+            {
+              "id": "<string>",
+              "title": "<string>",
+              "publishingAt": "<dateTime>",
+              "state": "<string>",
+              "createdAt": "<dateTime>",
+              "updatedAt": "<dateTime>",
+              "updatedById": "<string>",
+              "platformInfo": {
+                "platform": "linear",
+                "platformKind": "<string>",
+                "account": {
+                  "accountId": "<string>",
+                  "accountTitle": "<string>"
+                }
+              },
+              "version": "<integer>",
+              "isPlaceholder": "<boolean>",
+              "metadata": {
+                "deserunta2": -72739241.0540121
+              },
+              "mMetaData": [
+                {
+                  "key": "<string>",
+                  "value": "<string>"
+                },
+                {
+                  "key": "<string>",
+                  "value": "<string>"
+                }
+              ]
+            },
+            {
+              "id": "<string>",
+              "title": "<string>",
+              "publishingAt": "<dateTime>",
+              "state": "<string>",
+              "createdAt": "<dateTime>",
+              "updatedAt": "<dateTime>",
+              "updatedById": "<string>",
+              "platformInfo": {
+                "platform": "linear",
+                "platformKind": "<string>",
+                "account": {
+                  "accountId": "<string>",
+                  "accountTitle": "<string>"
+                }
+              },
+              "version": "<integer>",
+              "isPlaceholder": "<boolean>",
+              "metadata": {
+                "culpa_4": 7793596,
+                "occaecat_b": false
+              },
+              "mMetaData": [
+                {
+                  "key": "<string>",
+                  "value": "<string>"
+                },
+                {
+                  "key": "<string>",
+                  "value": "<string>"
+                }
+              ]
+            }
+          ]
+        }
+      }
+order: 1000

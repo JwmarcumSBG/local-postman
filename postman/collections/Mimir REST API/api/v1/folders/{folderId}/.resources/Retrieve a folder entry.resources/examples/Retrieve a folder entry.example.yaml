@@ -1,0 +1,59 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}folders/:folderId"
+  method: GET
+  headers:
+    - key: Accept
+      value: application/json
+    - key: x-mimir-cognito-id-token
+      value: Bearer sakm.JbU7wfB6CUD_wZ99nZ8VD.B8Dn1Hea67--g1k_awT1P
+      disabled: true
+  pathVariables:
+    - key: folderId
+      value: 403166f7-1945-4a67-84e4-9c8894dc4d9a
+      description: (Required) The folder ID
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Content-Length
+      value: "251"
+    - key: Connection
+      value: keep-alive
+    - key: Date
+      value: Wed, 22 Jan 2025 16:41:43 GMT
+    - key: x-amzn-RequestId
+      value: 9f24f1f3-c2e7-441b-b08c-9415c3aab669
+    - key: Access-Control-Allow-Origin
+      value: "*"
+    - key: x-amz-apigw-id
+      value: EzHnIENAoAMEQgg=
+    - key: Server-Timing
+      value: total;dur=10.17
+    - key: X-Amzn-Trace-Id
+      value: Root=1-67911fc6-5f72ca480726053958580154;Parent=768809bd99ecc030;Sampled=0;Lineage=2:b5be8af0:0
+    - key: X-Amz-Cf-Pop
+      value: EWR53-C2
+    - key: X-Amz-Cf-Pop
+      value: JFK52-P5
+    - key: Via
+      value: 1.1 ee623581f95aa65c7c8707871d87b790.cloudfront.net (CloudFront), 1.1 b4aed0fc17149bbf4e91539a66d546a0.cloudfront.net (CloudFront)
+    - key: X-Cache
+      value: Miss from cloudfront
+    - key: X-Amz-Cf-Id
+      value: OefPtmm9Ug5V1oeoM9hCqn68T92Bc8ChSH0yUMf45-28Vl55yOm2tA==
+  body:
+    type: json
+    content: |-
+      {
+          "id": "403166f7-1945-4a67-84e4-9c8894dc4d9a",
+          "owner": "cfffd4ee-b44a-48c7-abbd-a5124d190f99",
+          "name": "726AM CUTIN [369cfce]",
+          "createdOn": "2025-01-14T13:56:38.599Z",
+          "hasSubfolder": false,
+          "parent": "f4734803-bd82-4e17-8071-6aa7cc1d76b6",
+          "itemType": "folder"
+      }
+order: 4000

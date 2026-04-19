@@ -1,0 +1,74 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/dailynotes/:id"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "content": {
+          "document": [
+            {
+              "type": "heading-one",
+              "children": [
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                },
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                }
+              ]
+            },
+            {
+              "type": "heading-three",
+              "children": [
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                },
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                }
+              ]
+            }
+          ]
+        },
+        "type": "<string>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "createdAt": "<dateTime>",
+        "updatedAt": "<dateTime>",
+        "updatedById": "<string>",
+        "type": "<string>",
+        "contentUrl": "<string>"
+      }
+order: 1000

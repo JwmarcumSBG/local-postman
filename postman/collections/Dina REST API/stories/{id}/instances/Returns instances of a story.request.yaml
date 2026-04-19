@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/stories/:id/instances?limit=<integer>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: limit
+    value: <integer>
+    description: Max number of instances to retrieve
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Story id
+examples: ./.resources/Returns instances of a story.resources/examples
+order: 1000

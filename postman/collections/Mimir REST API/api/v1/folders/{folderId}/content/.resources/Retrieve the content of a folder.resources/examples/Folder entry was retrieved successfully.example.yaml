@@ -1,0 +1,62 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/folders/:folderId/content?type=folder&fetchAllRecursively=<boolean>&mScrollId=<string>&skipFolders=<boolean>&readableMetadataFields=<boolean>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: type
+      value: folder
+      description: An optional filter to constrain the type of children we want to retrieve
+    - key: fetchAllRecursively
+      value: <boolean>
+      description: Used to fetch all descendants of the requested folder. Returns one page of results together with a scroll id that can be used as a mScrollId param to fetch the next page of results.
+    - key: mScrollId
+      value: <string>
+      description: If mScrollId is provided (obtained from a previous fetchAllRecursively request), returns next page of results
+    - key: skipFolders
+      value: <boolean>
+      description: If skipFolders is true, folders are not returned in the response. Only items are returned.
+    - key: readableMetadataFields
+      value: <boolean>
+      description: If true, the <b>metadata</b> fields' internal GUID will be replaced with readable field IDs
+  pathVariables:
+    folderId: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "from": "<number>",
+        "total": "<number>",
+        "mScrollId": "<string>",
+        "hits": [
+          {
+            "id": "Duis nostrud ex",
+            "name": "anim",
+            "originalFileName": "enim cupidatat consequat",
+            "mediaDuration": 10368069.948559493,
+            "thumbnail": "tempor laboris cupidatat dolor",
+            "createdOn": "1957-01-09T14:09:38.943Z",
+            "itemType": "in incididunt dolore culpa",
+            "owner": "magna et",
+            "hasSubfolder": false
+          },
+          {
+            "id": "Lorem cupidatat mollit eu ullamco",
+            "name": "laborum",
+            "originalFileName": "exercitation proident eiusmod reprehenderit",
+            "mediaDuration": 21915172.063677654,
+            "thumbnail": "labore sed",
+            "createdOn": "1996-11-04T13:22:41.015Z",
+            "itemType": "eu in tempor fugiat",
+            "owner": "dolor laborum tempor esse",
+            "hasSubfolder": true
+          }
+        ]
+      }
+order: 1000

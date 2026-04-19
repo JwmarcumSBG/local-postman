@@ -1,0 +1,32 @@
+$kind: http-example
+name: Label(s) were deleted successfully.
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/labels"
+  method: DELETE
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "labels": [
+          "<string>"
+        ]
+      }
+response:
+  statusCode: 204
+  statusText: No Content
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "data": {
+          "message": "<string>"
+        }
+      }
+order: 1000

@@ -1,0 +1,13 @@
+$kind: http-request
+description: |
+  Update the tenant configuration information
+url: "{{baseUrl}}/config/api/v1/config"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: "{}"
+examples: ./.resources/Update the tenant configuration information.resources/examples
+order: 5000

@@ -1,0 +1,29 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/items/merge"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "sourceItemId": "<string>",
+        "targetItemId": "<string>",
+        "mediaToCopy": "editProxy"
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 4000

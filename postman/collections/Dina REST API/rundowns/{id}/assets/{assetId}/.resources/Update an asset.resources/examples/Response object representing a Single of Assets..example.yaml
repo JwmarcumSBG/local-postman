@@ -1,0 +1,53 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/rundowns/:id/assets/:assetId"
+  method: PATCH
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+    assetId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "title": "<string>",
+        "mediaType": "<string>",
+        "externalId": "<string>",
+        "thumbnail": "<string>",
+        "proxy": "<string>",
+        "duration": "<number>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "type": "rundown",
+        "title": "<string>",
+        "description": "<string>",
+        "mdfId": "<string>",
+        "metadata": {
+          "aute_05": "est fugiat mollit irure nostrud",
+          "in6": false,
+          "laborum_a6": 48524625.436342776,
+          "aute_4": "do nostrud proident"
+        },
+        "createdAt": "<dateTime>",
+        "createdById": "<string>",
+        "updatedAt": "<dateTime>",
+        "updatedById": "<string>",
+        "version": "<integer>",
+        "state": "<string>",
+        "mediaType": "<string>",
+        "itemType": "<string>",
+        "externalId": "<string>",
+        "provider": "<string>"
+      }
+order: 1000

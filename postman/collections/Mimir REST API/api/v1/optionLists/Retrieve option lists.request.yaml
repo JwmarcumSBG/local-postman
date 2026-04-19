@@ -1,0 +1,13 @@
+$kind: http-request
+description: |
+  Retrieve the option lists of the tenant
+url: "{{baseUrl}}/api/v1/optionLists?idsOnly=<boolean>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: idsOnly
+    value: <boolean>
+    description: If true, only ids of the option lists are returned in response
+examples: ./.resources/Retrieve option lists.resources/examples
+order: 2000

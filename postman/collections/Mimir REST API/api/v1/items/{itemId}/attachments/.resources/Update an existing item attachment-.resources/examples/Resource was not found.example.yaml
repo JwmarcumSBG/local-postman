@@ -1,0 +1,33 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/attachments"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "fileName": "<string>",
+        "type": "image",
+        "role": "poster",
+        "language": "<string>",
+        "description": "<string>"
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 4000

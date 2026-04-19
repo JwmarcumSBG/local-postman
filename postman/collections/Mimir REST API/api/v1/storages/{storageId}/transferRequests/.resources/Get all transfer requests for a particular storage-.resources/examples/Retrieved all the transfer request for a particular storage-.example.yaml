@@ -1,0 +1,73 @@
+$kind: http-example
+name: Retrieved all the transfer request for a particular storage.
+request:
+  url: "{{baseUrl}}/api/v1/storages/:storageId/transferRequests"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    storageId: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "total": "<number>",
+        "_embedded": [
+          {
+            "id": "<string>",
+            "createdOn": "<dateTime>",
+            "itemId": "<string>",
+            "modifiedOn": "<dateTime>",
+            "originalFileName": "<string>",
+            "storageId": "<string>",
+            "storageManagerInstanceId": "<string>",
+            "transferState": "<string>",
+            "targetFileName": "<string>",
+            "createLinkForTargetFileName": "<boolean>",
+            "artefact": "proxy",
+            "errorCount": "<integer>",
+            "title": "<string>",
+            "highresIsOffline": "<boolean>",
+            "downloadProgress": {
+              "elapsedTime": "<number>",
+              "estimatedRemainingTime": "<number>",
+              "speed": "<number>",
+              "totalSize": "<number>",
+              "transferred": "<number>",
+              "progressUnit": "part",
+              "transientError": "<string>"
+            }
+          },
+          {
+            "id": "<string>",
+            "createdOn": "<dateTime>",
+            "itemId": "<string>",
+            "modifiedOn": "<dateTime>",
+            "originalFileName": "<string>",
+            "storageId": "<string>",
+            "storageManagerInstanceId": "<string>",
+            "transferState": "<string>",
+            "targetFileName": "<string>",
+            "createLinkForTargetFileName": "<boolean>",
+            "artefact": "proxy",
+            "errorCount": "<integer>",
+            "title": "<string>",
+            "highresIsOffline": "<boolean>",
+            "downloadProgress": {
+              "elapsedTime": "<number>",
+              "estimatedRemainingTime": "<number>",
+              "speed": "<number>",
+              "totalSize": "<number>",
+              "transferred": "<number>",
+              "progressUnit": "part",
+              "transientError": "<string>"
+            }
+          }
+        ]
+      }
+order: 1000

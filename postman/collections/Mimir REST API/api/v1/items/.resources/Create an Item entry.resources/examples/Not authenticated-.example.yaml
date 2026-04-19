@@ -1,0 +1,118 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/api/v1/items?readableMetadataFields=<boolean>"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  queryParams:
+    - key: readableMetadataFields
+      value: <boolean>
+      description: If true, the <b>metadata</b> fields' internal GUID will be replaced with readable field IDs
+  body:
+    type: json
+    content: |-
+      {
+        "filename": "<string>",
+        "title": "<string>",
+        "itemType": "clipList",
+        "languageCode": "<string>",
+        "transcriptionService": "<string>",
+        "transcriptionChannels": [
+          "<integer>",
+          "<integer>"
+        ],
+        "transcriptionEnabled": "<boolean>",
+        "celebrityDetectionEnabled": "<boolean>",
+        "labelDetectionEnabled": "<boolean>",
+        "personDetectionEnabled": "<boolean>",
+        "folderParents": null,
+        "visibleTo": {
+          "level": "selected_groups",
+          "groups": [
+            "<string>",
+            "<string>"
+          ]
+        },
+        "updatableBy": {
+          "level": "owner",
+          "groups": [
+            "<string>",
+            "<string>"
+          ]
+        },
+        "parentItemIds": [
+          "<string>",
+          "<string>"
+        ],
+        "sequenceDetails": {
+          "tracks": [
+            {
+              "id": "<string>",
+              "name": "<string>",
+              "mediaType": "video",
+              "clips": [
+                {
+                  "start": "<number>",
+                  "end": "<number>",
+                  "duration": "<number>",
+                  "inPoint": "<number>",
+                  "outPoint": "<number>",
+                  "mimirItemId": "<string>"
+                },
+                {
+                  "start": "<number>",
+                  "end": "<number>",
+                  "duration": "<number>",
+                  "inPoint": "<number>",
+                  "outPoint": "<number>",
+                  "mimirItemId": "<string>"
+                }
+              ]
+            },
+            {
+              "id": "<string>",
+              "name": "<string>",
+              "mediaType": "audio",
+              "clips": [
+                {
+                  "start": "<number>",
+                  "end": "<number>",
+                  "duration": "<number>",
+                  "inPoint": "<number>",
+                  "outPoint": "<number>",
+                  "mimirItemId": "<string>"
+                },
+                {
+                  "start": "<number>",
+                  "end": "<number>",
+                  "duration": "<number>",
+                  "inPoint": "<number>",
+                  "outPoint": "<number>",
+                  "mimirItemId": "<string>"
+                }
+              ]
+            }
+          ]
+        },
+        "metadata": {
+          "formId": "<string>",
+          "formData": {}
+        },
+        "itemIdToCopyMetadataFrom": "<string>"
+      }
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 3000

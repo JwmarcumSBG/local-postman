@@ -1,0 +1,45 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/prime/api/v1/storages"
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": "<string>",
+          "name": "<string>",
+          "folderPath": "<string>",
+          "storageType": "aws-s3",
+          "createdBy": "<string>",
+          "keys": {
+            "accessKey": "<string>"
+          },
+          "associatedArtifactsToTransfer": [
+            "transcript-srt",
+            "transcript-srt"
+          ]
+        },
+        {
+          "id": "<string>",
+          "name": "<string>",
+          "folderPath": "<string>",
+          "storageType": "aws-s3",
+          "createdBy": "<string>",
+          "keys": {
+            "accessKey": "<string>"
+          },
+          "associatedArtifactsToTransfer": [
+            "transcript-srt",
+            "transcript-srt"
+          ]
+        }
+      ]
+order: 1000

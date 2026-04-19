@@ -1,0 +1,30 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/folders"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "parent": "<string>"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "name": "<string>",
+        "owner": "<string>",
+        "createdOn": "<dateTime>",
+        "hasSubfolder": false
+      }
+order: 1000

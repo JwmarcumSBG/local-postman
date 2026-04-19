@@ -1,0 +1,28 @@
+$kind: http-request
+description: |
+  Retrieve the media segment URLs for an item to get (during playback) or put (while transcoding) actual media chunks.
+url: "{{baseUrl}}/api/v1/items/:itemId/mediaSegments/:stereamIds/:signedForMethod/:firstSegmentIndex"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item
+  - key: stereamIds
+    value: ""
+  - key: signedForMethod
+    value: get
+    description: (Required) HTTP method to sign the URLs for
+  - key: firstSegmentIndex
+    value: <number>
+    description: (Required) Zero-based index of the first media segment to get URL for
+  - key: streamIds
+    value: <string>
+    description: |
+      (Required) Comma-separated list of media stream IDs for which the segment URLs are requested. Currently supported stream IDs are:
+        * `bpv` - BrowsePreviewVideo
+        * `bpad` - BrowsePreviewAudioDownmix
+        * `epf` - EditProxyFull
+examples: ./.resources/Get media segment URLs for an item.resources/examples
+order: 1000

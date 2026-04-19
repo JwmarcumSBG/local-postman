@@ -1,0 +1,12 @@
+$kind: http-request
+description: Get a slash command
+url: "{{baseUrl}}/commands/:id"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) Slash command id
+examples: ./.resources/Get a slash command.resources/examples
+order: 1000

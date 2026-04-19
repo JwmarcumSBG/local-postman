@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{baseUrl}}/config/api/v1/bookmarks/:bookmarkId"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: bookmarkId
+    value: <string>
+    description: (Required) The ID of the bookmark
+examples: ./.resources/Retrieve a system bookmark.resources/examples
+order: 1000

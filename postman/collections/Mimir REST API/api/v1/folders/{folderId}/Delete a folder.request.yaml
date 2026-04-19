@@ -1,0 +1,14 @@
+$kind: http-request
+description: |
+  Recursively delete a folder. All subfolders are removed. All items are soft-deleted, i.e.
+  they are still accessible in the recycle bin.
+url: "{{baseUrl}}/api/v1/folders/:folderId"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  - key: folderId
+    value: <string>
+    description: (Required) The folder ID
+examples: ./.resources/Delete a folder.resources/examples
+order: 4000

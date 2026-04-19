@@ -1,0 +1,21 @@
+$kind: http-request
+description: |
+  Returns item id by storage name (bucket name) and storage object key. Virtual clips are ignored.
+url: "{{baseUrl}}/auxiliary/api/v1/storages/:bucketName/items/:objectKey"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: bucketName
+    value: <string>
+    description: (Required) Name of the bucket to query
+  - key: objectKey
+    value: <string>
+    description: |
+      (Required) Bucket object key or full path of the object in the bucket
+        * objectKey must be URL encoded.
+        * "N.FOLDER1/SOME-SUB-DIR/More_Dir/10_18_2017 11_20_06 AM (UTC+06_00).mp4" should be given as
+        * "N.FOLDER1%2FSOME-SUB-DIR%2FMore_Dir%2F10_18_2017%2011_20_06%20AM%20(UTC%2B06_00).mp4"
+        * Above example decoded using encodeURIComponent method of JavaScript
+examples: ./.resources/Returns item id by storage & object key.resources/examples
+order: 1000

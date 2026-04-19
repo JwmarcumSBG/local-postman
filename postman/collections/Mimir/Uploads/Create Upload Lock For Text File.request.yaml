@@ -1,0 +1,30 @@
+$kind: http-request
+description: >
+  Generates a signed URL for direct upload to the prod upload bucket. Run this
+  after `Create Text Placeholder`.
+url: "https://us.mjoll.no/api/v1/items/{{item_id}}/upload"
+method: PUT
+headers:
+  x-mimir-cognito-id-token: Bearer {{api_key}}
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "lockOwnerInstanceId": "23e4567-e89b-12d3-a456-426614174000",
+      "uploadLocationId": "{{mimir_upload_location_id}}",
+      "fileName": "{{mimir_upload_file_name}}",
+      "isMultiPartUpload": false,
+      "contentType": "{{mimir_upload_content_type}}"
+    }
+scripts:
+  - type: afterResponse
+    code: >-
+      pm.test('Status 200', function () { pm.response.to.have.status(200); });
+
+      try { const body = pm.response.json(); if (body && body.uploadSignedUrl) {
+      pm.environment.set('mimir_upload_signed_url', body.uploadSignedUrl); } }
+      catch (e) {}
+    language: text/javascript
+order: 4000

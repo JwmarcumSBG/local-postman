@@ -1,0 +1,19 @@
+$kind: http-request
+name: Create storage transfers.
+description: Create a storage transfer request for an item
+url: "{{baseUrl}}/prime/api/v1/transfers"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "itemId": "<string>",
+      "artefact": "highres",
+      "destinationStorageId": "<string>",
+      "targetFileName": "<string>"
+    }
+examples: ./.resources/Create storage transfers-.resources/examples
+order: 2000

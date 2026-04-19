@@ -1,0 +1,36 @@
+$kind: http-example
+name: The created API key, including the full authentication token.
+request:
+  url: "{{baseUrl}}/auth/api/v1/keys"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "isActive": "<boolean>",
+        "expiryDate": "<string>",
+        "label": "<string>",
+        "maxUnusedDays": "<number>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "keyId": "<string>",
+        "isActive": "<boolean>",
+        "expiryDate": "<string>",
+        "modifiedOnIsoDateString": "<string>",
+        "label": "<string>",
+        "lastUsedOnIsoDate": "<string>",
+        "maxUnusedDays": "<number>",
+        "apiKeyHeaderValue": "<string>"
+      }
+order: 1000

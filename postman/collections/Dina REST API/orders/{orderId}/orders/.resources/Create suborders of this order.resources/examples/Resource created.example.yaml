@@ -1,0 +1,42 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/orders/:orderId/orders"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    orderId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "mFormId": "<string>",
+        "mResourceId": "<string>",
+        "mResourceType": "<string>",
+        "mStatus": "<string>",
+        "mOwner": "<string>",
+        "mAssignee": "<string>",
+        "metadata": {}
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "mId": "<string>",
+        "mResourceId": "<string>",
+        "mType": "<string>",
+        "mOwner": "<string>",
+        "mAssignee": "<string>",
+        "mFormId": "<string>",
+        "mCreatedAt": "<string>",
+        "mCreatedById": "<string>",
+        "metadata": {},
+        "mStatus": "<string>"
+      }
+order: 1000

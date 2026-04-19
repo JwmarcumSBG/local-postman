@@ -1,0 +1,26 @@
+$kind: http-request
+name: Create signed urls for multipart upload for an item.
+description: |
+  Create signed urls for a multipart upload which has been created when item upload lock was created.
+  The number of links generated can be controlled by using firstPartNumber and partCount properties.
+url: "{{baseUrl}}/api/v1/items/:itemId/itemUploadPartsSignUrls"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item to upload to
+body:
+  type: json
+  content: |-
+    {
+      "uploadId": "<string>",
+      "uploadLocationId": "<string>",
+      "targetKey": "<string>",
+      "firstPartNumber": "<number>",
+      "partCount": "<number>"
+    }
+examples: ./.resources/Create signed urls for multipart upload for an item-.resources/examples
+order: 1000

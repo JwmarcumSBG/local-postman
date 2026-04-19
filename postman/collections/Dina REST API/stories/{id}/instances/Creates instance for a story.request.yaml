@@ -1,0 +1,105 @@
+$kind: http-request
+description: Add a new instance to story
+url: "{{baseUrl}}/stories/:id/instances"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Story id
+body:
+  type: json
+  content: |-
+    {
+      "title": "<string>",
+      "metadata": {
+        "nulla387": "est quis"
+      },
+      "mMetaData": [
+        {
+          "key": "<string>",
+          "value": "<string>"
+        },
+        {
+          "key": "<string>",
+          "value": "<string>"
+        }
+      ],
+      "platformInfo": {
+        "platform": "linear",
+        "platformKind": "<string>",
+        "account": {
+          "accountId": "<string>",
+          "accountTitle": "<string>"
+        }
+      },
+      "templateId": "<string>",
+      "content": {
+        "document": [
+          {
+            "type": "automation",
+            "data": {
+              "templateType": "DVE",
+              "templateVariant": "<string>",
+              "assets": [
+                {
+                  "mId": "<string>",
+                  "mRefId": "<string>",
+                  "mProvider": "<string>",
+                  "mediaType": "<string>",
+                  "mAssetId": "<string>",
+                  "mosobj": "<string>",
+                  "mTitle": "<string>",
+                  "duration": "<integer>"
+                },
+                {
+                  "mId": "<string>",
+                  "mRefId": "<string>",
+                  "mProvider": "<string>",
+                  "mediaType": "<string>",
+                  "mAssetId": "<string>",
+                  "mosobj": "<string>",
+                  "mTitle": "<string>",
+                  "duration": "<integer>"
+                }
+              ],
+              "itemId": "<string>"
+            }
+          },
+          {
+            "type": "automation",
+            "data": {
+              "templateType": "PACKAGE",
+              "templateVariant": "<string>",
+              "assets": [
+                {
+                  "mId": "<string>",
+                  "mRefId": "<string>",
+                  "mProvider": "<string>",
+                  "mediaType": "<string>",
+                  "mAssetId": "<string>",
+                  "mosobj": "<string>",
+                  "mTitle": "<string>",
+                  "duration": "<integer>"
+                },
+                {
+                  "mId": "<string>",
+                  "mRefId": "<string>",
+                  "mProvider": "<string>",
+                  "mediaType": "<string>",
+                  "mAssetId": "<string>",
+                  "mosobj": "<string>",
+                  "mTitle": "<string>",
+                  "duration": "<integer>"
+                }
+              ],
+              "itemId": "<string>"
+            }
+          }
+        ]
+      }
+    }
+examples: ./.resources/Creates instance for a story.resources/examples
+order: 2000

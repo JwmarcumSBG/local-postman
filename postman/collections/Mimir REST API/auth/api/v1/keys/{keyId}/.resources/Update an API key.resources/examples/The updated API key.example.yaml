@@ -1,0 +1,36 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/auth/api/v1/keys/:keyId"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    keyId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "isActive": "<boolean>",
+        "expiryDate": "<string>",
+        "label": "<string>",
+        "maxUnusedDays": "<number>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "keyId": "<string>",
+        "isActive": "<boolean>",
+        "expiryDate": "<string>",
+        "modifiedOnIsoDateString": "<string>",
+        "label": "<string>",
+        "lastUsedOnIsoDate": "<string>",
+        "maxUnusedDays": "<number>"
+      }
+order: 1000

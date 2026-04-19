@@ -1,0 +1,40 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/config/api/v1/bookmarks"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "path": "<string>",
+        "title": "<string>",
+        "icon": "<string>",
+        "isFilterBookmark": "<boolean>",
+        "visibleToGroups": [
+          "<string>",
+          "<string>"
+        ]
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "path": "<string>",
+        "title": "<string>",
+        "icon": "<string>",
+        "isFilterBookmark": "<boolean>",
+        "visibleToGroups": [
+          "<string>",
+          "<string>"
+        ]
+      }
+order: 1000

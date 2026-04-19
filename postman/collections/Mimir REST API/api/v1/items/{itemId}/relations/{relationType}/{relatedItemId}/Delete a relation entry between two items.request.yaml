@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/items/:itemId/relations/:relationType/:relatedItemId"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item
+  - key: relationType
+    value: <string>
+    description: (Required) The type of the relation
+  - key: relatedItemId
+    value: <string>
+    description: (Required) The ID of the related item
+examples: ./.resources/Delete a relation entry between two items.resources/examples
+order: 1000

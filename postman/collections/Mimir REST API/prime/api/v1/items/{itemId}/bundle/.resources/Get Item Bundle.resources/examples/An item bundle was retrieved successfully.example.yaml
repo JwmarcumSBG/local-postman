@@ -1,0 +1,44 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/prime/api/v1/items/:itemId/bundle"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "replica": {
+          "want": {
+            "unnamed": {
+              "pariatur_d": "<boolean>"
+            },
+            "streamFrom": {
+              "aute710": "<number>",
+              "in_1c": "<number>"
+            }
+          },
+          "have": {
+            "schemas": {},
+            "optionLists": {}
+          }
+        }
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "strippedItemEntity": {},
+        "normalizedFolderPath": "<string>",
+        "modifiedOn": "<string>",
+        "truncated": "<boolean>"
+      }
+order: 1000

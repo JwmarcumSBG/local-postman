@@ -1,0 +1,34 @@
+$kind: http-request
+description: |
+  Creates upload lock for an item by checking if the item is in itemState.NEW and no
+  other upload request has been made within the last 10 minutes.
+
+  The lambda will return necessary configuration to initiate an upload to the item. The
+  possible upload methods supported:
+    - S3 PUT for objects < 5GB
+    - S3 Multipart upload for objects > 5GB
+
+  Authentication is performed using the provided signed URL.
+url: "{{baseUrl}}/api/v1/items/:itemId/upload"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item to upload to
+body:
+  type: json
+  content: |-
+    {
+      "lockOwnerInstanceId": "<string>",
+      "uploadLocationId": "<string>",
+      "fileName": "<string>",
+      "isMultiPartUpload": "<boolean>",
+      "fileSize": "<number>",
+      "contentType": "<string>",
+      "chunkSize": "<number>"
+    }
+examples: ./.resources/Create upload lock for an item.resources/examples
+order: 2000

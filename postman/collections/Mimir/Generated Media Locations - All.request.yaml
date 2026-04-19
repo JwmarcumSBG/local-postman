@@ -1,0 +1,7 @@
+$kind: http-request
+url: "https://us.mjoll.no/ingest/api/v1/generatedMediaLocations"
+method: GET
+headers:
+  x-mimir-cognito-id-token: Bearer {{api_key}}
+  Accept: application/json
+order: 6000

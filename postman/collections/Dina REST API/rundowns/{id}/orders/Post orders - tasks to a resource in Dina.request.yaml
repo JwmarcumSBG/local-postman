@@ -1,0 +1,26 @@
+$kind: http-request
+name: Post orders / tasks to a resource in Dina
+description: Create new tasks / orders as part of a rundown in Dina
+url: "{{baseUrl}}/rundowns/:id/orders"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Rundown id
+body:
+  type: json
+  content: |-
+    {
+      "mFormId": "<string>",
+      "mResourceId": "<string>",
+      "mResourceType": "<string>",
+      "mStatus": "<string>",
+      "mOwner": "<string>",
+      "mAssignee": "<string>",
+      "metadata": {}
+    }
+examples: ./.resources/Post orders - tasks to a resource in Dina.resources/examples
+order: 2000

@@ -1,0 +1,92 @@
+$kind: http-request
+description: Create new stories or pitches in Dina
+url: "{{baseUrl}}/stories"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "mTitle": "<string>",
+      "mType": "<string>",
+      "mDescription": "<string>",
+      "mPublishingAt": "<string>",
+      "mMetaData": [
+        [
+          {
+            "key": "<string>",
+            "value": "<string>"
+          },
+          {
+            "key": "<string>",
+            "value": "<string>"
+          }
+        ],
+        [
+          {
+            "key": "<string>",
+            "value": "<string>"
+          },
+          {
+            "key": "<string>",
+            "value": "<string>"
+          }
+        ]
+      ],
+      "metadata": {
+        "aliqua6": -84361950,
+        "cillum_0": 6285283.842522517,
+        "ad_ee4": -22526852
+      },
+      "mIcon": "<string>",
+      "assignedMemberIds": [
+        "<string>",
+        "<string>"
+      ],
+      "content": {
+        "document": [
+          {
+            "type": "heading-one",
+            "children": [
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              },
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              }
+            ]
+          },
+          {
+            "type": "heading-one",
+            "children": [
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              },
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              }
+            ]
+          }
+        ]
+      }
+    }
+examples: ./.resources/Post stories or pitches to Dina.resources/examples
+order: 2000

@@ -1,0 +1,32 @@
+$kind: http-example
+name: Get All Transcription Language Settings for the system.
+request:
+  url: "{{baseUrl}}/config/api/v1/systemConfig/transcriptionLanguageSettings"
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "total": "<number>",
+        "_embedded": {
+          "collection": [
+            {
+              "awsTranscribeCode": "<string>",
+              "defaultList": "<boolean>",
+              "ibmNluCode": "<string>",
+              "ibmSpeechToTextCode": "<string>",
+              "label": "<string>",
+              "languageCode": "<string>",
+              "textrazorCode": "<string>"
+            }
+          ]
+        }
+      }
+order: 1000

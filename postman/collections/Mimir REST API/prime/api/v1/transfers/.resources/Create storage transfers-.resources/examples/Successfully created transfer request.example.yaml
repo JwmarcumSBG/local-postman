@@ -1,0 +1,50 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/prime/api/v1/transfers"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "itemId": "<string>",
+        "artefact": "highres",
+        "destinationStorageId": "<string>",
+        "targetFileName": "<string>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "itemId": "<string>",
+        "artefact": "highres",
+        "source": {
+          "storageId": "<string>",
+          "name": "<string>",
+          "path": "<string>",
+          "type": "aws-s3"
+        },
+        "destination": {
+          "storageId": "<string>",
+          "name": "<string>",
+          "path": "<string>",
+          "type": "aws-s3"
+        },
+        "state": "error",
+        "progressInfo": {
+          "totalSizeInBytes": "<number>",
+          "transferredBytes": "<number>"
+        },
+        "statusMessage": "<string>",
+        "requestByUserId": "<string>",
+        "createdOn": "<string>",
+        "modifiedOn": "<string>"
+      }
+order: 1000

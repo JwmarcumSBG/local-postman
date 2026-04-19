@@ -1,0 +1,23 @@
+$kind: http-request
+description: Allows updating only a part of a contact
+url: "{{baseUrl}}/contacts/:id"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: "(Required) "
+body:
+  type: json
+  content: |-
+    {
+      "title": "<string>",
+      "description": "<string>",
+      "metadata": {
+        "cillum_3a9": 87297958
+      }
+    }
+examples: ./.resources/Partial update of a single contact.resources/examples
+order: 3000

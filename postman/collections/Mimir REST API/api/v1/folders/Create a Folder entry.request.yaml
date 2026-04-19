@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/folders"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "<string>",
+      "parent": "<string>"
+    }
+examples: ./.resources/Create a Folder entry.resources/examples
+order: 4000

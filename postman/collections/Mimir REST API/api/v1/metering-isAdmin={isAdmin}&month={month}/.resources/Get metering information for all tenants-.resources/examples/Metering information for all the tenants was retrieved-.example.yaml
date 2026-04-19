@@ -1,0 +1,82 @@
+$kind: http-example
+name: Metering information for all the tenants was retrieved.
+request:
+  url: "{{baseUrl}}/api/v1/metering?isAdmin=<boolean>&month=<string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: isAdmin
+      value: <boolean>
+      description: A boolean which determines if the metering information should be fetched for Admin panel or not.
+    - key: month
+      value: <string>
+      description: Month in the format of YYYY-MM.
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "meteringDataGroupByTenant": [
+          {
+            "tenantId": {
+              "cost": "<number>",
+              "Transcoding": {
+                "cost": "<number>",
+                "duration": "<number>",
+                "unit": "<number>",
+                "count": "<number>"
+              },
+              "audioExtraction": {
+                "cost": "<number>",
+                "duration": "<number>",
+                "unit": "<number>",
+                "count": "<number>"
+              },
+              "transcription": {
+                "cost": "<number>",
+                "duration": "<number>",
+                "unit": "<number>",
+                "count": "<number>"
+              },
+              "translation": {
+                "cost": "<number>",
+                "duration": "<number>",
+                "unit": "<number>",
+                "count": "<number>"
+              },
+              "celebrityDetection": {
+                "cost": "<number>",
+                "duration": "<number>",
+                "unit": "<number>",
+                "count": "<number>"
+              },
+              "personDetection": {
+                "cost": "<number>",
+                "duration": "<number>",
+                "unit": "<number>",
+                "count": "<number>"
+              },
+              "labelDetection": {
+                "cost": "<number>",
+                "duration": "<number>",
+                "unit": "<number>",
+                "count": "<number>"
+              },
+              "storage": {
+                "cost": "<number>",
+                "unit": "<number>",
+                "count": "<number>"
+              }
+            }
+          }
+        ],
+        "startDay": "<number>",
+        "endDay": "<number>",
+        "cost": "<number>"
+      }
+order: 1000

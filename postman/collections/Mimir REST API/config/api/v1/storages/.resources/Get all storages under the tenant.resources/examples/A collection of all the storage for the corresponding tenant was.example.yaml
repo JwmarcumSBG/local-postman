@@ -1,0 +1,30 @@
+$kind: http-example
+name: A collection of all the storage for the corresponding tenant was retrieved.
+request:
+  url: "{{baseUrl}}/config/api/v1/storages"
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "total": "<number>",
+        "_embedded": {
+          "collection": [
+            {
+              "id": "<string>",
+              "createdOn": "<dateTime>",
+              "tenantId": "<string>",
+              "name": "<string>",
+              "description": "<string>"
+            }
+          ]
+        }
+      }
+order: 1000

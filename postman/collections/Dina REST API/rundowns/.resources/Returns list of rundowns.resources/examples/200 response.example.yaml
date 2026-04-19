@@ -1,0 +1,338 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/rundowns?type=rundown&from=<string>&to=<string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: type
+      value: rundown
+      description: rundown type master rundown(type=rundowntemplate) or
+        daily(rundown). If nothing specified daily rundown will be returned
+    - key: from
+      value: <string>
+      description: start date to filter daily rundowns when query for rundown list
+    - key: to
+      value: <string>
+      description: end date to filter daily rundowns when query for rundown list
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": "<string>",
+          "title": "<string>",
+          "type": "rundown",
+          "publishingTime": "<dateTime>",
+          "updatedById": "<string>",
+          "createdAt": "<dateTime>",
+          "updatedAt": "<dateTime>",
+          "version": "<integer>",
+          "ready": {
+            "state": "active",
+            "plannedDuration": "<integer>",
+            "instances": [
+              {
+                "id": "<string>",
+                "title": "<string>",
+                "publishingAt": "<dateTime>",
+                "state": "<string>",
+                "createdAt": "<dateTime>",
+                "updatedAt": "<dateTime>",
+                "updatedById": "<string>",
+                "platformInfo": {
+                  "platform": "linear",
+                  "platformKind": "<string>",
+                  "account": {
+                    "accountId": "<string>",
+                    "accountTitle": "<string>"
+                  }
+                },
+                "version": "<integer>",
+                "isPlaceholder": "<boolean>",
+                "metadata": {
+                  "officia_7b": false
+                },
+                "mMetaData": [
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  }
+                ]
+              },
+              {
+                "id": "<string>",
+                "title": "<string>",
+                "publishingAt": "<dateTime>",
+                "state": "<string>",
+                "createdAt": "<dateTime>",
+                "updatedAt": "<dateTime>",
+                "updatedById": "<string>",
+                "platformInfo": {
+                  "platform": "cms",
+                  "platformKind": "<string>",
+                  "account": {
+                    "accountId": "<string>",
+                    "accountTitle": "<string>"
+                  }
+                },
+                "version": "<integer>",
+                "isPlaceholder": "<boolean>",
+                "metadata": {
+                  "ut_6a6": "adipisicing veniam"
+                },
+                "mMetaData": [
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  }
+                ]
+              }
+            ]
+          },
+          "preparing": {
+            "state": "notready",
+            "plannedDuration": "<integer>",
+            "instances": [
+              {
+                "id": "<string>",
+                "title": "<string>",
+                "publishingAt": "<dateTime>",
+                "state": "<string>",
+                "createdAt": "<dateTime>",
+                "updatedAt": "<dateTime>",
+                "updatedById": "<string>",
+                "platformInfo": {
+                  "platform": "cms",
+                  "platformKind": "<string>",
+                  "account": {
+                    "accountId": "<string>",
+                    "accountTitle": "<string>"
+                  }
+                },
+                "version": "<integer>",
+                "isPlaceholder": "<boolean>",
+                "metadata": {
+                  "dolorb": false,
+                  "consequatd6b": "veniam amet",
+                  "adipisicing_a": "dolor enim magna cupidatat"
+                },
+                "mMetaData": [
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  }
+                ]
+              },
+              {
+                "id": "<string>",
+                "title": "<string>",
+                "publishingAt": "<dateTime>",
+                "state": "<string>",
+                "createdAt": "<dateTime>",
+                "updatedAt": "<dateTime>",
+                "updatedById": "<string>",
+                "platformInfo": {
+                  "platform": "linear",
+                  "platformKind": "<string>",
+                  "account": {
+                    "accountId": "<string>",
+                    "accountTitle": "<string>"
+                  }
+                },
+                "version": "<integer>",
+                "isPlaceholder": "<boolean>",
+                "metadata": {
+                  "dolor_bb6": true,
+                  "exercitation_c29": "minim quis anim eu tempor"
+                },
+                "mMetaData": [
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "<string>",
+          "title": "<string>",
+          "type": "rundown",
+          "publishingTime": "<dateTime>",
+          "updatedById": "<string>",
+          "createdAt": "<dateTime>",
+          "updatedAt": "<dateTime>",
+          "version": "<integer>",
+          "ready": {
+            "state": "active",
+            "plannedDuration": "<integer>",
+            "instances": [
+              {
+                "id": "<string>",
+                "title": "<string>",
+                "publishingAt": "<dateTime>",
+                "state": "<string>",
+                "createdAt": "<dateTime>",
+                "updatedAt": "<dateTime>",
+                "updatedById": "<string>",
+                "platformInfo": {
+                  "platform": "linear",
+                  "platformKind": "<string>",
+                  "account": {
+                    "accountId": "<string>",
+                    "accountTitle": "<string>"
+                  }
+                },
+                "version": "<integer>",
+                "isPlaceholder": "<boolean>",
+                "metadata": {
+                  "sit0": "et amet",
+                  "cillum_6e": "mollit aliqua eiusmod"
+                },
+                "mMetaData": [
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  }
+                ]
+              },
+              {
+                "id": "<string>",
+                "title": "<string>",
+                "publishingAt": "<dateTime>",
+                "state": "<string>",
+                "createdAt": "<dateTime>",
+                "updatedAt": "<dateTime>",
+                "updatedById": "<string>",
+                "platformInfo": {
+                  "platform": "cms",
+                  "platformKind": "<string>",
+                  "account": {
+                    "accountId": "<string>",
+                    "accountTitle": "<string>"
+                  }
+                },
+                "version": "<integer>",
+                "isPlaceholder": "<boolean>",
+                "metadata": {
+                  "proident_8e": 6084664,
+                  "aliquip6a": true
+                },
+                "mMetaData": [
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  }
+                ]
+              }
+            ]
+          },
+          "preparing": {
+            "state": "active",
+            "plannedDuration": "<integer>",
+            "instances": [
+              {
+                "id": "<string>",
+                "title": "<string>",
+                "publishingAt": "<dateTime>",
+                "state": "<string>",
+                "createdAt": "<dateTime>",
+                "updatedAt": "<dateTime>",
+                "updatedById": "<string>",
+                "platformInfo": {
+                  "platform": "linear",
+                  "platformKind": "<string>",
+                  "account": {
+                    "accountId": "<string>",
+                    "accountTitle": "<string>"
+                  }
+                },
+                "version": "<integer>",
+                "isPlaceholder": "<boolean>",
+                "metadata": {
+                  "ea_14": true,
+                  "Duisb": "id Lorem culpa consectetur quis",
+                  "deserunt_6": false,
+                  "pariatur_3e6": true
+                },
+                "mMetaData": [
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  }
+                ]
+              },
+              {
+                "id": "<string>",
+                "title": "<string>",
+                "publishingAt": "<dateTime>",
+                "state": "<string>",
+                "createdAt": "<dateTime>",
+                "updatedAt": "<dateTime>",
+                "updatedById": "<string>",
+                "platformInfo": {
+                  "platform": "linear",
+                  "platformKind": "<string>",
+                  "account": {
+                    "accountId": "<string>",
+                    "accountTitle": "<string>"
+                  }
+                },
+                "version": "<integer>",
+                "isPlaceholder": "<boolean>",
+                "metadata": {
+                  "ipsum_974": 80010347.2211484,
+                  "ad_4": "Duis veniam fugiat Excepteur",
+                  "anim_9": "ad ea ut"
+                },
+                "mMetaData": [
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "<string>",
+                    "value": "<string>"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+order: 1000

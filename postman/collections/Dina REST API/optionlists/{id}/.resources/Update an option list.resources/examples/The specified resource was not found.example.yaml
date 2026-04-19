@@ -1,0 +1,42 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/optionlists/:id"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "label": "<string>",
+        "id": "<string>",
+        "description": "<string>",
+        "alternatives": [
+          {
+            "id": "<string>",
+            "label": "<string>",
+            "value": "<string>"
+          },
+          {
+            "id": "<string>",
+            "label": "<string>",
+            "value": "<string>"
+          }
+        ]
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 3000

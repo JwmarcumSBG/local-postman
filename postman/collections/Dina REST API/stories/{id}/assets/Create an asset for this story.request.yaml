@@ -1,0 +1,21 @@
+$kind: http-request
+description: Create an asset for this story
+url: "{{baseUrl}}/stories/:id/assets"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Story id
+body:
+  type: json
+  content: |-
+    {
+      "title": "<string>",
+      "itemType": "<string>",
+      "externalId": "<string>"
+    }
+examples: ./.resources/Create an asset for this story.resources/examples
+order: 3000

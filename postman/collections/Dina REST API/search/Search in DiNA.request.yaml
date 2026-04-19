@@ -1,0 +1,88 @@
+$kind: http-request
+description: Search in DiNA with additional filters
+url: "{{baseUrl}}/search"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: >-
+    {
+      "ids": [
+        "<string>",
+        "<string>"
+      ],
+      "statusList": [
+        "<string>",
+        "<string>"
+      ],
+      "types": [
+        "<string>",
+        "<string>"
+      ],
+      "title": "<string>",
+      "mdfId": "<string>",
+      "assignedMemberIds": [
+        "<string>",
+        "<string>"
+      ],
+      "assignedMemberIdsMustOccur": [
+        "<string>",
+        "<string>"
+      ],
+      "createdByIds": [
+        "<string>",
+        "<string>"
+      ],
+      "priorities": [
+        "<string>",
+        "<string>"
+      ],
+      "searchString": "<string>",
+      "semanticSearch": "<boolean>",
+      "fuzzySearch": "<boolean>",
+      "isScheduled": "<boolean>",
+      "isTemplateInstance": "<boolean>",
+      "searchAfter": {
+        "description": "The pagination key provided in the field `nextToken` in the previous search to get the next page. Provides better performance than using `from`."
+      },
+      "from": "<number>",
+      "perPagelimit": "<number>",
+      "trackTotalHits": "<boolean>",
+      "rangeBy": {
+        "createdAt": {
+          "from": "<string>",
+          "to": "<string>"
+        },
+        "updatedAt": {
+          "from": "<string>",
+          "to": "<string>"
+        },
+        "scheduledAt": {
+          "from": "<string>",
+          "to": "<string>"
+        }
+      },
+      "orderBy": {
+        "createdAt": "desc",
+        "updatedAt": "asc",
+        "scheduledAt": "asc",
+        "title": "desc",
+        "totalInstances": "asc"
+      },
+      "metaDataFilter": {
+        "dolore_931": 72632549.16766632
+      },
+      "metaDataFilterByType": {
+        "in_e": "Duis Ut dolore aliquip dolor",
+        "nulla_70": 78308729,
+        "mollit8": false
+      },
+      "platformTypes": [
+        "<string>",
+        "<string>"
+      ]
+    }
+examples: ./.resources/Search in DiNA.resources/examples
+order: 1000

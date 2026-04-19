@@ -1,0 +1,26 @@
+$kind: http-example
+name: The user does not have permission to execute this action or the action is not allowed.
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/mediaSegments/:stereamIds/:signedForMethod/:firstSegmentIndex"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+    stereamIds: ""
+    signedForMethod: ""
+    firstSegmentIndex: ""
+response:
+  statusCode: 403
+  statusText: Forbidden
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 4000

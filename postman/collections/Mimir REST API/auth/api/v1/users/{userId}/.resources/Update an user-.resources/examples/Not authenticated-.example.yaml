@@ -1,0 +1,38 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/auth/api/v1/users/:userId"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    userId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "givenName": "<string>",
+        "familyName": "<string>",
+        "accountStatus": "VERIFIED",
+        "groups": [
+          "<string>",
+          "<string>"
+        ],
+        "notListable": "<boolean>",
+        "isDeactivated": "<boolean>"
+      }
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

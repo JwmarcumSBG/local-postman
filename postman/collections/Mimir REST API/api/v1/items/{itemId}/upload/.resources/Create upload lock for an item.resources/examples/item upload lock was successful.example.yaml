@@ -1,0 +1,46 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/upload"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "lockOwnerInstanceId": "<string>",
+        "uploadLocationId": "<string>",
+        "fileName": "<string>",
+        "isMultiPartUpload": "<boolean>",
+        "fileSize": "<number>",
+        "contentType": "<string>",
+        "chunkSize": "<number>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "type": "<string>",
+        "region": "<boolean>",
+        "enableS3Acceleration": "<boolean>",
+        "bucketEndpoint": "<string>",
+        "isExternalBucket": "<boolean>",
+        "accessKey": "<string>",
+        "secretKey": "<string>",
+        "isUploadLocked": "<boolean>",
+        "uploadSignedUrl": "<string>",
+        "bucketCredentials": "<string>",
+        "uploadId": "<string>",
+        "uploadPartSize": "<string>",
+        "uploadPartCount": "<number>"
+      }
+order: 1000

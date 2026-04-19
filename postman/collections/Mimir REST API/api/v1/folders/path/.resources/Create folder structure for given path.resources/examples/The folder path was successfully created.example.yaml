@@ -1,0 +1,33 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/folders/path"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "path": "<string>",
+        "rootFolderId": "<string>"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "eu_c4": "<string>"
+        },
+        {
+          "ut_d": "<string>",
+          "consequat_26": "<string>",
+          "in835": "<string>"
+        }
+      ]
+order: 1000

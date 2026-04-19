@@ -1,0 +1,39 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/transcript"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "timedTranscript": [
+          {
+            "content": "<string>",
+            "startTime": "<number>",
+            "endTime": "<number>"
+          }
+        ],
+        "languageCode": "<string>",
+        "isTranslation": "<boolean>",
+        "translationTargetLanguage": "<string>"
+      }
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

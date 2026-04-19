@@ -1,0 +1,25 @@
+$kind: http-request
+description: Get orders for this planning item
+url: "{{baseUrl}}/planningItems/:id/orders?limit=<integer>&key=<string>&sortOrd\
+  er=asc&status=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: limit
+    value: <integer>
+    description: Max number of orders to retrieve.
+  - key: key
+    value: <string>
+    description: Pagination key
+  - key: sortOrder
+    value: asc
+    description: Sort order. Either asc or desc
+  - key: status
+    value: <string>
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Planning item id
+examples: ./.resources/Get orders for this planning item.resources/examples
+order: 1000

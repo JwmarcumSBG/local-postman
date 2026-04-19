@@ -1,0 +1,70 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/stories/:id/assets"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "assets",
+        "timestamp": "<dateTime>",
+        "assets": [
+          {
+            "id": "<string>",
+            "type": "pitch",
+            "title": "<string>",
+            "description": "<string>",
+            "mdfId": "<string>",
+            "metadata": {
+              "voluptate_99c": "consequat sed Lorem",
+              "in__": 8900074.891371101,
+              "esse6e1": 19920917
+            },
+            "createdAt": "<dateTime>",
+            "createdById": "<string>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>",
+            "version": "<integer>",
+            "state": "<string>",
+            "mediaType": "<string>",
+            "itemType": "<string>",
+            "externalId": "<string>",
+            "provider": "<string>"
+          },
+          {
+            "id": "<string>",
+            "type": "pitch",
+            "title": "<string>",
+            "description": "<string>",
+            "mdfId": "<string>",
+            "metadata": {
+              "laborum_54f": "Duis irure do reprehenderit",
+              "aliquip7": 53161868,
+              "tempor_17": 93902076
+            },
+            "createdAt": "<dateTime>",
+            "createdById": "<string>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>",
+            "version": "<integer>",
+            "state": "<string>",
+            "mediaType": "<string>",
+            "itemType": "<string>",
+            "externalId": "<string>",
+            "provider": "<string>"
+          }
+        ],
+        "links": {
+          "self": "<string>"
+        }
+      }
+order: 1000

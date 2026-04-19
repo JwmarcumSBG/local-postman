@@ -1,0 +1,22 @@
+$kind: http-request
+description: Create a slash command
+url: "{{baseUrl}}/commands"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "id": "<string>",
+      "title": "<string>",
+      "mdfId": "<string>",
+      "type": "config",
+      "command": "<string>",
+      "active": "<boolean>",
+      "color": "<string>",
+      "singleOnly": "<boolean>"
+    }
+examples: ./.resources/Create a slash command.resources/examples
+order: 3000

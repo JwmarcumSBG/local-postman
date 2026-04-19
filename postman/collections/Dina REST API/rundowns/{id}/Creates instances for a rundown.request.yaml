@@ -1,0 +1,90 @@
+$kind: http-request
+description: Add a new instance to rundown
+url: "{{baseUrl}}/rundowns/:id"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Rundown id
+body:
+  type: json
+  content: |-
+    {
+      "title": "<string>",
+      "metadata": {
+        "dolor35e": false,
+        "Duis36": -48033521.790537395
+      },
+      "isPreparing": "<boolean>",
+      "index": "<integer>",
+      "templateId": "<string>",
+      "content": {
+        "document": [
+          {
+            "type": "automation",
+            "data": {
+              "templateType": "AUDIO",
+              "templateVariant": "<string>",
+              "assets": [
+                {
+                  "mId": "<string>",
+                  "mRefId": "<string>",
+                  "mProvider": "<string>",
+                  "mediaType": "<string>",
+                  "mAssetId": "<string>",
+                  "mosobj": "<string>",
+                  "mTitle": "<string>",
+                  "duration": "<integer>"
+                },
+                {
+                  "mId": "<string>",
+                  "mRefId": "<string>",
+                  "mProvider": "<string>",
+                  "mediaType": "<string>",
+                  "mAssetId": "<string>",
+                  "mosobj": "<string>",
+                  "mTitle": "<string>",
+                  "duration": "<integer>"
+                }
+              ],
+              "itemId": "<string>"
+            }
+          },
+          {
+            "type": "automation",
+            "data": {
+              "templateType": "ADLIB",
+              "templateVariant": "<string>",
+              "assets": [
+                {
+                  "mId": "<string>",
+                  "mRefId": "<string>",
+                  "mProvider": "<string>",
+                  "mediaType": "<string>",
+                  "mAssetId": "<string>",
+                  "mosobj": "<string>",
+                  "mTitle": "<string>",
+                  "duration": "<integer>"
+                },
+                {
+                  "mId": "<string>",
+                  "mRefId": "<string>",
+                  "mProvider": "<string>",
+                  "mediaType": "<string>",
+                  "mAssetId": "<string>",
+                  "mosobj": "<string>",
+                  "mTitle": "<string>",
+                  "duration": "<integer>"
+                }
+              ],
+              "itemId": "<string>"
+            }
+          }
+        ]
+      }
+    }
+examples: ./.resources/Creates instances for a rundown.resources/examples
+order: 5000

@@ -1,0 +1,8 @@
+$kind: http-request
+description: Get all mdf schemas
+url: "{{baseUrl}}/mdfs"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Retrieve all mdf schemas.resources/examples
+order: 3000

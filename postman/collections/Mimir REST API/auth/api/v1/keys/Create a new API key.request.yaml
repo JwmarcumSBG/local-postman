@@ -1,0 +1,18 @@
+$kind: http-request
+description: Keys created using this endpoint are exclusively owned by the user making the request and can not be viewed or modified by other users.
+url: "{{baseUrl}}/auth/api/v1/keys"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "isActive": "<boolean>",
+      "expiryDate": "<string>",
+      "label": "<string>",
+      "maxUnusedDays": "<number>"
+    }
+examples: ./.resources/Create a new API key.resources/examples
+order: 3000

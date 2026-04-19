@@ -1,0 +1,29 @@
+$kind: http-example
+name: The user does not have permission to execute this action or the action is not allowed.
+request:
+  url: "{{baseUrl}}/folders/ancestry"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "ids": "<array>",
+        "type": "<string>"
+      }
+response:
+  statusCode: 403
+  statusText: Forbidden
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 4000

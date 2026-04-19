@@ -1,0 +1,17 @@
+$kind: http-request
+description: |
+  Create a person
+url: "{{baseUrl}}/api/v1/persons"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "<string>",
+      "description": "<string>"
+    }
+examples: ./.resources/Create a person.resources/examples
+order: 3000

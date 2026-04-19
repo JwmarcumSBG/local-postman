@@ -1,0 +1,25 @@
+$kind: http-request
+description: |
+  Create and send a custom notification to user(s) based on the provided parameters.
+url: "{{baseUrl}}/prime/api/v1/notifications"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "description": "<string>",
+      "email": "<string>",
+      "recipientType": "user-email",
+      "title": "<string>",
+      "validUntilDate": "<string>",
+      "action": {
+        "type": "navigate",
+        "label": "<string>",
+        "url": "<string>"
+      }
+    }
+examples: ./.resources/Create and send custom notifications.resources/examples
+order: 2000

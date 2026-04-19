@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/optionLists"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "<string>",
+      "alternatives": [
+        {
+          "label": "<string>",
+          "value": "<string>"
+        },
+        {
+          "label": "<string>",
+          "value": "<string>"
+        }
+      ],
+      "optionListType": "treeChoice"
+    }
+examples: ./.resources/Create an option list.resources/examples
+order: 3000

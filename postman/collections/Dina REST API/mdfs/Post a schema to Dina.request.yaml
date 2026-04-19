@@ -1,0 +1,65 @@
+$kind: http-request
+description: Create new a mdf schema in Dina
+url: "{{baseUrl}}/mdfs"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "label": "<string>",
+      "fields": [
+        {
+          "fieldId": "<string>",
+          "required": "<boolean>",
+          "defaultValue": "<string>",
+          "type": "link",
+          "alternatives": [
+            {
+              "id": "<string>",
+              "label": "<string>",
+              "value": "<string>"
+            },
+            {
+              "id": "<string>",
+              "label": "<string>",
+              "value": "<string>"
+            }
+          ],
+          "constraint": {},
+          "filters": {
+            "minim_5": -1444227,
+            "dolor5b": -40223714,
+            "elit5": 98294864
+          }
+        },
+        {
+          "fieldId": "<string>",
+          "required": "<boolean>",
+          "defaultValue": "<string>",
+          "type": "user",
+          "alternatives": [
+            {
+              "id": "<string>",
+              "label": "<string>",
+              "value": "<string>"
+            },
+            {
+              "id": "<string>",
+              "label": "<string>",
+              "value": "<string>"
+            }
+          ],
+          "constraint": {},
+          "filters": {
+            "ex_ecd": "Ut ipsum nostrud",
+            "qui9a9": 39154751.5255796,
+            "est_9f2": true
+          }
+        }
+      ]
+    }
+examples: ./.resources/Post a schema to Dina.resources/examples
+order: 2000

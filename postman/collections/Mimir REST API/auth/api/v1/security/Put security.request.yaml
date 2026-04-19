@@ -1,0 +1,17 @@
+$kind: http-request
+description: |
+  Store a JSON object describing how to verify external authentication tokens
+  that a tenant can use to access their resources in the Mimir API.
+url: "{{baseUrl}}/auth/api/v1/security"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "jkwsUrl": "<string>",
+      "autoAddUsersToOrganizationGroup": "<boolean>"
+    }
+examples: ./.resources/Put security.resources/examples
+order: 2000

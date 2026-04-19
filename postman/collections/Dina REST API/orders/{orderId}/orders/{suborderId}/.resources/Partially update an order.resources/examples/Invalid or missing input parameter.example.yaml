@@ -1,0 +1,32 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/orders/:orderId/orders/:suborderId"
+  method: PATCH
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    orderId: ""
+    suborderId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "mStatus": "<string>",
+        "mOwner": "<string>",
+        "mAssignee": "<string>",
+        "metadata": {}
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 2000

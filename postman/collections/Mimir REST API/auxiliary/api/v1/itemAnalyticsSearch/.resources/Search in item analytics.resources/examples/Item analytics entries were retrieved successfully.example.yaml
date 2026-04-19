@@ -1,0 +1,113 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/auxiliary/api/v1/itemAnalyticsSearch?itemsPerPage=<integer>&from=0&searchString=<string>&sortBy=executedOn&sortOrder=desc&itemId=<string>&date=<dateTime>&readableMetadataFields=<boolean>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: itemsPerPage
+      value: <integer>
+      description: Number of elements should be returned per page.
+    - key: from
+      value: "0"
+      description: Start number of the page
+    - key: searchString
+      value: <string>
+      description: To limit the search results to entries that has a specific 'actionType' given by this parameter.
+    - key: sortBy
+      value: executedOn
+      description: Property to sort by.
+    - key: sortOrder
+      value: desc
+      description: Sort order of the result.
+    - key: itemId
+      value: <string>
+      description: ID of the item.
+    - key: date
+      value: <dateTime>
+      description: Analytic of that day.
+    - key: readableMetadataFields
+      value: <boolean>
+      description: If true, the <b>mdfDiff</b>'s internal GUID will be replaced with readable field IDs
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "hits": [
+          {
+            "id": "<string>",
+            "itemId": "<string>",
+            "executedBy": "<string>",
+            "actionType": "<string>",
+            "email": "<string>",
+            "executedOn": "<dateTime>",
+            "itemTitle": "<string>",
+            "storageId": "<string>",
+            "mdfDiff": {
+              "metadataFields": [
+                {
+                  "fieldId": "<string>",
+                  "oldValue": "<string>",
+                  "newValue": "<string>"
+                },
+                {
+                  "fieldId": "<string>",
+                  "oldValue": "<string>",
+                  "newValue": "<string>"
+                }
+              ],
+              "oldMdfId": "<string>",
+              "newMdfId": "<string>",
+              "startTime": {
+                "oldValue": "<number>",
+                "newValue": "<number>"
+              },
+              "duration": {
+                "oldValue": "<number>",
+                "newValue": "<number>"
+              }
+            }
+          },
+          {
+            "id": "<string>",
+            "itemId": "<string>",
+            "executedBy": "<string>",
+            "actionType": "<string>",
+            "email": "<string>",
+            "executedOn": "<dateTime>",
+            "itemTitle": "<string>",
+            "storageId": "<string>",
+            "mdfDiff": {
+              "metadataFields": [
+                {
+                  "fieldId": "<string>",
+                  "oldValue": "<string>",
+                  "newValue": "<string>"
+                },
+                {
+                  "fieldId": "<string>",
+                  "oldValue": "<string>",
+                  "newValue": "<string>"
+                }
+              ],
+              "oldMdfId": "<string>",
+              "newMdfId": "<string>",
+              "startTime": {
+                "oldValue": "<number>",
+                "newValue": "<number>"
+              },
+              "duration": {
+                "oldValue": "<number>",
+                "newValue": "<number>"
+              }
+            }
+          }
+        ],
+        "total": "<integer>"
+      }
+order: 1000

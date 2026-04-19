@@ -1,0 +1,21 @@
+$kind: http-request
+name: Delete an attachment from a specific item.
+description: This API is used to delete an attachment from a specific item.
+url: "{{baseUrl}}/api/v1/items/:itemId/attachments"
+method: DELETE
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) Unique ID of the item this attachment should be created for
+body:
+  type: json
+  content: |-
+    {
+      "type": "poster",
+      "fileName": "<string>"
+    }
+examples: ./.resources/Delete an attachment from a specific item-.resources/examples
+order: 4000

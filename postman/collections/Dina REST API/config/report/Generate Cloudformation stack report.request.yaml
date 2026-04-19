@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{baseUrl}}/config/report"
+method: GET
+examples: ./.resources/Generate Cloudformation stack report.resources/examples
+order: 1000

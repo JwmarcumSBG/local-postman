@@ -1,0 +1,32 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/persons"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "description": "<string>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "id": "<string>",
+        "description": "<string>",
+        "imageIds": "<array>",
+        "itemType": "<string>",
+        "primaryImageId": "<string>",
+        "createdOn": "<dateTime>"
+      }
+order: 1000

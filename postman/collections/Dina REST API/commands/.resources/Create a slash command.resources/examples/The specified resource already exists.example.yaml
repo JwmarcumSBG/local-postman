@@ -1,0 +1,33 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/commands"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "title": "<string>",
+        "mdfId": "<string>",
+        "type": "config",
+        "command": "<string>",
+        "active": "<boolean>",
+        "color": "<string>",
+        "singleOnly": "<boolean>"
+      }
+response:
+  statusCode: 409
+  statusText: Conflict
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 4000

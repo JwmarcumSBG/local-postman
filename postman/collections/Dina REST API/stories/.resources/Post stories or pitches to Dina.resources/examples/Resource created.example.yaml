@@ -1,0 +1,164 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/stories"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "mTitle": "<string>",
+        "mType": "<string>",
+        "mDescription": "<string>",
+        "mPublishingAt": "<string>",
+        "mMetaData": [
+          [
+            {
+              "key": "<string>",
+              "value": "<string>"
+            },
+            {
+              "key": "<string>",
+              "value": "<string>"
+            }
+          ],
+          [
+            {
+              "key": "<string>",
+              "value": "<string>"
+            },
+            {
+              "key": "<string>",
+              "value": "<string>"
+            }
+          ]
+        ],
+        "metadata": {
+          "aliqua6": -84361950,
+          "cillum_0": 6285283.842522517,
+          "ad_ee4": -22526852
+        },
+        "mIcon": "<string>",
+        "assignedMemberIds": [
+          "<string>",
+          "<string>"
+        ],
+        "content": {
+          "document": [
+            {
+              "type": "heading-one",
+              "children": [
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                },
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                }
+              ]
+            },
+            {
+              "type": "heading-one",
+              "children": [
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                },
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                }
+              ]
+            }
+          ]
+        }
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "mId": "<string>",
+        "mLastVersion": "<string>",
+        "mCreatedAt": "<dateTime>",
+        "mdfId": "<string>",
+        "mState": "<string>",
+        "mUpdatedAt": "<dateTime>",
+        "mUpdatedById": "<string>",
+        "mDescription": "<string>",
+        "mCreatedById": "<string>",
+        "mPublishingAt": "<dateTime>",
+        "mPublishingEnd": "<dateTime>",
+        "mType": "<string>",
+        "mAssignedMembers": [
+          {
+            "mId": "<string>",
+            "mType": "<string>"
+          },
+          {
+            "mId": "<string>",
+            "mType": "<string>"
+          }
+        ],
+        "metadata": {
+          "ad92": 71475030,
+          "laborum_9": -41868785,
+          "exercitation_9bc": "laborum quis ex",
+          "aliquip_32_": -11766914
+        },
+        "version": "<integer>",
+        "mTitle": "<string>",
+        "mIcon": "<string>",
+        "isRestricted": "<boolean>",
+        "mSyncProviders": [
+          {
+            "provider": "<string>",
+            "mId": "<string>",
+            "mMetaData": [
+              {
+                "key": "<string>",
+                "value": "<string>"
+              },
+              {
+                "key": "<string>",
+                "value": "<string>"
+              }
+            ]
+          },
+          {
+            "provider": "<string>",
+            "mId": "<string>",
+            "mMetaData": [
+              {
+                "key": "<string>",
+                "value": "<string>"
+              },
+              {
+                "key": "<string>",
+                "value": "<string>"
+              }
+            ]
+          }
+        ],
+        "contentUrl": "<string>"
+      }
+order: 1000

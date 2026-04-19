@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{baseUrl}}/prime/api/v1/live/scheduled/:id"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) Recording item id
+examples: ./.resources/Get a scheduled recording item.resources/examples
+order: 1000

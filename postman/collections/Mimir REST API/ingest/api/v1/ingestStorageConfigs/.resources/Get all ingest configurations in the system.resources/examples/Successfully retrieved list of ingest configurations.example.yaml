@@ -1,0 +1,197 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/ingest/api/v1/ingestStorageConfigs"
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": "<string>",
+          "title": "<string>",
+          "ingestConfigType": "ingest_media",
+          "isDisabled": "<boolean>",
+          "storageProvider": "s3_native",
+          "sourceBucket": "<string>",
+          "sourceKeyPrefix": "<string>",
+          "sourceEndpoint": "<string>",
+          "accessKey": "<string>",
+          "accessType": "assume-role",
+          "externalId": "<string>",
+          "ingestFileExtensions": "<string>",
+          "highresFolder": "<string>",
+          "targetFolder": "<string>",
+          "targetFolderRemoveSourcePrefix": "<boolean>",
+          "requireSidecar": "<boolean>",
+          "sidecarParser": "vizOneXml",
+          "sidecarFileName": "<string>",
+          "confidence": "<integer>",
+          "sourceLastModified": "<dateTime>",
+          "analyticConfig": {
+            "transcriptionEnabled": "<boolean>",
+            "transcriptionConfig": {
+              "transcriptionSourceLanguage": "<string>",
+              "transcriptionService": "awsTranscribe",
+              "transcriptionChannels": [
+                "<number>",
+                "<number>"
+              ]
+            },
+            "labelDetectionEnabled": "<boolean>",
+            "textDetectionEnabled": "<boolean>",
+            "textDetectionSettings": {
+              "minWords": "<number>",
+              "minHeight": "<number>"
+            },
+            "personDetectionEnabled": "<boolean>",
+            "personDetectionConfig": {
+              "createUnknownPersons": "<boolean>"
+            },
+            "celebrityDetectionEnabled": "<boolean>"
+          },
+          "enableS3Acceleration": "<boolean>",
+          "deleteEnabled": "<boolean>",
+          "isProxyOnlyIngestConfig": "<boolean>",
+          "defaultMetadata": {
+            "formId": "<string>",
+            "formData": {}
+          },
+          "defaultTimedMetadata": {
+            "items": [
+              {
+                "startMs": "<number>",
+                "endMs": "<number>",
+                "data": {
+                  "formId": "<string>",
+                  "formData": {}
+                }
+              },
+              {
+                "startMs": "<number>",
+                "endMs": "<number>",
+                "data": {
+                  "formId": "<string>",
+                  "formData": {}
+                }
+              }
+            ],
+            "description": -55710566.07009255
+          },
+          "scanStorageState": {
+            "state": "complete",
+            "message": "<string>",
+            "modifiedOn": "<dateTime>"
+          },
+          "visibleTo": {
+            "level": "tenant",
+            "groups": [
+              "<string>",
+              "<string>"
+            ]
+          },
+          "visibleToGroupList": [
+            "<string>",
+            "<string>"
+          ],
+          "tenantId": "<string>",
+          "awsAccountId": "<string>"
+        },
+        {
+          "id": "<string>",
+          "title": "<string>",
+          "ingestConfigType": "ingest_persons",
+          "isDisabled": "<boolean>",
+          "storageProvider": "azure_blob",
+          "sourceBucket": "<string>",
+          "sourceKeyPrefix": "<string>",
+          "sourceEndpoint": "<string>",
+          "accessKey": "<string>",
+          "accessType": "iam-user",
+          "externalId": "<string>",
+          "ingestFileExtensions": "<string>",
+          "highresFolder": "<string>",
+          "targetFolder": "<string>",
+          "targetFolderRemoveSourcePrefix": "<boolean>",
+          "requireSidecar": "<boolean>",
+          "sidecarParser": "custom_json",
+          "sidecarFileName": "<string>",
+          "confidence": "<integer>",
+          "sourceLastModified": "<dateTime>",
+          "analyticConfig": {
+            "transcriptionEnabled": "<boolean>",
+            "transcriptionConfig": {
+              "transcriptionSourceLanguage": "<string>",
+              "transcriptionService": "amberscriptSpeechToText",
+              "transcriptionChannels": [
+                "<number>",
+                "<number>"
+              ]
+            },
+            "labelDetectionEnabled": "<boolean>",
+            "textDetectionEnabled": "<boolean>",
+            "textDetectionSettings": {
+              "minWords": "<number>",
+              "minHeight": "<number>"
+            },
+            "personDetectionEnabled": "<boolean>",
+            "personDetectionConfig": {
+              "createUnknownPersons": "<boolean>"
+            },
+            "celebrityDetectionEnabled": "<boolean>"
+          },
+          "enableS3Acceleration": "<boolean>",
+          "deleteEnabled": "<boolean>",
+          "isProxyOnlyIngestConfig": "<boolean>",
+          "defaultMetadata": {
+            "formId": "<string>",
+            "formData": {}
+          },
+          "defaultTimedMetadata": {
+            "items": [
+              {
+                "startMs": "<number>",
+                "endMs": "<number>",
+                "data": {
+                  "formId": "<string>",
+                  "formData": {}
+                }
+              },
+              {
+                "startMs": "<number>",
+                "endMs": "<number>",
+                "data": {
+                  "formId": "<string>",
+                  "formData": {}
+                }
+              }
+            ],
+            "description": true
+          },
+          "scanStorageState": {
+            "state": "in_progress",
+            "message": "<string>",
+            "modifiedOn": "<dateTime>"
+          },
+          "visibleTo": {
+            "level": "tenant",
+            "groups": [
+              "<string>",
+              "<string>"
+            ]
+          },
+          "visibleToGroupList": [
+            "<string>",
+            "<string>"
+          ],
+          "tenantId": "<string>",
+          "awsAccountId": "<string>"
+        }
+      ]
+order: 1000

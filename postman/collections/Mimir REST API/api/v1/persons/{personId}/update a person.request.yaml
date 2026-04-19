@@ -1,0 +1,22 @@
+$kind: http-request
+description: |
+  update a person
+url: "{{baseUrl}}/api/v1/persons/:personId"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: personId
+    value: <string>
+    description: (Required) The identifier string for person.
+body:
+  type: json
+  content: |-
+    {
+      "name": "<string>",
+      "description": "<string>",
+      "primaryImageId": "<string>"
+    }
+examples: ./.resources/update a person.resources/examples
+order: 1000

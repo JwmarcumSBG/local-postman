@@ -1,0 +1,7 @@
+$kind: http-request
+url: "https://us.mjoll.no/ingest/api/v1/generatedMediaLocations/mimir-kelda-wbff-2628-us-east-1%2Ffeeds%2F"
+method: GET
+headers:
+  x-mimir-cognito-id-token: Bearer {{api_key}}
+  Accept: application/json
+order: 6001

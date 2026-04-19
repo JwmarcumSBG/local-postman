@@ -1,0 +1,37 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/api/v1/items?ids=<string>&readableMetadataFields=<boolean>&fields=<string>&folderPath=<string>&itemTitle=<string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: ids
+      value: <string>
+      description: Given an array of item IDs like ["7c964cb5-0b9f-9e48-1669-0af85a036487"], the parameter value must be the URL-encoded string representation of this array. If 'ids' is not provided, 'folderPath' and 'itemTitle' query parameters must be provided.
+    - key: readableMetadataFields
+      value: <boolean>
+      description: If true, the <b>metadata</b> fields' internal GUID will be replaced with readable field IDs.
+    - key: fields
+      value: <string>
+      description: Specifies which of the items fields should be returned.
+    - key: folderPath
+      value: <string>
+      description: If provided along with 'itemTitle' query parameter, describes the mimir folder path where the desired items are.
+    - key: itemTitle
+      value: <string>
+      description: When provided along with 'folderPath' query parameter, the api will return items that have the exact title (case insensitive) under folderPath in mimir.
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 3000

@@ -1,0 +1,21 @@
+$kind: http-request
+description: |
+  An item can belong to multiple folders, adding an item to a folder adds a reference to the item
+  in this folder, unless it is already present.
+url: "{{baseUrl}}/api/v1/folders/:folderId/content"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: folderId
+    value: <string>
+    description: (Required) The folder ID
+body:
+  type: json
+  content: |-
+    {
+      "id": "<string>"
+    }
+examples: ./.resources/Add an item to a folder.resources/examples
+order: 2000

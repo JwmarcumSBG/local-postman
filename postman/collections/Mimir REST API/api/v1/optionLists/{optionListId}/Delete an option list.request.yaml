@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/optionLists/:optionListId"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  - key: optionListId
+    value: <string>
+    description: (Required) The ID of the option list model
+examples: ./.resources/Delete an option list.resources/examples
+order: 3000

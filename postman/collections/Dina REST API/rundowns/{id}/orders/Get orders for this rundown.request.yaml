@@ -1,0 +1,25 @@
+$kind: http-request
+description: Get orders for this rundown
+url: "{{baseUrl}}/rundowns/:id/orders?status=<string>&limit=<integer>&key=<stri\
+  ng>&sortOrder=asc"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: status
+    value: <string>
+  - key: limit
+    value: <integer>
+    description: Max number of orders to retrieve.
+  - key: key
+    value: <string>
+    description: Pagination key
+  - key: sortOrder
+    value: asc
+    description: Sort order. Either asc or desc
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Rundown id
+examples: ./.resources/Get orders for this rundown.resources/examples
+order: 3000

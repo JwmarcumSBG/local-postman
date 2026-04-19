@@ -1,0 +1,35 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/instances/:id/planningItems"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "commandId": "<string>",
+        "title": "<string>",
+        "metadata": {
+          "incididunte9b": "consectetur dolor amet incididunt et",
+          "mollit_d": 32725632.32263592,
+          "eaf_a": 83079459
+        }
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 2000

@@ -1,0 +1,31 @@
+$kind: http-request
+description: >
+  Creates a placeholder item for a direct signed upload. `itemType` is omitted
+  so Mimir derives it from the filename and falls back to `file`.
+url: "https://us.mjoll.no/api/v1/items"
+method: POST
+headers:
+  x-mimir-cognito-id-token: Bearer {{api_key}}
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "filename": "{{mimir_upload_file_name}}",
+      "metadata": {
+        "formId": "default",
+        "formData": {
+          "title": "{{mimir_upload_title}}"
+        }
+      }
+    }
+scripts:
+  - type: afterResponse
+    code: >-
+      pm.test('Status 200', function () { pm.response.to.have.status(200); });
+
+      try { const body = pm.response.json(); if (body && body.id) {
+      pm.environment.set('item_id', body.id); } } catch (e) {}
+    language: text/javascript
+order: 3000

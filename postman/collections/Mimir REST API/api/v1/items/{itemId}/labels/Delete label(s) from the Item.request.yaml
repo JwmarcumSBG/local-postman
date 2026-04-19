@@ -1,0 +1,24 @@
+$kind: http-request
+description: |
+  Delete label(s) from the Item
+url: "{{baseUrl}}/api/v1/items/:itemId/labels"
+method: DELETE
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: ""
+  - key: id
+    value: <string>
+    description: (Required) The resource identifier string.
+body:
+  type: json
+  content: |-
+    {
+      "labels": [
+        "<string>"
+      ]
+    }
+examples: ./.resources/Delete label(s) from the Item.resources/examples
+order: 1000

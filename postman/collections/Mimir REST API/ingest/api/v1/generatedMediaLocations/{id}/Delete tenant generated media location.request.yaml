@@ -1,0 +1,13 @@
+$kind: http-request
+description: |
+  Delete tenant generated media location
+url: "{{baseUrl}}/ingest/api/v1/generatedMediaLocations/:id"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) ID of the generated media location
+examples: ./.resources/Delete tenant generated media location.resources/examples
+order: 3000

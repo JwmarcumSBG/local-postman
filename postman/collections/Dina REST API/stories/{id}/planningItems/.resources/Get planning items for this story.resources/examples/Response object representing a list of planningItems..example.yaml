@@ -1,0 +1,54 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/stories/:id/planningItems"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "planningItems",
+        "timestamp": "<dateTime>",
+        "planningItems": [
+          {
+            "id": "<string>",
+            "hostId": "<string>",
+            "hostType": "story",
+            "type": "block",
+            "mdfId": "<string>",
+            "title": "<string>",
+            "commandId": "<string>",
+            "resourceId": "<string>",
+            "metadata": {
+              "in41": -25679703.060679644,
+              "consequat__": -7740066
+            }
+          },
+          {
+            "id": "<string>",
+            "hostId": "<string>",
+            "hostType": "story",
+            "type": "block",
+            "mdfId": "<string>",
+            "title": "<string>",
+            "commandId": "<string>",
+            "resourceId": "<string>",
+            "metadata": {
+              "magna_b09": true,
+              "velit3": 89961320
+            }
+          }
+        ],
+        "links": {
+          "self": "<string>"
+        }
+      }
+order: 1000

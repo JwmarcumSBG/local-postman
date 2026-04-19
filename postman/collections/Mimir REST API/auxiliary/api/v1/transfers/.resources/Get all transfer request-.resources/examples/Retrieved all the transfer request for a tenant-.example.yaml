@@ -1,0 +1,68 @@
+$kind: http-example
+name: Retrieved all the transfer request for a tenant.
+request:
+  url: "{{baseUrl}}/auxiliary/api/v1/transfers"
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": "<string>",
+          "createdOn": "<dateTime>",
+          "itemId": "<string>",
+          "modifiedOn": "<dateTime>",
+          "originalFileName": "<string>",
+          "storageId": "<string>",
+          "storageManagerInstanceId": "<string>",
+          "transferState": "<string>",
+          "targetFileName": "<string>",
+          "createLinkForTargetFileName": "<boolean>",
+          "artefact": "highres",
+          "errorCount": "<integer>",
+          "title": "<string>",
+          "highresIsOffline": "<boolean>",
+          "downloadProgress": {
+            "elapsedTime": "<number>",
+            "estimatedRemainingTime": "<number>",
+            "speed": "<number>",
+            "totalSize": "<number>",
+            "transferred": "<number>",
+            "progressUnit": "part",
+            "transientError": "<string>"
+          }
+        },
+        {
+          "id": "<string>",
+          "createdOn": "<dateTime>",
+          "itemId": "<string>",
+          "modifiedOn": "<dateTime>",
+          "originalFileName": "<string>",
+          "storageId": "<string>",
+          "storageManagerInstanceId": "<string>",
+          "transferState": "<string>",
+          "targetFileName": "<string>",
+          "createLinkForTargetFileName": "<boolean>",
+          "artefact": "highres",
+          "errorCount": "<integer>",
+          "title": "<string>",
+          "highresIsOffline": "<boolean>",
+          "downloadProgress": {
+            "elapsedTime": "<number>",
+            "estimatedRemainingTime": "<number>",
+            "speed": "<number>",
+            "totalSize": "<number>",
+            "transferred": "<number>",
+            "progressUnit": "byte",
+            "transientError": "<string>"
+          }
+        }
+      ]
+order: 1000

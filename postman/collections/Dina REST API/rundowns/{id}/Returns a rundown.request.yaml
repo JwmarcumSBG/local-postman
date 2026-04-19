@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/rundowns/:id?orderType=ready"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: orderType
+    value: ready
+    description: ready or preparing instances list. default is ready for linear instances
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) rundown id
+examples: ./.resources/Returns a rundown.resources/examples
+order: 4000

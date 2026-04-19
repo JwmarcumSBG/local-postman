@@ -1,0 +1,47 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/config/api/v1/bookmarks"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "path": "<string>",
+          "title": "<string>",
+          "icon": "<string>",
+          "isFilterBookmark": "<boolean>",
+          "visibleToGroups": [
+            "<string>",
+            "<string>"
+          ]
+        },
+        {
+          "path": "<string>",
+          "title": "<string>",
+          "icon": "<string>",
+          "isFilterBookmark": "<boolean>",
+          "visibleToGroups": [
+            "<string>",
+            "<string>"
+          ]
+        }
+      ]
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 3000

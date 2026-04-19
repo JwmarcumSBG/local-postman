@@ -1,0 +1,19 @@
+$kind: http-request
+description: Add a new instance to story
+url: "{{baseUrl}}/rundowns/:id/chat"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Story id
+body:
+  type: json
+  content: |-
+    {
+      "content": "<string>"
+    }
+examples: ./.resources/Creates chat for rundown by rundown id.resources/examples
+order: 3000

@@ -1,0 +1,23 @@
+$kind: http-request
+name: Delete a transfer request.
+description: Delete a transfer request.
+url: "{{baseUrl}}/api/v1/storages/:storageId/transferRequests/:transferRequestId"
+method: DELETE
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: storageId
+    value: <string>
+    description: (Required) The identifier string for storage.
+  - key: transferRequestId
+    value: <string>
+    description: (Required) The identifier string for transfer request.
+body:
+  type: json
+  content: |-
+    {
+      "transferState": "<string>"
+    }
+examples: ./.resources/Delete a transfer request-.resources/examples
+order: 3000

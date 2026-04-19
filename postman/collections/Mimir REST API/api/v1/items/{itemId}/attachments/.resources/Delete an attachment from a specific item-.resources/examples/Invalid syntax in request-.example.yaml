@@ -1,0 +1,31 @@
+$kind: http-example
+name: Invalid syntax in request.
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/attachments"
+  method: DELETE
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "type": "poster",
+        "fileName": "<string>"
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

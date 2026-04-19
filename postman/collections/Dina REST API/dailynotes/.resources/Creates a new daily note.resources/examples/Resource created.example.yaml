@@ -1,0 +1,73 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/dailynotes"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "content": {
+          "document": [
+            {
+              "type": "heading-four",
+              "children": [
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                },
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                }
+              ]
+            },
+            {
+              "type": "heading-two",
+              "children": [
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                },
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                }
+              ]
+            }
+          ]
+        },
+        "type": "<string>",
+        "date": "<string>"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "createdAt": "<dateTime>",
+        "updatedAt": "<dateTime>",
+        "updatedById": "<string>",
+        "type": "<string>",
+        "contentUrl": "<string>"
+      }
+order: 1000

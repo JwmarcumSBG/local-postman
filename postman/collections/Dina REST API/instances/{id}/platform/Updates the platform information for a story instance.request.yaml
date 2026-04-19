@@ -1,0 +1,36 @@
+$kind: http-request
+url: "{{baseUrl}}/instances/:id/platform"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) Instance id (mId)
+body:
+  type: json
+  content: |-
+    {
+      "provider": {
+        "requestId": "<string>",
+        "state": "<string>",
+        "message": "<string>",
+        "embeddedEndpoint": "<string>",
+        "previewEndpoint": "<string>",
+        "updateEndpoint": "<string>"
+      },
+      "update": [
+        {
+          "key": "<string>",
+          "value": "<string>"
+        },
+        {
+          "key": "<string>",
+          "value": "<string>"
+        }
+      ]
+    }
+examples: ./.resources/Updates the platform information for a story
+  instance.resources/examples
+order: 2000

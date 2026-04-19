@@ -1,0 +1,27 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/auth/api/v1/userInfo/users?id=<string>&email=<string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: id
+      value: <string>
+      description: The ID of the user
+    - key: email
+      value: <string>
+      description: The email of the user
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

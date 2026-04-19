@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/items/:itemId/relations?readableMetadataFields=<boolean>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: readableMetadataFields
+    value: <boolean>
+    description: If true, the <b>metadata</b> fields' internal GUID will be replaced with readable field IDs
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item
+examples: ./.resources/Retrieve all relation of the item.resources/examples
+order: 2000

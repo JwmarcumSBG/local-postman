@@ -1,0 +1,31 @@
+$kind: http-example
+name: Status of the all the storage managers are being retrieved.
+request:
+  url: "{{baseUrl}}/api/v1/storageManagers"
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "total": "<number>",
+        "_embedded": {
+          "collection": [
+            {
+              "userName": "<string>",
+              "ip": "<string>",
+              "version": "<string>",
+              "updatedOn": "<dateTime>",
+              "id": "<string>",
+              "tenantId": "<string>"
+            }
+          ]
+        }
+      }
+order: 1000

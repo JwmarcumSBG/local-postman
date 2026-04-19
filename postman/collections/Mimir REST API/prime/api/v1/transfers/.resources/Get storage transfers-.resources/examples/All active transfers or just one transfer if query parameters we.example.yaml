@@ -1,0 +1,75 @@
+$kind: http-example
+name: All active transfers or just one transfer if query parameters were provided for a specific one.
+request:
+  url: "{{baseUrl}}/prime/api/v1/transfers?dstStorageId=<string>&dstPath=<string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: dstStorageId
+      value: <string>
+      description: The unique ID of the destination storage. Get a specific transfer request by specifying the destination storage ID and path
+    - key: dstPath
+      value: <string>
+      description: The destination path of the transfer. Can be derived from the API response when the transfer was created. The parameter 'dstStorage' is required alongside 'dstPath'
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "itemId": "<string>",
+          "artefact": "highres",
+          "source": {
+            "storageId": "<string>",
+            "name": "<string>",
+            "path": "<string>",
+            "type": "aws-s3"
+          },
+          "destination": {
+            "storageId": "<string>",
+            "name": "<string>",
+            "path": "<string>",
+            "type": "aws-s3"
+          },
+          "state": "complete",
+          "progressInfo": {
+            "totalSizeInBytes": "<number>",
+            "transferredBytes": "<number>"
+          },
+          "statusMessage": "<string>",
+          "requestByUserId": "<string>",
+          "createdOn": "<string>",
+          "modifiedOn": "<string>"
+        },
+        {
+          "itemId": "<string>",
+          "artefact": "highres",
+          "source": {
+            "storageId": "<string>",
+            "name": "<string>",
+            "path": "<string>",
+            "type": "aws-s3"
+          },
+          "destination": {
+            "storageId": "<string>",
+            "name": "<string>",
+            "path": "<string>",
+            "type": "aws-s3"
+          },
+          "state": "in_progress",
+          "progressInfo": {
+            "totalSizeInBytes": "<number>",
+            "transferredBytes": "<number>"
+          },
+          "statusMessage": "<string>",
+          "requestByUserId": "<string>",
+          "createdOn": "<string>",
+          "modifiedOn": "<string>"
+        }
+      ]
+order: 1000

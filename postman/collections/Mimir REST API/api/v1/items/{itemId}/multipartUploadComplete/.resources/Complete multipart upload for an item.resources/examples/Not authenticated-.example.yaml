@@ -1,0 +1,43 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/multipartUploadComplete"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "uploadId": "<string>",
+        "uploadLocationId": "<string>",
+        "targetKey": "<string>",
+        "isCanceled": "<boolean>",
+        "uploadParts": [
+          {
+            "PartNumber": "<number>",
+            "ETag": "<string>"
+          },
+          {
+            "PartNumber": "<number>",
+            "ETag": "<string>"
+          }
+        ]
+      }
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 3000

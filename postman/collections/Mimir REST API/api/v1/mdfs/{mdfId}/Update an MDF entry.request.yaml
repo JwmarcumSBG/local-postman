@@ -1,0 +1,134 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/mdfs/:mdfId"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: mdfId
+    value: <string>
+    description: (Required) The ID of the MDF model
+body:
+  type: json
+  content: |-
+    {
+      "fields": [
+        {
+          "id": "<string>",
+          "fieldId": "<string>",
+          "type": "number",
+          "required": false,
+          "defaultValue": {},
+          "alternatives": [
+            {
+              "label": "<string>",
+              "value": "<string>"
+            },
+            {
+              "label": "<string>",
+              "value": "<string>"
+            }
+          ],
+          "optionListId": "<string>"
+        },
+        {
+          "id": "<string>",
+          "fieldId": "<string>",
+          "type": "checkbox",
+          "required": false,
+          "defaultValue": {},
+          "alternatives": [
+            {
+              "label": "<string>",
+              "value": "<string>"
+            },
+            {
+              "label": "<string>",
+              "value": "<string>"
+            }
+          ],
+          "optionListId": "<string>"
+        }
+      ],
+      "label": "<string>",
+      "active": "<boolean>",
+      "views": {
+        "item": [
+          {
+            "fieldId": "<string>",
+            "id": "<string>",
+            "visible": "<boolean>",
+            "label": "<string>",
+            "flex": "<integer>",
+            "multiline": "<boolean>",
+            "fieldHeight": null,
+            "hint": "<string>",
+            "icon": "<string>"
+          },
+          {
+            "fieldId": "<string>",
+            "id": "<string>",
+            "visible": "<boolean>",
+            "label": "<string>",
+            "flex": "<integer>",
+            "multiline": "<boolean>",
+            "fieldHeight": null,
+            "hint": "<string>",
+            "icon": "<string>"
+          }
+        ],
+        "search": [
+          {
+            "fieldId": "<string>",
+            "id": "<string>",
+            "visible": "<boolean>",
+            "label": "<string>",
+            "flex": "<integer>",
+            "multiline": "<boolean>",
+            "fieldHeight": null,
+            "hint": "<string>",
+            "icon": "<string>"
+          },
+          {
+            "fieldId": "<string>",
+            "id": "<string>",
+            "visible": "<boolean>",
+            "label": "<string>",
+            "flex": "<integer>",
+            "multiline": "<boolean>",
+            "fieldHeight": null,
+            "hint": "<string>",
+            "icon": "<string>"
+          }
+        ],
+        "editing": [
+          {
+            "fieldId": "<string>",
+            "id": "<string>",
+            "visible": "<boolean>",
+            "label": "<string>",
+            "flex": "<integer>",
+            "multiline": "<boolean>",
+            "fieldHeight": null,
+            "hint": "<string>",
+            "icon": "<string>"
+          },
+          {
+            "fieldId": "<string>",
+            "id": "<string>",
+            "visible": "<boolean>",
+            "label": "<string>",
+            "flex": "<integer>",
+            "multiline": "<boolean>",
+            "fieldHeight": null,
+            "hint": "<string>",
+            "icon": "<string>"
+          }
+        ]
+      },
+      "color": "<string>",
+      "icon": "<string>",
+      "rule": "<string>"
+    }
+examples: ./.resources/Update an MDF entry.resources/examples
+order: 2000

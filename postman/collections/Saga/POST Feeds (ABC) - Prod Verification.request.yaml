@@ -1,0 +1,149 @@
+$kind: http-request
+description: >-
+  Generated from cURL: curl --location --request POST '{{saga_base_url}}/feeds'
+  \
+
+  --header 'x-api-key: {{saga_api_key}}' \
+
+  --header 'Content-Type: application/json' \
+
+  --data-raw '{
+    "item": {
+      "uri": "postman-test-{{$timestamp}}",
+      "type": "ABC"
+    },
+    "payload": {
+      "source": "ABC"
+    }
+  }'
+url: "{{saga_base_url}}/feeds"
+method: POST
+headers:
+  x-api-key: "{{saga_api_key}}"
+  Content-Type: application/json
+body:
+  type: json
+  content: >-
+    {
+      "provider": "ABC",
+      "body": [
+        {
+          "uri": "postman-test-001",
+          "provider": "ABC",
+          "infosource": "ABC",
+          "versioncreated": "2026-03-03T20:00:00.000Z",
+          "firstcreated": "2026-03-03T20:00:00.000Z",
+          "headline": "Postman Test Feed - Prod Verification",
+          "slugline": "PostmanTestProd",
+          "body_html": "<p>This is a test wire feed submitted directly via Postman to verify prod Saga connectivity.</p>",
+          "description_html": "<p>Postman test feed.</p>",
+          "pubstatus": "usable",
+          "urgency": 3,
+          "priority": 3,
+          "language": "en",
+          "located": "Washington, DC",
+          "copyrightnotice": "Test",
+          "usageterms": "Test only"
+        }
+      ]
+    }
+scripts:
+  - type: afterResponse
+    code: >-
+      pm.test("Status is 200 or 201", function () {
+        pm.expect(pm.response.code).to.be.oneOf([200, 201]);
+      });
+
+
+      pm.test("Response indicates processed items >= 1 (or other success
+      indicator)", function () {
+        const contentType = (pm.response.headers.get("Content-Type") || "").toLowerCase();
+
+        // Helper: extract any processed/created count-like number from a string.
+        function extractCountFromText(text) {
+          if (!text) return null;
+
+          // Common patterns: "processed feed items: 1", "processed: 1", "count=1" etc.
+          const regexes = [
+            /processed[^0-9]{0,20}(\d+)/i,
+            /feed items[^0-9]{0,20}(\d+)/i,
+            /count[^0-9]{0,20}(\d+)/i,
+            /(\d+)\s*(processed|created|ingested)/i
+          ];
+
+          for (const r of regexes) {
+            const m = String(text).match(r);
+            if (m && m[1] != null) return Number(m[1]);
+          }
+          return null;
+        }
+
+        if (contentType.includes("application/json")) {
+          let json;
+          try {
+            json = pm.response.json();
+          } catch (e) {
+            pm.expect.fail("Response Content-Type is JSON but body is not valid JSON");
+          }
+
+          // 1) If API provides a numeric count field, assert it's >= 1
+          const countCandidates = [
+            json?.processed,
+            json?.processedCount,
+            json?.processedItems,
+            json?.count,
+            json?.data?.processed,
+            json?.data?.count
+          ];
+
+          const numericCount = countCandidates.find(v => typeof v === "number");
+          if (typeof numericCount === "number") {
+            pm.expect(numericCount, "processed/count field should be >= 1").to.be.at.least(1);
+            return;
+          }
+
+          // 2) Fall back to message text and extract count
+          const messageCandidates = [
+            json?.message,
+            json?.statusMessage,
+            json?.result,
+            json?.details
+          ].filter(v => typeof v === 'string');
+
+          const asString = JSON.stringify(json);
+
+          const counts = [
+            ...messageCandidates.map(extractCountFromText),
+            extractCountFromText(asString)
+          ].filter(v => typeof v === 'number' && !Number.isNaN(v));
+
+          if (counts.length) {
+            pm.expect(Math.max(...counts), "processed count found in response should be >= 1").to.be.at.least(1);
+            return;
+          }
+
+          // 3) Last resort: presence of common success indicators
+          const successFlag = json?.success;
+          if (typeof successFlag === 'boolean') {
+            pm.expect(successFlag, "success flag should be true").to.be.true;
+            return;
+          }
+
+          pm.expect(asString.toLowerCase(), "Response should contain a success indicator").to.satisfy(t =>
+            t.includes("processed") || t.includes("success") || t.includes("ok")
+          );
+        } else {
+          const text = pm.response.text() || "";
+          const count = extractCountFromText(text);
+
+          if (typeof count === 'number') {
+            pm.expect(count, "processed count found in text response should be >= 1").to.be.at.least(1);
+          } else {
+            pm.expect(text.toLowerCase(), "Text response should include a success indicator").to.satisfy(t =>
+              t.includes("processed") || t.includes("success") || t.includes("ok")
+            );
+          }
+        }
+      });
+    language: text/javascript
+order: 3000

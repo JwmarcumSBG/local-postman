@@ -1,0 +1,33 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/teams?limit=<integer>&orderBy=createdAt&sortOrder=asc&key=<st\
+    ring>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: limit
+      value: <integer>
+      description: Max number of teams to retrieve. Default 25
+    - key: orderBy
+      value: createdAt
+      description: Sort criteria. Either createdAt or updatedAt. Default is createdAt
+    - key: sortOrder
+      value: asc
+      description: Sort order. Either asc or desc. Default is desc
+    - key: key
+      value: <string>
+      description: Pagination key
+response:
+  statusCode: 501
+  statusText: Not Implemented
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 4000

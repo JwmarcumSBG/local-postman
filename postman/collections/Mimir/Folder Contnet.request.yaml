@@ -1,0 +1,35 @@
+$kind: http-request
+url: "{{base_url}}/folders/{{folder_id}}/content?type=folder"
+method: GET
+headers:
+  x-mimir-cognito-id-token: Bearer {{api_key}}
+  Accept: application/json
+queryParams:
+  type: folder
+scripts:
+  - type: afterResponse
+    code: >
+      // Status check
+
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+
+
+      // JSON shape check (best-effort)
+
+      pm.test("Response is valid JSON", function () {
+          pm.response.to.be.json;
+      });
+
+
+      pm.test("Response has top-level data or folders key (or is an array)",
+      function () {
+          const json = pm.response.json();
+          const isArray = Array.isArray(json);
+          const hasData = json && typeof json === 'object' && Object.prototype.hasOwnProperty.call(json, 'data');
+          const hasFolders = json && typeof json === 'object' && Object.prototype.hasOwnProperty.call(json, 'folders');
+          pm.expect(isArray || hasData || hasFolders).to.equal(true);
+      });
+    language: text/javascript
+order: 4000

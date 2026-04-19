@@ -1,0 +1,49 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/stories/:id/asset/getSignedUrl"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "placeholderId": "<string>",
+        "filename": "<string>",
+        "mimeType": "<string>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "asset": {
+          "id": "<string>",
+          "type": "note",
+          "title": "<string>",
+          "description": "<string>",
+          "mdfId": "<string>",
+          "metadata": {
+            "officia_e2": 25809690
+          },
+          "createdAt": "<dateTime>",
+          "createdById": "<string>",
+          "updatedAt": "<dateTime>",
+          "updatedById": "<string>",
+          "version": "<integer>",
+          "state": "<string>",
+          "mediaType": "<string>",
+          "itemType": "<string>",
+          "externalId": "<string>",
+          "provider": "<string>"
+        },
+        "uploadSignedUrl": "<string>"
+      }
+order: 1000

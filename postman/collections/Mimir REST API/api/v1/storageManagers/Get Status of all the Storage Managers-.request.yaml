@@ -1,0 +1,9 @@
+$kind: http-request
+name: Get Status of all the Storage Managers.
+description: Get Status of all the Storage Managers.
+url: "{{baseUrl}}/api/v1/storageManagers"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Get Status of all the Storage Managers-.resources/examples
+order: 1000

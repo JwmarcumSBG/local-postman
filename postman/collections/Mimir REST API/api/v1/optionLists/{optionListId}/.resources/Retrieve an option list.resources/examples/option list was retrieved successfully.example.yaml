@@ -1,0 +1,31 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/optionLists/:optionListId"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    optionListId: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "name": "<string>",
+        "alternatives": [
+          {
+            "label": "<string>",
+            "value": "<string>"
+          },
+          {
+            "label": "<string>",
+            "value": "<string>"
+          }
+        ]
+      }
+order: 1000

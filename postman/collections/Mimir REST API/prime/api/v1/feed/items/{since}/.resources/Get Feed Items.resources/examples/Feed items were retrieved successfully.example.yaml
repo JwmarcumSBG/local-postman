@@ -1,0 +1,42 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/prime/api/v1/feed/items/:since?since=<dateTime>&next=<string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: since
+      value: <dateTime>
+      description: (Required) The date to retrieve feed items since.
+    - key: next
+      value: <string>
+      description: |
+        The opaque cursor for the next page of results if there are more to fetch.
+  pathVariables:
+    since: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "tenant": {
+          "stage": "<string>",
+          "tenantId": "<string>"
+        },
+        "modifications": [
+          {
+            "id": "<string>",
+            "modifiedOn": "<string>"
+          },
+          {
+            "id": "<string>",
+            "modifiedOn": "<string>"
+          }
+        ],
+        "next": "<string>"
+      }
+order: 1000

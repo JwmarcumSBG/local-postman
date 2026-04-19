@@ -1,0 +1,84 @@
+$kind: http-request
+url: "{{baseUrl}}/instances/:id"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) instance id
+body:
+  type: json
+  content: |-
+    {
+      "title": "<string>",
+      "state": "<string>",
+      "publishingAt": "<string>",
+      "content": {
+        "document": [
+          {
+            "type": "automation",
+            "data": {
+              "templateType": "OVERLAY_GRAPHICS",
+              "templateVariant": "<string>",
+              "assets": [
+                {
+                  "mId": "<string>",
+                  "mRefId": "<string>",
+                  "mProvider": "<string>",
+                  "mediaType": "<string>",
+                  "mAssetId": "<string>",
+                  "mosobj": "<string>",
+                  "mTitle": "<string>",
+                  "duration": "<integer>"
+                },
+                {
+                  "mId": "<string>",
+                  "mRefId": "<string>",
+                  "mProvider": "<string>",
+                  "mediaType": "<string>",
+                  "mAssetId": "<string>",
+                  "mosobj": "<string>",
+                  "mTitle": "<string>",
+                  "duration": "<integer>"
+                }
+              ],
+              "itemId": "<string>"
+            }
+          },
+          {
+            "type": "automation",
+            "data": {
+              "templateType": "MOS",
+              "templateVariant": "<string>",
+              "assets": [
+                {
+                  "mId": "<string>",
+                  "mRefId": "<string>",
+                  "mProvider": "<string>",
+                  "mediaType": "<string>",
+                  "mAssetId": "<string>",
+                  "mosobj": "<string>",
+                  "mTitle": "<string>",
+                  "duration": "<integer>"
+                },
+                {
+                  "mId": "<string>",
+                  "mRefId": "<string>",
+                  "mProvider": "<string>",
+                  "mediaType": "<string>",
+                  "mAssetId": "<string>",
+                  "mosobj": "<string>",
+                  "mTitle": "<string>",
+                  "duration": "<integer>"
+                }
+              ],
+              "itemId": "<string>"
+            }
+          }
+        ]
+      }
+    }
+examples: ./.resources/Update an instance.resources/examples
+order: 7000

@@ -1,0 +1,39 @@
+$kind: collection
+description: |-
+  REST API for accessing and access to DiNA resources
+
+  Contact Support:
+   Email: andreas@onedina.com
+variables:
+  baseUrl: https://jnqpz9vemg.execute-api.us-east-1.amazonaws.com/v1
+  saga_api_key: <SAGA_API_KEY>
+  saga_instance_id: ""
+  saga_last_search_count: ""
+  saga_mdf_create_body: |-
+    {
+      "label": "station-story-mdf",
+      "fields": []
+    }
+  saga_mdf_id: ""
+  saga_optionlist_create_body: |-
+    {
+      "title": "Station Desk",
+      "alternatives": [
+        {"id": "desk1", "label": "Main Desk"}
+      ]
+    }
+  saga_planning_item_create_body: |-
+    {
+      "title": "Station Planning Placeholder"
+    }
+  saga_search_body: |-
+    {
+      "query": "weather"
+    }
+auth:
+  - id: 82e37ec7-240a-46f0-8b82-70dc8c800e14
+    type: apikey
+    name: apikey auth
+    credentials:
+      value: "{{saga_api_key}}"
+      key: x-api-key

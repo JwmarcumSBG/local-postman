@@ -1,0 +1,9 @@
+$kind: http-request
+description: |
+  Get tenant generated media locations
+url: "{{baseUrl}}/ingest/api/v1/generatedMediaLocations"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Get tenant generated media locations.resources/examples
+order: 2000

@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/folders/path"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "path": "<string>",
+      "rootFolderId": "<string>"
+    }
+examples: ./.resources/Create folder structure for given path.resources/examples
+order: 1000

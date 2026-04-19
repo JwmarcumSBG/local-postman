@@ -1,0 +1,33 @@
+$kind: http-example
+name: Server is unable to handle the request.
+request:
+  url: "{{baseUrl}}/api/v1/folders/metadata/:folderId"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    folderId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "metadataDelta": {
+          "formId": "<string>",
+          "formData": {}
+        }
+      }
+response:
+  statusCode: 503
+  statusText: Service Unavailable
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 6000

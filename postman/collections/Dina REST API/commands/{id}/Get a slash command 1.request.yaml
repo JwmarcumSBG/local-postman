@@ -1,0 +1,24 @@
+$kind: http-request
+name: Get a slash command
+description: Get a slash command
+url: "{{baseUrl}}/commands/:id"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) Slash command id
+body:
+  type: json
+  content: |-
+    {
+      "title": "<string>",
+      "command": "<string>",
+      "active": "<boolean>",
+      "color": "<string>",
+      "singleOnly": "<boolean>"
+    }
+examples: ./.resources/Get a slash command 1.resources/examples
+order: 2000

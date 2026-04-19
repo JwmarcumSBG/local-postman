@@ -1,0 +1,34 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/stories/:id/planningItems/:planningItemId"
+  method: PATCH
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+    planningItemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "title": "<string>",
+        "metadata": {
+          "ut_1ab": 43945293.374902844,
+          "adipisicing_a75": true,
+          "ad0": "ea labore fugiat e"
+        }
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 3000

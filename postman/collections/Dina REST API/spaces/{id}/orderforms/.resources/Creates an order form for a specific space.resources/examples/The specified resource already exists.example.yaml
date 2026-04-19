@@ -1,0 +1,48 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/spaces/:id/orderforms"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "spaceId": "<string>",
+        "mdfId": "<string>",
+        "groupName": "<string>",
+        "subGroupName": "<string>",
+        "types": [
+          "<string>",
+          "<string>"
+        ],
+        "statusAlternatives": [
+          {
+            "id": "<string>",
+            "label": "<string>",
+            "value": "<string>"
+          },
+          {
+            "id": "<string>",
+            "label": "<string>",
+            "value": "<string>"
+          }
+        ]
+      }
+response:
+  statusCode: 409
+  statusText: Conflict
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 3000

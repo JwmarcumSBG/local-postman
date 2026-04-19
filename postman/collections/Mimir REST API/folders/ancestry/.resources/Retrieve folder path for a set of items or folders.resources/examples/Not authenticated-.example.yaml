@@ -1,0 +1,29 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/folders/ancestry"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "ids": "<array>",
+        "type": "<string>"
+      }
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 3000

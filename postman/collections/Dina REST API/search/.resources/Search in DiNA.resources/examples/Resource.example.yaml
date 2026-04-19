@@ -1,0 +1,209 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/search"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: >-
+      {
+        "ids": [
+          "<string>",
+          "<string>"
+        ],
+        "statusList": [
+          "<string>",
+          "<string>"
+        ],
+        "types": [
+          "<string>",
+          "<string>"
+        ],
+        "title": "<string>",
+        "mdfId": "<string>",
+        "assignedMemberIds": [
+          "<string>",
+          "<string>"
+        ],
+        "assignedMemberIdsMustOccur": [
+          "<string>",
+          "<string>"
+        ],
+        "createdByIds": [
+          "<string>",
+          "<string>"
+        ],
+        "priorities": [
+          "<string>",
+          "<string>"
+        ],
+        "searchString": "<string>",
+        "semanticSearch": "<boolean>",
+        "fuzzySearch": "<boolean>",
+        "isScheduled": "<boolean>",
+        "isTemplateInstance": "<boolean>",
+        "searchAfter": {
+          "description": "The pagination key provided in the field `nextToken` in the previous search to get the next page. Provides better performance than using `from`."
+        },
+        "from": "<number>",
+        "perPagelimit": "<number>",
+        "trackTotalHits": "<boolean>",
+        "rangeBy": {
+          "createdAt": {
+            "from": "<string>",
+            "to": "<string>"
+          },
+          "updatedAt": {
+            "from": "<string>",
+            "to": "<string>"
+          },
+          "scheduledAt": {
+            "from": "<string>",
+            "to": "<string>"
+          }
+        },
+        "orderBy": {
+          "createdAt": "desc",
+          "updatedAt": "asc",
+          "scheduledAt": "asc",
+          "title": "desc",
+          "totalInstances": "asc"
+        },
+        "metaDataFilter": {
+          "dolore_931": 72632549.16766632
+        },
+        "metaDataFilterByType": {
+          "in_e": "Duis Ut dolore aliquip dolor",
+          "nulla_70": 78308729,
+          "mollit8": false
+        },
+        "platformTypes": [
+          "<string>",
+          "<string>"
+        ]
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "items": [
+          {
+            "active": "<boolean>",
+            "assigneeId": "<string>",
+            "assignedMembers": [
+              {
+                "id": "<string>",
+                "type": "<string>"
+              },
+              {
+                "id": "<string>",
+                "type": "<string>"
+              }
+            ],
+            "createdAt": "<dateTime>",
+            "createdById": "<string>",
+            "crudAction": "<string>",
+            "description": "<string>",
+            "email": "<string>",
+            "feedType": "<string>",
+            "formId": "<string>",
+            "highlight": {
+              "title": "<string>",
+              "description": "<string>",
+              "textContent": "<string>"
+            },
+            "id": "<string>",
+            "isRestricted": "<boolean>",
+            "isSyncActive": "<boolean>",
+            "isTemplateInstance": "<boolean>",
+            "mdfId": "<string>",
+            "metadata": {
+              "in_d85": "<string>",
+              "proident714": "<string>",
+              "in__": "<string>"
+            },
+            "name": "<string>",
+            "ownerId": "<string>",
+            "platformType": "<string>",
+            "plannedDuration": "<string>",
+            "publishingAt": "<dateTime>",
+            "publishingEnd": "<dateTime>",
+            "resourceId": "<string>",
+            "resourceType": "<string>",
+            "spaceId": "<string>",
+            "status": "<string>",
+            "storyId": "<string>",
+            "textContent": "<string>",
+            "title": "<string>",
+            "totalInstances": "<integer>",
+            "type": "<string>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>",
+            "priority": "<string>",
+            "nextToken": "<string>"
+          },
+          {
+            "active": "<boolean>",
+            "assigneeId": "<string>",
+            "assignedMembers": [
+              {
+                "id": "<string>",
+                "type": "<string>"
+              },
+              {
+                "id": "<string>",
+                "type": "<string>"
+              }
+            ],
+            "createdAt": "<dateTime>",
+            "createdById": "<string>",
+            "crudAction": "<string>",
+            "description": "<string>",
+            "email": "<string>",
+            "feedType": "<string>",
+            "formId": "<string>",
+            "highlight": {
+              "title": "<string>",
+              "description": "<string>",
+              "textContent": "<string>"
+            },
+            "id": "<string>",
+            "isRestricted": "<boolean>",
+            "isSyncActive": "<boolean>",
+            "isTemplateInstance": "<boolean>",
+            "mdfId": "<string>",
+            "metadata": {
+              "nulla1b4": "<string>"
+            },
+            "name": "<string>",
+            "ownerId": "<string>",
+            "platformType": "<string>",
+            "plannedDuration": "<string>",
+            "publishingAt": "<dateTime>",
+            "publishingEnd": "<dateTime>",
+            "resourceId": "<string>",
+            "resourceType": "<string>",
+            "spaceId": "<string>",
+            "status": "<string>",
+            "storyId": "<string>",
+            "textContent": "<string>",
+            "title": "<string>",
+            "totalInstances": "<integer>",
+            "type": "<string>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>",
+            "priority": "<string>",
+            "nextToken": "<string>"
+          }
+        ],
+        "total": "<integer>",
+        "nextToken": "<string>"
+      }
+order: 1000

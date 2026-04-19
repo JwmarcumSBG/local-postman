@@ -1,0 +1,9 @@
+$kind: http-request
+name: Get All Transcription Language Settings for the system.
+description: Perform search operation on items
+url: "{{baseUrl}}/config/api/v1/systemConfig/transcriptionLanguageSettings"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Get All Transcription Language Settings for the system-.resources/examples
+order: 1000

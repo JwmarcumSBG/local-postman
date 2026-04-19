@@ -1,0 +1,8 @@
+$kind: http-request
+description: Retrieve all order forms
+url: "{{baseUrl}}/orderforms"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Retrieve all order forms.resources/examples
+order: 2000

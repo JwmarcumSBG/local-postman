@@ -1,0 +1,12 @@
+$kind: http-example
+name: No user settings exists for the implied user.
+request:
+  url: "{{baseUrl}}/auxiliary/api/v1/userSettings"
+  method: GET
+response:
+  statusCode: 204
+  statusText: No Content
+  body:
+    type: text
+    content: ""
+order: 2000

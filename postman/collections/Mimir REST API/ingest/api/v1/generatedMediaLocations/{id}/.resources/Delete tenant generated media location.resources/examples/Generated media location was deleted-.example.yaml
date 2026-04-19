@@ -1,0 +1,14 @@
+$kind: http-example
+name: Generated media location was deleted.
+request:
+  url: "{{baseUrl}}/ingest/api/v1/generatedMediaLocations/:id"
+  method: DELETE
+  pathVariables:
+    id: ""
+response:
+  statusCode: 204
+  statusText: No Content
+  body:
+    type: text
+    content: ""
+order: 1000

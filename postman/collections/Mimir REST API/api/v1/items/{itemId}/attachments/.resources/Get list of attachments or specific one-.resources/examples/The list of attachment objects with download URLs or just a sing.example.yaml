@@ -1,0 +1,22 @@
+$kind: http-example
+name: The list of attachment objects with download URLs or just a single download URL if 'attachment' query parameter was passed.
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/attachments?attachment="
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: attachment
+      value: ""
+      description: The file name of a specific attachment
+  pathVariables:
+    itemId: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: <string>
+order: 1000

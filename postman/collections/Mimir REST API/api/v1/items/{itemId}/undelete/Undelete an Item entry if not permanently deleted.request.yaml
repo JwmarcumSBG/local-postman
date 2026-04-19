@@ -1,0 +1,13 @@
+$kind: http-request
+description: |
+  Undelete an item entry with specified identifier string, if that is not
+url: "{{baseUrl}}/api/v1/items/:itemId/undelete"
+method: POST
+headers:
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item
+examples: ./.resources/Undelete an Item entry if not permanently deleted.resources/examples
+order: 1000

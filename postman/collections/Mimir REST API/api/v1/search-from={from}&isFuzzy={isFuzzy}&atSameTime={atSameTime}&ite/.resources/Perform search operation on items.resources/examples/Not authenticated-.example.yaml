@@ -1,0 +1,73 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/api/v1/search?itemsPerPage=<number>&from=<number>&searchString=<string>&rangeStart=<number>&timeZone=<string>&isFuzzy=<boolean>&atSameTime=<boolean>&typeCount=<boolean>&folderId=<string>&includeSubfolders=<boolean>&includeFolders=<boolean>&scroll=<boolean>&mScrollId=<string>&fetchFatVersion=<boolean>&fetchFullVersion=<boolean>&excludeFields=<string>&readableMetadataFields=<boolean>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: itemsPerPage
+      value: <number>
+      description: (Required) Number of items should be returned per page.
+    - key: from
+      value: <number>
+      description: (Required) Start number of the page
+    - key: searchString
+      value: <string>
+      description: (Required) Actual Search String.
+    - key: rangeStart
+      value: <number>
+      description: A number that determines if the start number of the page
+    - key: timeZone
+      value: <string>
+      description: time zone of the client
+    - key: isFuzzy
+      value: <boolean>
+      description: A boolean that indicates if the search should run as fuzzy or not.
+    - key: atSameTime
+      value: <boolean>
+      description: A boolean that indicates if matching to filters need to happen at the same time within the video or if match within the same video item is sufficient.
+    - key: typeCount
+      value: <boolean>
+      description: When set to true, only a full count of item types will be returned.
+    - key: folderId
+      value: <string>
+      description: The id of the folder in which the search should perform.
+    - key: includeSubfolders
+      value: <boolean>
+      description: Look for search hits in sub-folders as well.
+    - key: includeFolders
+      value: <boolean>
+      description: A boolean value that represents whether or not folders should be included in the search results.
+    - key: scroll
+      value: <boolean>
+      description: If scroll is true, returns a page of items of the requested search params with a scroll id, which can be used in subsequent requests to scroll through all the items
+    - key: mScrollId
+      value: <string>
+      description: If mScrollId is provided (obtained from a previous scroll request), returns next page of results
+    - key: fetchFatVersion
+      value: <boolean>
+      description: A boolean value that represents whether to return more properties in the search scroll API.
+    - key: fetchFullVersion
+      value: <boolean>
+      description: A boolean value that represents whether to include the requested MDF fields in the search scroll API. Indicating a regular search with the scroll API.
+    - key: excludeFields
+      value: <string>
+      description: List of fields to be excluded from the search results.
+    - key: readableMetadataFields
+      value: <boolean>
+      description: If true, the <b>metadata</b> fields' internal GUID will be replaced with readable field IDs
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

@@ -1,0 +1,46 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/stories/:id/planningItems"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "commandId": "<string>",
+        "title": "<string>",
+        "metadata": {
+          "incididunte9b": "consectetur dolor amet incididunt et",
+          "mollit_d": 32725632.32263592,
+          "eaf_a": 83079459
+        }
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "hostId": "<string>",
+        "hostType": "instance",
+        "type": "block",
+        "mdfId": "<string>",
+        "title": "<string>",
+        "commandId": "<string>",
+        "resourceId": "<string>",
+        "metadata": {
+          "in_99": -18275906.04929559,
+          "culpa_84b": 14392084,
+          "nostrud_3": -3143167
+        }
+      }
+order: 1000

@@ -1,0 +1,69 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/orders?limit=<integer>&key=<string>&sortOrder=asc&status=<str\
+    ing>&assigneeId=<string>&ownerId=<string>&resourceId=<string>&spaceId=<stri\
+    ng>&formId=<string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: limit
+      value: <integer>
+      description: Max number of orders to retrieve.
+    - key: key
+      value: <string>
+      description: Pagination key
+    - key: sortOrder
+      value: asc
+      description: Sort order. Either asc or desc
+    - key: status
+      value: <string>
+    - key: assigneeId
+      value: <string>
+    - key: ownerId
+      value: <string>
+    - key: resourceId
+      value: <string>
+    - key: spaceId
+      value: <string>
+    - key: formId
+      value: <string>
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "orders",
+        "timestamp": "<dateTime>",
+        "orders": [
+          {
+            "mId": "<string>",
+            "mResourceId": "<string>",
+            "mType": "<string>",
+            "mOwner": "<string>",
+            "mAssignee": "<string>",
+            "mFormId": "<string>",
+            "mCreatedAt": "<string>",
+            "mCreatedById": "<string>",
+            "metadata": {},
+            "mStatus": "<string>"
+          },
+          {
+            "mId": "<string>",
+            "mResourceId": "<string>",
+            "mType": "<string>",
+            "mOwner": "<string>",
+            "mAssignee": "<string>",
+            "mFormId": "<string>",
+            "mCreatedAt": "<string>",
+            "mCreatedById": "<string>",
+            "metadata": {},
+            "mStatus": "<string>"
+          }
+        ]
+      }
+order: 1000

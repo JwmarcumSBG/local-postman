@@ -1,0 +1,19 @@
+$kind: http-request
+description: |
+  Retrieve a list of items that have been modified in a replication significant way since a given date.
+url: "{{baseUrl}}/prime/api/v1/feed/items/:since?since=<dateTime>&next=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: since
+    value: <dateTime>
+    description: (Required) The date to retrieve feed items since.
+  - key: next
+    value: <string>
+    description: |
+      The opaque cursor for the next page of results if there are more to fetch.
+pathVariables:
+  since: ""
+examples: ./.resources/Get Feed Items.resources/examples
+order: 1000

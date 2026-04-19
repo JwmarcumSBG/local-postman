@@ -1,0 +1,121 @@
+$kind: http-example
+request:
+  url: https://jnqpz9vemg.execute-api.us-east-1.amazonaws.com/v1/mdfs
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": "<string>",
+          "label": "<string>",
+          "views": {},
+          "fields": [
+            {
+              "fieldId": "<string>",
+              "required": "<boolean>",
+              "defaultValue": "<string>",
+              "type": "text",
+              "alternatives": [
+                {
+                  "id": "<string>",
+                  "label": "<string>",
+                  "value": "<string>"
+                },
+                {
+                  "id": "<string>",
+                  "label": "<string>",
+                  "value": "<string>"
+                }
+              ],
+              "constraint": {},
+              "filters": {
+                "magna__": "id"
+              }
+            },
+            {
+              "fieldId": "<string>",
+              "required": "<boolean>",
+              "defaultValue": "<string>",
+              "type": "choice",
+              "alternatives": [
+                {
+                  "id": "<string>",
+                  "label": "<string>",
+                  "value": "<string>"
+                },
+                {
+                  "id": "<string>",
+                  "label": "<string>",
+                  "value": "<string>"
+                }
+              ],
+              "constraint": {},
+              "filters": {
+                "nulla85b": -19066541,
+                "exeb8": -5400504.999056116
+              }
+            }
+          ]
+        },
+        {
+          "id": "<string>",
+          "label": "<string>",
+          "views": {},
+          "fields": [
+            {
+              "fieldId": "<string>",
+              "required": "<boolean>",
+              "defaultValue": "<string>",
+              "type": "checkbox",
+              "alternatives": [
+                {
+                  "id": "<string>",
+                  "label": "<string>",
+                  "value": "<string>"
+                },
+                {
+                  "id": "<string>",
+                  "label": "<string>",
+                  "value": "<string>"
+                }
+              ],
+              "constraint": {},
+              "filters": {
+                "cupidatat50": 1259079.6655296683
+              }
+            },
+            {
+              "fieldId": "<string>",
+              "required": "<boolean>",
+              "defaultValue": "<string>",
+              "type": "number",
+              "alternatives": [
+                {
+                  "id": "<string>",
+                  "label": "<string>",
+                  "value": "<string>"
+                },
+                {
+                  "id": "<string>",
+                  "label": "<string>",
+                  "value": "<string>"
+                }
+              ],
+              "constraint": {},
+              "filters": {
+                "nisib": "reprehenderit esse sint fugiat adipisicing",
+                "nisi_5ea": 16633644
+              }
+            }
+          ]
+        }
+      ]
+order: 1000

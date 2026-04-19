@@ -1,0 +1,8 @@
+$kind: http-request
+description: Get the default upload location in the system
+url: "{{baseUrl}}/config/api/v1/config/defaultUploadLocation"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Get the default upload location in the system.resources/examples
+order: 1000

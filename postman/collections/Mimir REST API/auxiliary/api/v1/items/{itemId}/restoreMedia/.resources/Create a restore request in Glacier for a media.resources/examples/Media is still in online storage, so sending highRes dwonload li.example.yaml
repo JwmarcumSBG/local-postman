@@ -1,0 +1,31 @@
+$kind: http-example
+name: Media is still in online storage, so sending highRes dwonload link
+request:
+  url: "{{baseUrl}}/auxiliary/api/v1/items/:itemId/restoreMedia"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "tier": "<string>",
+        "retentionDays": "<number>",
+        "itemId": 69453378
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "itemId": "<string>",
+        "highRes": "<string>"
+      }
+order: 2000

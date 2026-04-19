@@ -1,0 +1,8 @@
+$kind: http-request
+description: Make it possible to update scheduled entries.
+url: "{{baseUrl}}/scheduleentries"
+method: POST
+headers:
+  Accept: application/json
+examples: ./.resources/Posting scheduled entries.resources/examples
+order: 1000

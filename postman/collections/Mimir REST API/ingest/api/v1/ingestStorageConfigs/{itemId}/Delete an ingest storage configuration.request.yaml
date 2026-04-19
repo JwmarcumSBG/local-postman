@@ -1,0 +1,12 @@
+$kind: http-request
+description: Delete an ingest storage configuration
+url: "{{baseUrl}}/ingest/api/v1/ingestStorageConfigs/:itemId"
+method: DELETE
+headers:
+  Accept: text/plain
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) Unique identifier of the ingest storage configuration to delete
+examples: ./.resources/Delete an ingest storage configuration.resources/examples
+order: 3000

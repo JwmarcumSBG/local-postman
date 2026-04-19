@@ -1,0 +1,23 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/ingest/api/v1/generatedMediaLocations/:id"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    id: ""
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

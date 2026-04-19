@@ -1,0 +1,16 @@
+$kind: http-request
+name: Delete storage location.
+description: Delete a storage location
+url: "{{baseUrl}}/prime/api/v1/storages"
+method: DELETE
+headers:
+  Content-Type: application/json
+  Accept: text/plain
+body:
+  type: json
+  content: |-
+    {
+      "id": "<string>"
+    }
+examples: ./.resources/Delete storage location-.resources/examples
+order: 4000

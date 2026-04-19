@@ -1,0 +1,34 @@
+$kind: http-request
+name: Delete old system bookmarks and create new bookmarks from payload
+url: "{{baseUrl}}/config/api/v1/bookmarks"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    [
+      {
+        "path": "<string>",
+        "title": "<string>",
+        "icon": "<string>",
+        "isFilterBookmark": "<boolean>",
+        "visibleToGroups": [
+          "<string>",
+          "<string>"
+        ]
+      },
+      {
+        "path": "<string>",
+        "title": "<string>",
+        "icon": "<string>",
+        "isFilterBookmark": "<boolean>",
+        "visibleToGroups": [
+          "<string>",
+          "<string>"
+        ]
+      }
+    ]
+examples: ./.resources/Delete old system bookmarks and create new bookmarks from payloa.resources/examples
+order: 4000

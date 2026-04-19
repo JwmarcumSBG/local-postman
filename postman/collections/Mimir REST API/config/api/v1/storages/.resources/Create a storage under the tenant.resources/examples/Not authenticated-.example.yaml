@@ -1,0 +1,30 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/config/api/v1/storages"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "name": "<string>",
+        "description": "<string>"
+      }
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

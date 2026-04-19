@@ -1,0 +1,26 @@
+$kind: http-request
+description: Create a planning item for this story
+url: "{{baseUrl}}/stories/:id/planningItems"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Story id
+body:
+  type: json
+  content: |-
+    {
+      "id": "<string>",
+      "commandId": "<string>",
+      "title": "<string>",
+      "metadata": {
+        "incididunte9b": "consectetur dolor amet incididunt et",
+        "mollit_d": 32725632.32263592,
+        "eaf_a": 83079459
+      }
+    }
+examples: ./.resources/Create a planning item for this story.resources/examples
+order: 3000

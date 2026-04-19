@@ -1,0 +1,15 @@
+$kind: http-request
+description: Delete an order
+url: "{{baseUrl}}/orders/:orderId/orders/:suborderId"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  - key: orderId
+    value: <uuid>
+    description: (Required) order id
+  - key: suborderId
+    value: <uuid>
+    description: (Required) suborder id
+examples: ./.resources/Delete an order.resources/examples
+order: 2000

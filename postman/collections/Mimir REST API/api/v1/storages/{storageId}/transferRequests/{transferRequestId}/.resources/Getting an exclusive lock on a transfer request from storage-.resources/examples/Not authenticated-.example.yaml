@@ -1,0 +1,32 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/api/v1/storages/:storageId/transferRequests/:transferRequestId"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    storageId: ""
+    transferRequestId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "storageManagerInstanceId": "<string>",
+        "transferState": "<string>"
+      }
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

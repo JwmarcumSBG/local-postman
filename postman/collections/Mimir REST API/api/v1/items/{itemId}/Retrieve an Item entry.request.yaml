@@ -1,0 +1,29 @@
+$kind: http-request
+description: |
+  Retrieve an item entry with specified identifier string
+url: "{{baseUrl}}/api/v1/items/:itemId?searchString=<string>&isFuzzy=<boolean>&readableMetadataFields=<boolean>&fields=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: searchString
+    value: <string>
+    description: Space-separated terms to highlight when loading the item.
+  - key: isFuzzy
+    value: <boolean>
+    description: |
+      This is only relevant in combination with searchString. If false, only
+      terms matching exactly will be highlighted. If true, fuzzy matches will
+      be highlighted as well.
+  - key: readableMetadataFields
+    value: <boolean>
+    description: If true, the <b>metadata</b> fields' internal GUID will be replaced with readable field IDs.
+  - key: fields
+    value: <string>
+    description: Specifies which of the item fields should be returned.
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item
+examples: ./.resources/Retrieve an Item entry.resources/examples
+order: 20000

@@ -1,0 +1,28 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/api/v1/metering?isAdmin=<boolean>&month=<string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: isAdmin
+      value: <boolean>
+      description: A boolean which determines if the metering information should be fetched for Admin panel or not.
+    - key: month
+      value: <string>
+      description: Month in the format of YYYY-MM.
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

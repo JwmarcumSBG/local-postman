@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{baseUrl}}/rundowns?type=rundown&from=<string>&to=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: type
+    value: rundown
+    description: rundown type master rundown(type=rundowntemplate) or
+      daily(rundown). If nothing specified daily rundown will be returned
+  - key: from
+    value: <string>
+    description: start date to filter daily rundowns when query for rundown list
+  - key: to
+    value: <string>
+    description: end date to filter daily rundowns when query for rundown list
+examples: ./.resources/Returns list of rundowns.resources/examples
+order: 3000

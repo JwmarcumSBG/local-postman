@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{baseUrl}}/stories/:id"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) Story id
+examples: ./.resources/Get a story by the story id.resources/examples
+order: 8000

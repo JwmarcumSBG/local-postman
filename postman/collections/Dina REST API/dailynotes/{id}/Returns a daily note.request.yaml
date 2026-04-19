@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{baseUrl}}/dailynotes/:id"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) date at which the daily note was created
+examples: ./.resources/Returns a daily note.resources/examples
+order: 1000

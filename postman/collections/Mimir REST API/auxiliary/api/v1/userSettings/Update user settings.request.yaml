@@ -1,0 +1,60 @@
+$kind: http-request
+description: |
+  Update settings of a user.
+url: "{{baseUrl}}/auxiliary/api/v1/userSettings"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "bookmarks": [
+        {
+          "icon": "<string>",
+          "title": "<string>",
+          "path": "<string>",
+          "folderId": "<string>",
+          "isFilterBookmark": "<boolean>",
+          "itemId": "<string>"
+        },
+        {
+          "icon": "<string>",
+          "title": "<string>",
+          "path": "<string>",
+          "folderId": "<string>",
+          "isFilterBookmark": "<boolean>",
+          "itemId": "<string>"
+        }
+      ],
+      "workFolderId": "<uuid>",
+      "lastSeenChangelogId": "<uuid>",
+      "defaultFilters": [
+        {
+          "isExactSearch": "<boolean>",
+          "token": "<string>",
+          "value": "<string>",
+          "isRecognized": "<boolean>",
+          "isSticky": "<boolean>",
+          "filterKey": "<string>"
+        },
+        {
+          "isExactSearch": "<boolean>",
+          "token": "<string>",
+          "value": "<string>",
+          "isRecognized": "<boolean>",
+          "isSticky": "<boolean>",
+          "filterKey": "<string>"
+        }
+      ],
+      "dismissedNotifications": {
+        "fugiat_85f": {
+          "code": "<string>",
+          "text": "<boolean>"
+        }
+      },
+      "showRenameSubclipDialog": "<boolean>"
+    }
+examples: ./.resources/Update user settings.resources/examples
+order: 2000

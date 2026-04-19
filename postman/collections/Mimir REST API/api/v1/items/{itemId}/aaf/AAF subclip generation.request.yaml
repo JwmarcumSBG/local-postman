@@ -1,0 +1,30 @@
+$kind: http-request
+description: Generate an AAF subclip file with transcript as markers for given item ingested from Avid Mediafiles
+url: "{{baseUrl}}/api/v1/items/:itemId/aaf"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: ""
+    description: (Required) The ID of the item ingested from Avid Mediafiles folder
+body:
+  type: json
+  content: |-
+    {
+      "inPoint": "<number>",
+      "outPoint": "<number>",
+      "markers": [
+        {
+          "position": "<number>",
+          "text": "<string>"
+        },
+        {
+          "position": "<number>",
+          "text": "<string>"
+        }
+      ]
+    }
+examples: ./.resources/AAF subclip generation.resources/examples
+order: 1000

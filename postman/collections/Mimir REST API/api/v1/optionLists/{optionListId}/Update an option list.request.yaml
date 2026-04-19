@@ -1,0 +1,29 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/optionLists/:optionListId"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: optionListId
+    value: <string>
+    description: (Required) The ID of the option list
+body:
+  type: json
+  content: |-
+    {
+      "name": "<string>",
+      "alternatives": [
+        {
+          "label": "<string>",
+          "value": "<string>"
+        },
+        {
+          "label": "<string>",
+          "value": "<string>"
+        }
+      ],
+      "optionListType": "treeChoice"
+    }
+examples: ./.resources/Update an option list.resources/examples
+order: 2000

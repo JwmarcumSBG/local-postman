@@ -1,0 +1,38 @@
+$kind: http-example
+name: Invalid syntax in request.
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/attachments?isPrecheck=<boolean>"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  queryParams:
+    - key: isPrecheck
+      value: <boolean>
+      description: If set to true, performs a check on whether a given filename already exists and returns a list of already existing files
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "fileName": "<string>",
+        "type": "image",
+        "role": "poster",
+        "language": "<string>",
+        "description": "<string>"
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

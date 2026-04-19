@@ -1,0 +1,30 @@
+$kind: http-example
+name: Invalid syntax in request.
+request:
+  url: "{{baseUrl}}/ingest/api/v1/ingestFile"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "configId": "<string>",
+        "srcKey": "<string>",
+        "placeholderId": "<string>"
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

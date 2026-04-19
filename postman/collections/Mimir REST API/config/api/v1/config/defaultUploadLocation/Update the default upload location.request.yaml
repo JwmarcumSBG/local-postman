@@ -1,0 +1,15 @@
+$kind: http-request
+description: Update the default upload location
+url: "{{baseUrl}}/config/api/v1/config/defaultUploadLocation"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "id": "<string>"
+    }
+examples: ./.resources/Update the default upload location.resources/examples
+order: 2000

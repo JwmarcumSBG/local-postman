@@ -1,0 +1,88 @@
+$kind: http-request
+description: |
+  Update an item entry with specified identifier string
+url: "{{baseUrl}}/api/v1/items/:itemId?readableMetadataFields=<boolean>&requiredMetadataVersion=<number>"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+queryParams:
+  - key: readableMetadataFields
+    value: <boolean>
+    description: If true, the <b>metadata</b> fields' internal GUID will be replaced with readable field IDs
+  - key: requiredMetadataVersion
+    value: <number>
+    description: The update will be made on condition that the current item.metadataVersion value matches the provided value. If the precondition check fails, a 409 Conflict response is returned with the response body having error.payload.reason="PreconditionFailed".
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item
+body:
+  type: json
+  content: |-
+    {
+      "metadata": {
+        "formId": "<string>",
+        "formData": {}
+      },
+      "metadataDelta": {
+        "formId": "<string>",
+        "formData": {}
+      },
+      "visibleTo": {
+        "level": "tenant",
+        "groups": [
+          "<string>",
+          "<string>"
+        ]
+      },
+      "updatableBy": {
+        "level": "owner",
+        "groups": [
+          "<string>",
+          "<string>"
+        ]
+      },
+      "timedMetadataCurated": "<boolean>",
+      "ingestSourceStorageId": "<string>",
+      "ingestSourceS3Bucket": "<string>",
+      "ingestSourceFullPath": "<string>",
+      "ingest": {
+        "source": {
+          "scheme": "managed-storage",
+          "realm": "<string>",
+          "path": "<string>"
+        }
+      },
+      "webProxyLocation": {
+        "scheme": "external-generated-media",
+        "realm": "<string>",
+        "path": "<string>",
+        "root": "<string>"
+      },
+      "editProxyLocation": {
+        "scheme": "external-generated-media",
+        "realm": "<string>",
+        "path": "<string>",
+        "root": "<string>"
+      },
+      "highresDeletion": {
+        "deletionState": "in-progress",
+        "statusMessage": "<string>",
+        "deletionDate": "<string>"
+      },
+      "webProxyAudioDownMixInfo": {
+        "downMixChannelSets": [
+          [
+            "<integer>",
+            "<integer>"
+          ],
+          [
+            "<integer>",
+            "<integer>"
+          ]
+        ]
+      }
+    }
+examples: ./.resources/Update an Item entry.resources/examples
+order: 21000

@@ -1,0 +1,49 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/prime/api/v1/live/scheduled?from=<string>&to=<string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: from
+      value: <string>
+      description: (Required) Recording start time lower bound in millisecond epoch time
+    - key: to
+      value: <string>
+      description: (Required) Recording start time upper bound in millisecond epoch time
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "recordings": [
+          {
+            "id": "<string>",
+            "title": {},
+            "startTimeMs": "<string>",
+            "durationMs": "<string>",
+            "ingestFrom": {},
+            "liveRecording": {
+              "state": "<string>"
+            },
+            "seriesId": "<string>"
+          },
+          {
+            "id": "<string>",
+            "title": {},
+            "startTimeMs": "<string>",
+            "durationMs": "<string>",
+            "ingestFrom": {},
+            "liveRecording": {
+              "state": "<string>"
+            },
+            "seriesId": "<string>"
+          }
+        ],
+        "series": "<array>"
+      }
+order: 1000

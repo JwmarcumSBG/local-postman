@@ -1,0 +1,261 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/mdfs/:mdfId"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    mdfId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "fields": [
+          {
+            "id": "<string>",
+            "fieldId": "<string>",
+            "type": "number",
+            "required": false,
+            "defaultValue": {},
+            "alternatives": [
+              {
+                "label": "<string>",
+                "value": "<string>"
+              },
+              {
+                "label": "<string>",
+                "value": "<string>"
+              }
+            ],
+            "optionListId": "<string>"
+          },
+          {
+            "id": "<string>",
+            "fieldId": "<string>",
+            "type": "checkbox",
+            "required": false,
+            "defaultValue": {},
+            "alternatives": [
+              {
+                "label": "<string>",
+                "value": "<string>"
+              },
+              {
+                "label": "<string>",
+                "value": "<string>"
+              }
+            ],
+            "optionListId": "<string>"
+          }
+        ],
+        "label": "<string>",
+        "active": "<boolean>",
+        "views": {
+          "item": [
+            {
+              "fieldId": "<string>",
+              "id": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            },
+            {
+              "fieldId": "<string>",
+              "id": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            }
+          ],
+          "search": [
+            {
+              "fieldId": "<string>",
+              "id": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            },
+            {
+              "fieldId": "<string>",
+              "id": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            }
+          ],
+          "editing": [
+            {
+              "fieldId": "<string>",
+              "id": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            },
+            {
+              "fieldId": "<string>",
+              "id": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            }
+          ]
+        },
+        "color": "<string>",
+        "icon": "<string>",
+        "rule": "<string>"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "label": "<string>",
+        "active": "<boolean>",
+        "fields": [
+          {
+            "id": "<string>",
+            "fieldId": "<string>",
+            "type": "text",
+            "required": false,
+            "defaultValue": {},
+            "alternatives": [
+              {
+                "label": "<string>",
+                "value": "<string>"
+              },
+              {
+                "label": "<string>",
+                "value": "<string>"
+              }
+            ],
+            "optionListId": "<string>"
+          },
+          {
+            "id": "<string>",
+            "fieldId": "<string>",
+            "type": "choice",
+            "required": false,
+            "defaultValue": {},
+            "alternatives": [
+              {
+                "label": "<string>",
+                "value": "<string>"
+              },
+              {
+                "label": "<string>",
+                "value": "<string>"
+              }
+            ],
+            "optionListId": "<string>"
+          }
+        ],
+        "views": {
+          "item": [
+            {
+              "id": "<string>",
+              "fieldId": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            },
+            {
+              "id": "<string>",
+              "fieldId": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            }
+          ],
+          "search": [
+            {
+              "id": "<string>",
+              "fieldId": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            },
+            {
+              "id": "<string>",
+              "fieldId": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            }
+          ],
+          "editing": [
+            {
+              "id": "<string>",
+              "fieldId": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            },
+            {
+              "id": "<string>",
+              "fieldId": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            }
+          ]
+        },
+        "flavor": "<string>",
+        "color": "<string>",
+        "icon": "<string>",
+        "rule": "<string>"
+      }
+order: 2000

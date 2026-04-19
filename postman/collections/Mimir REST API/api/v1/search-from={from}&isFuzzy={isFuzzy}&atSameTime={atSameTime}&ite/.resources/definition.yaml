@@ -1,0 +1,3 @@
+$kind: collection
+name: search?from={from}&isFuzzy={isFuzzy}&atSameTime={atSameTime}&itemsPerPage={itemsPerPage}&rangeEnd={rangeEnd}&rangeStart={rangeStart}&searchString={searchString}&timeZone={timeZone}
+order: 8000

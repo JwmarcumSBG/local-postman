@@ -1,0 +1,33 @@
+$kind: http-request
+description: |
+  Complete multipart upload for an item after uploading al the parts
+url: "{{baseUrl}}/api/v1/items/:itemId/multipartUploadComplete"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item
+body:
+  type: json
+  content: |-
+    {
+      "uploadId": "<string>",
+      "uploadLocationId": "<string>",
+      "targetKey": "<string>",
+      "isCanceled": "<boolean>",
+      "uploadParts": [
+        {
+          "PartNumber": "<number>",
+          "ETag": "<string>"
+        },
+        {
+          "PartNumber": "<number>",
+          "ETag": "<string>"
+        }
+      ]
+    }
+examples: ./.resources/Complete multipart upload for an item.resources/examples
+order: 1000

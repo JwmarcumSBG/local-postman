@@ -1,0 +1,17 @@
+$kind: http-request
+description: Copy source media, analytics and log events from an item into a placeholder
+url: "{{baseUrl}}/api/v1/items/merge"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "sourceItemId": "<string>",
+      "targetItemId": "<string>",
+      "mediaToCopy": "editProxy"
+    }
+examples: ./.resources/Copy media to placeholder.resources/examples
+order: 1000

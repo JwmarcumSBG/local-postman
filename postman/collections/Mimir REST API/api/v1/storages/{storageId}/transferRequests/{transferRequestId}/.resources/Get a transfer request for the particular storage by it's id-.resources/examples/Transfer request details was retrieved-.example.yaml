@@ -1,0 +1,24 @@
+$kind: http-example
+name: Transfer request details was retrieved.
+request:
+  url: "{{baseUrl}}/api/v1/storages/:storageId/transferRequests/:transferRequestId"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    storageId: ""
+    transferRequestId: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "storageManagerInstanceId": "<string>",
+        "transferState": "<string>"
+      }
+order: 1000

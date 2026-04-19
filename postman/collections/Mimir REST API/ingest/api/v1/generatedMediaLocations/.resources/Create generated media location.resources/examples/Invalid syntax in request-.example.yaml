@@ -1,0 +1,37 @@
+$kind: http-example
+name: Invalid syntax in request.
+request:
+  url: "{{baseUrl}}/ingest/api/v1/generatedMediaLocations"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "bucketName": "<string>",
+        "pathPrefix": "<string>",
+        "accessKey": "<string>",
+        "secretKey": "<string>",
+        "backup": "<boolean>",
+        "autoCreateItems": "<boolean>",
+        "uploadGeneratedMedia": "<boolean>",
+        "deleteEnabled": "<boolean>",
+        "storageProvider": "s3_clone",
+        "sourceEndpoint": "<string>"
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

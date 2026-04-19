@@ -1,0 +1,20 @@
+$kind: http-request
+name: Get metering information for all tenants.
+description: Get metering information for all tenants.
+url: "{{baseUrl}}/api/v1/metering?isAdmin={{isAdmin}}&month={{month}}&isAdmin=<boolean>&month=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: isAdmin
+    value: "{{isAdmin}}"
+  - key: month
+    value: "{{month}}"
+  - key: isAdmin
+    value: <boolean>
+    description: A boolean which determines if the metering information should be fetched for Admin panel or not.
+  - key: month
+    value: <string>
+    description: Month in the format of YYYY-MM.
+examples: ./.resources/Get metering information for all tenants-.resources/examples
+order: 1000

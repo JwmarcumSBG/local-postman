@@ -1,0 +1,15 @@
+$kind: http-request
+name: Get scheduled recordings that have a start time within a specified time period
+url: "{{baseUrl}}/prime/api/v1/live/scheduled?from=<string>&to=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: from
+    value: <string>
+    description: (Required) Recording start time lower bound in millisecond epoch time
+  - key: to
+    value: <string>
+    description: (Required) Recording start time upper bound in millisecond epoch time
+examples: ./.resources/Get scheduled recordings that have a start time within a specifi.resources/examples
+order: 2000

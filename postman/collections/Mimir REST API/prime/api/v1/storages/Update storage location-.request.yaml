@@ -1,0 +1,24 @@
+$kind: http-request
+name: Update storage location.
+description: Update an existing storage location
+url: "{{baseUrl}}/prime/api/v1/storages"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "id": "<string>",
+      "associatedArtifactsToTransfer": [
+        "transcript-srt",
+        "transcript-srt"
+      ],
+      "keys": {
+        "accessKey": "<string>",
+        "secretKey": "<string>"
+      }
+    }
+examples: ./.resources/Update storage location-.resources/examples
+order: 3000

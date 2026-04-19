@@ -1,0 +1,9 @@
+$kind: http-request
+name: User deactivation status.
+description: Get the deactivation status of a user.
+url: "{{baseUrl}}/auth/api/v1/user/status"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/User deactivation status-.resources/examples
+order: 1000

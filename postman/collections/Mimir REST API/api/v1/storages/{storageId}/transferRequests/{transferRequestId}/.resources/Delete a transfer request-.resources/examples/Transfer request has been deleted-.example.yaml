@@ -1,0 +1,23 @@
+$kind: http-example
+name: Transfer request has been deleted.
+request:
+  url: "{{baseUrl}}/api/v1/storages/:storageId/transferRequests/:transferRequestId"
+  method: DELETE
+  headers:
+    Content-Type: application/json
+  pathVariables:
+    storageId: ""
+    transferRequestId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "transferState": "<string>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

@@ -1,0 +1,14 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/instances/:id/planningItems/:planningItemId"
+  method: DELETE
+  pathVariables:
+    id: ""
+    planningItemId: ""
+response:
+  statusCode: 204
+  statusText: No Content
+  body:
+    type: text
+    content: ""
+order: 1000

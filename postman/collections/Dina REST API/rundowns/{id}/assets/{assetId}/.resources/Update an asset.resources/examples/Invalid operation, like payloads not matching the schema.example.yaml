@@ -1,0 +1,34 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/rundowns/:id/assets/:assetId"
+  method: PATCH
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+    assetId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "title": "<string>",
+        "mediaType": "<string>",
+        "externalId": "<string>",
+        "thumbnail": "<string>",
+        "proxy": "<string>",
+        "duration": "<number>"
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 2000

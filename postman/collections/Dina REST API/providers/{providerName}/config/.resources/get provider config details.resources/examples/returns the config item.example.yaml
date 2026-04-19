@@ -1,0 +1,68 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/providers/:providerName/config"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    providerName: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: >-
+      {
+        "id": "<string>",
+        "type": "mdf",
+        "title": "<string>",
+        "description": "<string>",
+        "mdfId": "<string>",
+        "metadata": {
+          "est_96b": 81928959,
+          "tempor881": -7265803.5707708895
+        },
+        "createdAt": "<dateTime>",
+        "createdById": "<string>",
+        "updatedAt": "<dateTime>",
+        "updatedById": "<string>",
+        "version": "<integer>",
+        "properties": {
+          "consectetur_c24": "<string>",
+          "reprehenderit246": "<string>",
+          "sunt2f5": "<string>"
+        },
+        "preferences": {
+          "notificationSchema": [
+            {
+              "title": "<string>",
+              "key": "<string>",
+              "value": "<boolean>",
+              "subPreferences": [
+                {
+                  "value": "<Circular reference to #/components/schemas/ProviderNotificationSchema detected>"
+                },
+                {
+                  "value": "<Circular reference to #/components/schemas/ProviderNotificationSchema detected>"
+                }
+              ]
+            },
+            {
+              "title": "<string>",
+              "key": "<string>",
+              "value": "<boolean>",
+              "subPreferences": [
+                {
+                  "value": "<Circular reference to #/components/schemas/ProviderNotificationSchema detected>"
+                },
+                {
+                  "value": "<Circular reference to #/components/schemas/ProviderNotificationSchema detected>"
+                }
+              ]
+            }
+          ]
+        }
+      }
+order: 1000

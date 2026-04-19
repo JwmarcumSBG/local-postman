@@ -1,0 +1,12 @@
+$kind: http-request
+description: get provider config details of a provider
+url: "{{baseUrl}}/providers/:providerName/config"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: providerName
+    value: <string>
+    description: "(Required) "
+examples: ./.resources/get provider config details.resources/examples
+order: 1000

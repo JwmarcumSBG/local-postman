@@ -1,0 +1,30 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/providers/:providerName/member/:id?nextToken=<string>&limit=<\
+    string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: nextToken
+      value: <string>
+      description: url encoded string fetched from previous response
+    - key: limit
+      value: <string>
+      description: number of related members to return at most
+  pathVariables:
+    providerName: ""
+    id: ""
+response:
+  statusCode: 500
+  statusText: Internal Server Error
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 4000

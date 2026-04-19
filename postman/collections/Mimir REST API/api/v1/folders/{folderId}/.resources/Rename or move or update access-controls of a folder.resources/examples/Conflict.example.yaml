@@ -1,0 +1,51 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/folders/:folderId?noRecursiveUpdate=<boolean>&implicitVisibilityUpdate=<boolean>"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  queryParams:
+    - key: noRecursiveUpdate
+      value: <boolean>
+      description: If true, when updating visibility of a folder, its nested contents will not be updated. By default false if not given.
+    - key: implicitVisibilityUpdate
+      value: <boolean>
+      description: If false, when updating parent of a folder i.e., moving a folder, the folder and its nested contents will not inherit the visibility of the destination folder. By default true if not given.
+  pathVariables:
+    folderId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "parentId": "<string>",
+        "visibleTo": {
+          "level": "<string>",
+          "groups": [
+            "<string>",
+            "<string>"
+          ]
+        },
+        "updatableBy": {
+          "level": "<string>",
+          "groups": [
+            "<string>",
+            "<string>"
+          ]
+        }
+      }
+response:
+  statusCode: 409
+  statusText: Conflict
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 5000

@@ -1,0 +1,13 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/upload"
+  method: DELETE
+  pathVariables:
+    itemId: ""
+response:
+  statusCode: 204
+  statusText: No Content
+  body:
+    type: text
+    content: ""
+order: 1000

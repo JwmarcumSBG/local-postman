@@ -1,0 +1,26 @@
+$kind: http-request
+name: Post orders / tasks to an instance in Dina
+description: Create new tasks / orders as part of an instance in Dina
+url: "{{baseUrl}}/instances/:id/orders"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) Instance id
+body:
+  type: json
+  content: |-
+    {
+      "mFormId": "<string>",
+      "mResourceId": "<string>",
+      "mResourceType": "<string>",
+      "mStatus": "<string>",
+      "mOwner": "<string>",
+      "mAssignee": "<string>",
+      "metadata": {}
+    }
+examples: ./.resources/Post orders - tasks to an instance in Dina.resources/examples
+order: 2000

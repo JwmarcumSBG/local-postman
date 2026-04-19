@@ -1,0 +1,411 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId?searchString=<string>&isFuzzy=<boolean>&readableMetadataFields=<boolean>&fields=<string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: searchString
+      value: <string>
+      description: Space-separated terms to highlight when loading the item.
+    - key: isFuzzy
+      value: <boolean>
+      description: |
+        This is only relevant in combination with searchString. If false, only
+        terms matching exactly will be highlighted. If true, fuzzy matches will
+        be highlighted as well.
+    - key: readableMetadataFields
+      value: <boolean>
+      description: If true, the <b>metadata</b> fields' internal GUID will be replaced with readable field IDs.
+    - key: fields
+      value: <string>
+      description: Specifies which of the item fields should be returned.
+  pathVariables:
+    itemId: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "originalFileName": "<string>",
+        "highRes": "<string>",
+        "hasProxy": "<boolean>",
+        "proxy": "<string>",
+        "vttUrl": "<string>",
+        "srtUrl": "<string>",
+        "translationVttUrl": "<string>",
+        "translationSrtUrl": "<string>",
+        "audioChannels": "<number>",
+        "mediaDuration": "<number>",
+        "mediaFramerate": "<number>",
+        "frameCaptureFrequency": {
+          "numerator": "<number>",
+          "denominator": "<number>"
+        },
+        "thumbnail": "<string>",
+        "proxyAudioTrackUrls": [
+          "<string>",
+          "<string>"
+        ],
+        "folderParents": [
+          "<string>",
+          "<string>"
+        ],
+        "isArchived": "<boolean>",
+        "transcriptionService": "<string>",
+        "languageCode": {
+          "description": "A language code representing the transcription language. Only present when transcription is enabled for the item.",
+          "example": "en-US"
+        },
+        "translationLanguage": "<string>",
+        "metadata": {
+          "formId": "default",
+          "formData": {
+            "default_title": "<string>",
+            "default_createdOn": "<string-data>",
+            "default_mediaCreatedOn": "<string-data>",
+            "default_description": "<string>",
+            "9797af6f-168c-9e61-962b-e16228250b5f": {
+              "description": "Some field defined in the MDF model whose ID is \"e640a6c4-5a31-54be-6c03-9ac09d63f338\"",
+              "example": "some text value"
+            },
+            "f40c5bbc-774f-6152-507b-8448132bfdce": {
+              "description": "Some other field defined in the MDF model whose ID is \"e640a6c4-5a31-54be-6c03-9ac09d63f338\"",
+              "example": "another text value"
+            }
+          },
+          "highlights": {
+            "default_titleHighlighted": "<string>",
+            "default_descriptionHighlighted": "<string>"
+          }
+        },
+        "geoLocation": {
+          "coordinates": [
+            {
+              "lat": "<number>",
+              "lng": "<number>",
+              "startTime": "<number>"
+            },
+            {
+              "lat": "<number>",
+              "lng": "<number>",
+              "startTime": "<number>"
+            }
+          ]
+        },
+        "transcriptionEnabled": "<boolean>",
+        "labelDetectionEnabled": "<boolean>",
+        "celebrityDetectionEnabled": "<boolean>",
+        "personDetectionEnabled": "<boolean>",
+        "transcodingState": "complete",
+        "transcriptionState": "progressing",
+        "labelDetectionState": "error",
+        "celebrityDetectionState": "progressing",
+        "personDetectionState": "progressing",
+        "itemState": "deleting",
+        "searchHitsInTranscript": "<number>",
+        "searchHitsInTranslatedTranscript": "<number>",
+        "searchHitsInCelebrities": "<number>",
+        "searchHitsInPersons": "<number>",
+        "searchHitsInLabels": "<number>",
+        "searchHitsInTags": "<number>",
+        "searchHitsInTranscriptWords": [
+          [
+            "<string>",
+            "<string>"
+          ],
+          [
+            "<string>",
+            "<string>"
+          ]
+        ],
+        "searchHitsInTranslatedTranscriptWords": [
+          [
+            "<string>",
+            "<string>"
+          ],
+          [
+            "<string>",
+            "<string>"
+          ]
+        ],
+        "timedTranscriptUrl": "<string>",
+        "timedTranslatedTranscriptUrl": "<string>",
+        "detectedCelebrities": [
+          {
+            "urls": [
+              "<string>",
+              "<string>"
+            ],
+            "maxConfidence": "<number>",
+            "avgConfidence": "<number>",
+            "celebrityId": "<string>",
+            "name": "<string>",
+            "segments": [
+              {
+                "maxConfidence": "<number>",
+                "avgConfidence": "<number>",
+                "start": "<number>",
+                "end": "<number>"
+              },
+              {
+                "maxConfidence": "<number>",
+                "avgConfidence": "<number>",
+                "start": "<number>",
+                "end": "<number>"
+              }
+            ],
+            "nameHighlighted": "<string>"
+          },
+          {
+            "urls": [
+              "<string>",
+              "<string>"
+            ],
+            "maxConfidence": "<number>",
+            "avgConfidence": "<number>",
+            "celebrityId": "<string>",
+            "name": "<string>",
+            "segments": [
+              {
+                "maxConfidence": "<number>",
+                "avgConfidence": "<number>",
+                "start": "<number>",
+                "end": "<number>"
+              },
+              {
+                "maxConfidence": "<number>",
+                "avgConfidence": "<number>",
+                "start": "<number>",
+                "end": "<number>"
+              }
+            ],
+            "nameHighlighted": "<string>"
+          }
+        ],
+        "detectedPersons": [
+          {
+            "personId": "<string>",
+            "name": "<string>",
+            "maxConfidence": "<number>",
+            "avgConfidence": "<number>",
+            "primaryImageUrl": "<string>",
+            "segments": [
+              {
+                "imageId": "<string>",
+                "maxConfidence": "<number>",
+                "avgConfidence": "<number>",
+                "start": "<number>",
+                "end": "<number>"
+              },
+              {
+                "imageId": "<string>",
+                "maxConfidence": "<number>",
+                "avgConfidence": "<number>",
+                "start": "<number>",
+                "end": "<number>"
+              }
+            ],
+            "nameHighlighted": "<string>"
+          },
+          {
+            "personId": "<string>",
+            "name": "<string>",
+            "maxConfidence": "<number>",
+            "avgConfidence": "<number>",
+            "primaryImageUrl": "<string>",
+            "segments": [
+              {
+                "imageId": "<string>",
+                "maxConfidence": "<number>",
+                "avgConfidence": "<number>",
+                "start": "<number>",
+                "end": "<number>"
+              },
+              {
+                "imageId": "<string>",
+                "maxConfidence": "<number>",
+                "avgConfidence": "<number>",
+                "start": "<number>",
+                "end": "<number>"
+              }
+            ],
+            "nameHighlighted": "<string>"
+          }
+        ],
+        "tags": [
+          {
+            "name": "<string>",
+            "source": "<string>",
+            "nameHighlighted": "<string>"
+          },
+          {
+            "name": "<string>",
+            "source": "<string>",
+            "nameHighlighted": "<string>"
+          }
+        ],
+        "detectedLabels": [
+          {
+            "maxConfidence": "<number>",
+            "name": "<string>",
+            "segments": [
+              {
+                "maxConfidence": "<number>",
+                "start": "<number>",
+                "end": "<number>"
+              },
+              {
+                "maxConfidence": "<number>",
+                "start": "<number>",
+                "end": "<number>"
+              }
+            ],
+            "nameHighlighted": "<string>"
+          },
+          {
+            "maxConfidence": "<number>",
+            "name": "<string>",
+            "segments": [
+              {
+                "maxConfidence": "<number>",
+                "start": "<number>",
+                "end": "<number>"
+              },
+              {
+                "maxConfidence": "<number>",
+                "start": "<number>",
+                "end": "<number>"
+              }
+            ],
+            "nameHighlighted": "<string>"
+          }
+        ],
+        "paragraphRulesParameters": {
+          "maxDuration": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "maxCharacters": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "maxWords": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "maxSilence": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "punctuation": {
+            "isActive": "<boolean>"
+          }
+        },
+        "subtitleRulesParameters": {
+          "maxDuration": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "maxCharacters": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "maxWords": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "maxSilence": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "punctuation": {
+            "isActive": "<boolean>"
+          }
+        },
+        "translationParagraphRulesParameters": {
+          "maxDuration": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "maxCharacters": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "maxWords": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "maxSilence": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "punctuation": {
+            "isActive": "<boolean>"
+          }
+        },
+        "translationSubtitleRulesParameters": {
+          "maxDuration": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "maxCharacters": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "lineBreakMaxCharacters": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "maxWords": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "maxSilence": {
+            "isActive": "<boolean>",
+            "value": "<number>"
+          },
+          "punctuation": {
+            "isActive": "<boolean>"
+          }
+        },
+        "isTranslationUpdated": "<boolean>",
+        "paragraphMarkers": [
+          {
+            "p": "<number>"
+          },
+          {
+            "p": "<number>"
+          }
+        ],
+        "subtitleMarkers": [
+          {
+            "p": "<number>"
+          },
+          {
+            "p": "<number>"
+          }
+        ],
+        "translationParagraphMarkers": [
+          {
+            "p": "<number>"
+          },
+          {
+            "p": "<number>"
+          }
+        ],
+        "translationSubtitleMarkers": [
+          {
+            "p": "<number>"
+          },
+          {
+            "p": "<number>"
+          }
+        ]
+      }
+order: 1000

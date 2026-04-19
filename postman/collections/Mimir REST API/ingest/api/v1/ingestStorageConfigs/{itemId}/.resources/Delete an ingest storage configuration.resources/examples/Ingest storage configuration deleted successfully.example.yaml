@@ -1,0 +1,17 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/ingest/api/v1/ingestStorageConfigs/:itemId"
+  method: DELETE
+  headers:
+    Accept: text/plain
+  pathVariables:
+    itemId: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: text/plain
+  body:
+    type: text
+    content: <string>
+order: 1000

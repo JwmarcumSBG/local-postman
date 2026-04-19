@@ -1,0 +1,23 @@
+$kind: http-example
+name: The user does not have permission to execute this action or the action is not allowed.
+request:
+  url: "{{baseUrl}}/ingest/api/v1/ingestStorageConfigs/:itemId"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+response:
+  statusCode: 403
+  statusText: Forbidden
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 3000

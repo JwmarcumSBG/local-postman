@@ -1,0 +1,8 @@
+$kind: http-request
+description: Get content templates
+url: "{{baseUrl}}/templates"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Get content templates.resources/examples
+order: 1000

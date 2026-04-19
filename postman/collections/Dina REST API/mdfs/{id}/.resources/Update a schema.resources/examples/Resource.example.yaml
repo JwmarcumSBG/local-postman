@@ -1,0 +1,172 @@
+$kind: http-example
+request:
+  url: https://jnqpz9vemg.execute-api.us-east-1.amazonaws.com/v1/mdfs/:id
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "label": "<string>",
+        "views": {
+          "default": [
+            {
+              "fieldId": "<string>",
+              "hint": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>"
+            },
+            {
+              "fieldId": "<string>",
+              "hint": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>"
+            }
+          ],
+          "order_form": [
+            {
+              "fieldId": "<string>",
+              "hint": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>"
+            },
+            {
+              "fieldId": "<string>",
+              "hint": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>"
+            }
+          ],
+          "order_grid": [
+            {
+              "fieldId": "<string>",
+              "hint": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>"
+            },
+            {
+              "fieldId": "<string>",
+              "hint": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>"
+            }
+          ]
+        },
+        "fields": [
+          {
+            "fieldId": "<string>",
+            "required": "<boolean>",
+            "defaultValue": "<string>",
+            "type": "number",
+            "alternatives": [
+              {
+                "id": "<string>",
+                "label": "<string>",
+                "value": "<string>"
+              },
+              {
+                "id": "<string>",
+                "label": "<string>",
+                "value": "<string>"
+              }
+            ],
+            "constraint": {},
+            "filters": {
+              "non_f": 42631647,
+              "commodo_7e": -79678048,
+              "qui0e": 51149873
+            }
+          },
+          {
+            "fieldId": "<string>",
+            "required": "<boolean>",
+            "defaultValue": "<string>",
+            "type": "user",
+            "alternatives": [
+              {
+                "id": "<string>",
+                "label": "<string>",
+                "value": "<string>"
+              },
+              {
+                "id": "<string>",
+                "label": "<string>",
+                "value": "<string>"
+              }
+            ],
+            "constraint": {},
+            "filters": {
+              "occaecatb62": false,
+              "reprehenderit1e": "proident amet"
+            }
+          }
+        ]
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "label": "<string>",
+        "views": {},
+        "fields": [
+          {
+            "fieldId": "<string>",
+            "required": "<boolean>",
+            "defaultValue": "<string>",
+            "type": "choice",
+            "alternatives": [
+              {
+                "id": "<string>",
+                "label": "<string>",
+                "value": "<string>"
+              },
+              {
+                "id": "<string>",
+                "label": "<string>",
+                "value": "<string>"
+              }
+            ],
+            "constraint": {},
+            "filters": {
+              "dolorf": -52572127
+            }
+          },
+          {
+            "fieldId": "<string>",
+            "required": "<boolean>",
+            "defaultValue": "<string>",
+            "type": "relation",
+            "alternatives": [
+              {
+                "id": "<string>",
+                "label": "<string>",
+                "value": "<string>"
+              },
+              {
+                "id": "<string>",
+                "label": "<string>",
+                "value": "<string>"
+              }
+            ],
+            "constraint": {},
+            "filters": {
+              "aliquaab": 78067372,
+              "nostrud9": -98467985.4767423,
+              "irure54e": 90442065.81381539,
+              "Lorem8bd": -20787735.131514966
+            }
+          }
+        ]
+      }
+order: 1000

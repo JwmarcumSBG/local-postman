@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{baseUrl}}/instances/:id/metadata"
+method: GET
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) Instance id (mId)
+examples: ./.resources/Returns a list of all metadata for a given
+  instance.resources/examples
+order: 1000

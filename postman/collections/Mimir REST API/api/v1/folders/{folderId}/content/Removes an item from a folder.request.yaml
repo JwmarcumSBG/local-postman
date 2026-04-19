@@ -1,0 +1,17 @@
+$kind: http-request
+description: |
+  Removes the reference to the parent folder from the item.
+url: "{{baseUrl}}/api/v1/folders/:folderId/content?id=<string>"
+method: DELETE
+headers:
+  Accept: application/json
+queryParams:
+  - key: id
+    value: <string>
+    description: (Required) The ID of this item/subfolder to remove
+pathVariables:
+  - key: folderId
+    value: <string>
+    description: (Required) The folder ID
+examples: ./.resources/Removes an item from a folder.resources/examples
+order: 3000

@@ -1,0 +1,75 @@
+$kind: http-request
+url: "{{baseUrl}}/stories/:id"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) Story id
+body:
+  type: json
+  content: |-
+    {
+      "mTitle": "<string>",
+      "mDescription": "<string>",
+      "metadata": {
+        "pariatur7d_": 62234038,
+        "Excepteur_c2c": 38189561,
+        "ad_dc": false,
+        "qui_1": false,
+        "proidenta_1": 95276569.81101558
+      },
+      "assignedMemberIds": [
+        "<string>",
+        "<string>"
+      ],
+      "mPublishingAt": "<string>",
+      "mPublishingEnd": "<string>",
+      "mIcon": "<string>",
+      "content": {
+        "document": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              },
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              }
+            ]
+          },
+          {
+            "type": "block-quote",
+            "children": [
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              },
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              }
+            ]
+          }
+        ]
+      }
+    }
+examples: ./.resources/Update a story partially.resources/examples
+order: 9000

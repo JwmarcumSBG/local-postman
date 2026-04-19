@@ -1,0 +1,13 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/config/api/v1/bookmarks/:bookmarkId"
+  method: DELETE
+  pathVariables:
+    bookmarkId: ""
+response:
+  statusCode: 204
+  statusText: No Content
+  body:
+    type: text
+    content: ""
+order: 1000

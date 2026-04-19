@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{baseUrl}}/rundowns/:id/chat"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) rundown id
+examples: ./.resources/Get chat for rundown by the rundown id.resources/examples
+order: 2000

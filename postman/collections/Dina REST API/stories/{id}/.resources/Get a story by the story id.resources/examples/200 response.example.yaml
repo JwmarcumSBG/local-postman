@@ -1,0 +1,82 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/stories/:id"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "mId": "<string>",
+        "mLastVersion": "<string>",
+        "mCreatedAt": "<dateTime>",
+        "mdfId": "<string>",
+        "mState": "<string>",
+        "mUpdatedAt": "<dateTime>",
+        "mUpdatedById": "<string>",
+        "mDescription": "<string>",
+        "mCreatedById": "<string>",
+        "mPublishingAt": "<dateTime>",
+        "mPublishingEnd": "<dateTime>",
+        "mType": "<string>",
+        "mAssignedMembers": [
+          {
+            "mId": "<string>",
+            "mType": "<string>"
+          },
+          {
+            "mId": "<string>",
+            "mType": "<string>"
+          }
+        ],
+        "metadata": {
+          "ad92": 71475030,
+          "laborum_9": -41868785,
+          "exercitation_9bc": "laborum quis ex",
+          "aliquip_32_": -11766914
+        },
+        "version": "<integer>",
+        "mTitle": "<string>",
+        "mIcon": "<string>",
+        "isRestricted": "<boolean>",
+        "mSyncProviders": [
+          {
+            "provider": "<string>",
+            "mId": "<string>",
+            "mMetaData": [
+              {
+                "key": "<string>",
+                "value": "<string>"
+              },
+              {
+                "key": "<string>",
+                "value": "<string>"
+              }
+            ]
+          },
+          {
+            "provider": "<string>",
+            "mId": "<string>",
+            "mMetaData": [
+              {
+                "key": "<string>",
+                "value": "<string>"
+              },
+              {
+                "key": "<string>",
+                "value": "<string>"
+              }
+            ]
+          }
+        ],
+        "contentUrl": "<string>"
+      }
+order: 1000

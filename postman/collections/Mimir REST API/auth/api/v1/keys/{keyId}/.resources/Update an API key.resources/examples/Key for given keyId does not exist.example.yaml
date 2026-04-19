@@ -1,0 +1,24 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/auth/api/v1/keys/:keyId"
+  method: PUT
+  headers:
+    Content-Type: application/json
+  pathVariables:
+    keyId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "isActive": "<boolean>",
+        "expiryDate": "<string>",
+        "label": "<string>",
+        "maxUnusedDays": "<number>"
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  body:
+    type: text
+    content: ""
+order: 3000

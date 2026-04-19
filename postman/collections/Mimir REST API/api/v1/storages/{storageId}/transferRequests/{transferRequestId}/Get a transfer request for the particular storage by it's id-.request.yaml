@@ -1,0 +1,16 @@
+$kind: http-request
+name: Get a transfer request for the particular storage by it's id.
+description: Get a transfer request for the particular storage by it's id.
+url: "{{baseUrl}}/api/v1/storages/:storageId/transferRequests/:transferRequestId"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: storageId
+    value: <string>
+    description: (Required) The identifier string for storage.
+  - key: transferRequestId
+    value: <string>
+    description: (Required) The identifier string for transfer request.
+examples: ./.resources/Get a transfer request for the particular storage by it's id-.resources/examples
+order: 2000

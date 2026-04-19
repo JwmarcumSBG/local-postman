@@ -1,0 +1,12 @@
+$kind: http-request
+description: Retrieve a single order form
+url: "{{baseUrl}}/orderforms/:formId"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: formId
+    value: <uuid>
+    description: (Required) The order form identifier
+examples: ./.resources/Retrieve a single order form.resources/examples
+order: 1000

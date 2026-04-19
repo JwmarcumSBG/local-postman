@@ -1,0 +1,138 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/mdfs/:mdfId"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    mdfId: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "label": "<string>",
+        "active": "<boolean>",
+        "fields": [
+          {
+            "id": "<string>",
+            "fieldId": "<string>",
+            "type": "text",
+            "required": false,
+            "defaultValue": {},
+            "alternatives": [
+              {
+                "label": "<string>",
+                "value": "<string>"
+              },
+              {
+                "label": "<string>",
+                "value": "<string>"
+              }
+            ],
+            "optionListId": "<string>"
+          },
+          {
+            "id": "<string>",
+            "fieldId": "<string>",
+            "type": "choice",
+            "required": false,
+            "defaultValue": {},
+            "alternatives": [
+              {
+                "label": "<string>",
+                "value": "<string>"
+              },
+              {
+                "label": "<string>",
+                "value": "<string>"
+              }
+            ],
+            "optionListId": "<string>"
+          }
+        ],
+        "views": {
+          "item": [
+            {
+              "id": "<string>",
+              "fieldId": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            },
+            {
+              "id": "<string>",
+              "fieldId": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            }
+          ],
+          "search": [
+            {
+              "id": "<string>",
+              "fieldId": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            },
+            {
+              "id": "<string>",
+              "fieldId": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            }
+          ],
+          "editing": [
+            {
+              "id": "<string>",
+              "fieldId": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            },
+            {
+              "id": "<string>",
+              "fieldId": "<string>",
+              "visible": "<boolean>",
+              "label": "<string>",
+              "flex": "<integer>",
+              "multiline": "<boolean>",
+              "fieldHeight": null,
+              "hint": "<string>",
+              "icon": "<string>"
+            }
+          ]
+        },
+        "flavor": "<string>",
+        "color": "<string>",
+        "icon": "<string>",
+        "rule": "<string>"
+      }
+order: 1000

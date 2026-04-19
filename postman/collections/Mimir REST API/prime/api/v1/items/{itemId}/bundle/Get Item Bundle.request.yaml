@@ -1,0 +1,39 @@
+$kind: http-request
+description: |
+  This API is used for system-to-system replication of items and their
+  associated resources. The exact nature of the resource requests and responses
+  will evolve as both replication support and the information associated with an
+  item in the system evolves. Information about item state and resources are
+  delivered in bundles. Multiple bundles may be needed to fully replicate the
+  state and resources of an item.
+url: "{{baseUrl}}/prime/api/v1/items/:itemId/bundle"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item
+body:
+  type: json
+  content: |-
+    {
+      "replica": {
+        "want": {
+          "unnamed": {
+            "pariatur_d": "<boolean>"
+          },
+          "streamFrom": {
+            "aute710": "<number>",
+            "in_1c": "<number>"
+          }
+        },
+        "have": {
+          "schemas": {},
+          "optionLists": {}
+        }
+      }
+    }
+examples: ./.resources/Get Item Bundle.resources/examples
+order: 1000

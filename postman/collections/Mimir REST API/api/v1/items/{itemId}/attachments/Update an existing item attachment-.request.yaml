@@ -1,0 +1,24 @@
+$kind: http-request
+name: Update an existing item attachment.
+description: This API is used to update an attachment for a specific item.
+url: "{{baseUrl}}/api/v1/items/:itemId/attachments"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) Unique ID of the item this attachment should be created for
+body:
+  type: json
+  content: |-
+    {
+      "fileName": "<string>",
+      "type": "image",
+      "role": "poster",
+      "language": "<string>",
+      "description": "<string>"
+    }
+examples: ./.resources/Update an existing item attachment-.resources/examples
+order: 3000

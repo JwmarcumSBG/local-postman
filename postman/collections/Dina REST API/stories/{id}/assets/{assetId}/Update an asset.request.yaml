@@ -1,0 +1,27 @@
+$kind: http-request
+description: Update an asset
+url: "{{baseUrl}}/stories/:id/assets/:assetId"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Story id
+  - key: assetId
+    value: <uuid>
+    description: (Required) Asset id
+body:
+  type: json
+  content: |-
+    {
+      "title": "<string>",
+      "mediaType": "<string>",
+      "externalId": "<string>",
+      "thumbnail": "<string>",
+      "proxy": "<string>",
+      "duration": "<number>"
+    }
+examples: ./.resources/Update an asset.resources/examples
+order: 2000

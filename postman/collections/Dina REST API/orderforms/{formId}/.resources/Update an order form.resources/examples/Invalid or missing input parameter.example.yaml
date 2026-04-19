@@ -1,0 +1,48 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/orderforms/:formId"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    formId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "spaceId": "<string>",
+        "mdfId": "<string>",
+        "groupName": "<string>",
+        "subGroupName": "<string>",
+        "types": [
+          "<string>",
+          "<string>"
+        ],
+        "statusAlternatives": [
+          {
+            "id": "<string>",
+            "label": "<string>",
+            "value": "<string>"
+          },
+          {
+            "id": "<string>",
+            "label": "<string>",
+            "value": "<string>"
+          }
+        ]
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 2000

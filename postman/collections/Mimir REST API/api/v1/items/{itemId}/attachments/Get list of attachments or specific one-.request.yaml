@@ -1,0 +1,17 @@
+$kind: http-request
+name: Get list of attachments or specific one.
+description: Returns the list of attachments available for the item, or a specific one if 'attachment' query parameter is passed.
+url: "{{baseUrl}}/api/v1/items/:itemId/attachments?attachment="
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: attachment
+    value: ""
+    description: The file name of a specific attachment
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) Unique ID of the item the attachments should be fetched for.
+examples: ./.resources/Get list of attachments or specific one-.resources/examples
+order: 1000

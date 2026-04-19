@@ -1,0 +1,24 @@
+$kind: http-request
+name: Getting an exclusive lock on a transfer request from storage.
+description: Getting an exclusive lock on a transfer request from storage.
+url: "{{baseUrl}}/api/v1/storages/:storageId/transferRequests/:transferRequestId"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: storageId
+    value: <string>
+    description: (Required) The identifier string for storage.
+  - key: transferRequestId
+    value: <string>
+    description: (Required) The identifier string for transfer request.
+body:
+  type: json
+  content: |-
+    {
+      "storageManagerInstanceId": "<string>",
+      "transferState": "<string>"
+    }
+examples: ./.resources/Getting an exclusive lock on a transfer request from storage-.resources/examples
+order: 1000

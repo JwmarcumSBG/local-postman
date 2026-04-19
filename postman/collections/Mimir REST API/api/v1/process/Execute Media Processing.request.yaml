@@ -1,0 +1,29 @@
+$kind: http-request
+description: |
+  The Process API executes various operations on media items, including transcoding, transcription, person detection, celebrity detection, label detection, text detection, subclip creation, and archive file transfer. Each operation requires an `itemId`, `operationType`, and optional `operationParams`. The `forced` field determines if the operation should run even when disabled.
+
+  **N.B:** These operations may invoke additional costs depending on the nature of the operation.
+url: "{{baseUrl}}/api/v1/process"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "itemId": "<string>",
+      "operationType": "transcription",
+      "operationParams": {
+        "transcriptionSourceLanguage": "<string>",
+        "transcriptionService": "amberscriptSpeechToText",
+        "transcriptionChannels": [
+          "<integer>",
+          "<integer>"
+        ],
+        "transcriptionChannelIdentification": "<boolean>"
+      },
+      "forced": "<boolean>"
+    }
+examples: ./.resources/Execute Media Processing.resources/examples
+order: 1000

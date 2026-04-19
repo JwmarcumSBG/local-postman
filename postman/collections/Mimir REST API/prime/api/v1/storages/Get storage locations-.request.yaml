@@ -1,0 +1,9 @@
+$kind: http-request
+name: Get storage locations.
+description: Get all storage locations
+url: "{{baseUrl}}/prime/api/v1/storages"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Get storage locations-.resources/examples
+order: 1000

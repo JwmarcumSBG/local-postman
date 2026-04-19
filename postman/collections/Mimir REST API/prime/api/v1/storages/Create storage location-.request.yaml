@@ -1,0 +1,27 @@
+$kind: http-request
+name: Create storage location.
+description: Create a new storage location
+url: "{{baseUrl}}/prime/api/v1/storages"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "id": "<string>",
+      "name": "<string>",
+      "folderPath": "<string>",
+      "storageType": "aws-s3",
+      "associatedArtifactsToTransfer": [
+        "transcript-srt",
+        "transcript-srt"
+      ],
+      "keys": {
+        "accessKey": "<string>",
+        "secretKey": "<string>"
+      }
+    }
+examples: ./.resources/Create storage location-.resources/examples
+order: 2000

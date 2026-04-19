@@ -1,0 +1,13 @@
+$kind: http-request
+description: |
+  Cancel highres deletion of an item scheduled using the 'delete highres' API. Will only succeed if the highres deletion request hasn't already been processed or in progress.
+url: "{{baseUrl}}/api/v1/items/:itemId/deleteHighres"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item
+examples: ./.resources/Cancel highres deletion of an item.resources/examples
+order: 2000

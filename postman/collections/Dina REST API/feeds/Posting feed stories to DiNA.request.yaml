@@ -1,0 +1,9 @@
+$kind: http-request
+description: Makes it possible to send feature stories to DiNA. Typically used
+  by feed microservices
+url: "{{baseUrl}}/feeds"
+method: POST
+headers:
+  Accept: application/json
+examples: ./.resources/Posting feed stories to DiNA.resources/examples
+order: 1000

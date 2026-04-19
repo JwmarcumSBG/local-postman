@@ -1,0 +1,7 @@
+$kind: http-request
+url: "https://us.mjoll.no/ingest/api/v1/ingestStorageConfigs"
+method: GET
+headers:
+  x-mimir-cognito-id-token: Bearer {{api_key}}
+  Accept: application/json
+order: 7000

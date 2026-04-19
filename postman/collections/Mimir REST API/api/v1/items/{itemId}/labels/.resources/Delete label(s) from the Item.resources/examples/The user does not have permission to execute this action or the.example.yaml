@@ -1,0 +1,32 @@
+$kind: http-example
+name: The user does not have permission to execute this action or the action is not allowed.
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/labels"
+  method: DELETE
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "labels": [
+          "<string>"
+        ]
+      }
+response:
+  statusCode: 403
+  statusText: Forbidden
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 3000

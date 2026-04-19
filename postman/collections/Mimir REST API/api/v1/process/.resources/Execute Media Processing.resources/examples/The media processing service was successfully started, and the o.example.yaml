@@ -1,0 +1,37 @@
+$kind: http-example
+name: The media processing service was successfully started, and the operation is being processed in the background.
+request:
+  url: "{{baseUrl}}/api/v1/process"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "itemId": "<string>",
+        "operationType": "transcription",
+        "operationParams": {
+          "transcriptionSourceLanguage": "<string>",
+          "transcriptionService": "amberscriptSpeechToText",
+          "transcriptionChannels": [
+            "<integer>",
+            "<integer>"
+          ],
+          "transcriptionChannelIdentification": "<boolean>"
+        },
+        "forced": "<boolean>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "message": "<string>"
+      }
+order: 1000

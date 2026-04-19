@@ -1,0 +1,12 @@
+$kind: http-request
+description: Delete a planning item
+url: "{{baseUrl}}/planningItems/:id"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Planning item id
+examples: ./.resources/Delete a planning item.resources/examples
+order: 4000

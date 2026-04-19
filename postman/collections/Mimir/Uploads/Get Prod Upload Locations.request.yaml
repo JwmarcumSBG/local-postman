@@ -1,0 +1,10 @@
+$kind: http-request
+description: >
+  Lists upload locations so you can confirm which config ID maps to which S3
+  bucket.
+url: "https://us.mjoll.no/config/api/v1/config/uploadLocations"
+method: GET
+headers:
+  x-mimir-cognito-id-token: Bearer {{api_key}}
+  Accept: application/json
+order: 1000

@@ -1,0 +1,28 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/orders/:orderId/orders?limit=<integer>&key=<string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: limit
+      value: <integer>
+      description: Max number of orders to retrieve.
+    - key: key
+      value: <string>
+      description: Pagination key
+  pathVariables:
+    orderId: ""
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 2000

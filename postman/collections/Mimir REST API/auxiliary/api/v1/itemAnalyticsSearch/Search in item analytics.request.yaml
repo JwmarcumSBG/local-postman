@@ -1,0 +1,34 @@
+$kind: http-request
+description: |
+  Search in item analytics
+url: "{{baseUrl}}/auxiliary/api/v1/itemAnalyticsSearch?itemsPerPage=<integer>&from=0&searchString=<string>&sortBy=executedOn&sortOrder=desc&itemId=<string>&date=<dateTime>&readableMetadataFields=<boolean>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: itemsPerPage
+    value: <integer>
+    description: Number of elements should be returned per page.
+  - key: from
+    value: "0"
+    description: Start number of the page
+  - key: searchString
+    value: <string>
+    description: To limit the search results to entries that has a specific 'actionType' given by this parameter.
+  - key: sortBy
+    value: executedOn
+    description: Property to sort by.
+  - key: sortOrder
+    value: desc
+    description: Sort order of the result.
+  - key: itemId
+    value: <string>
+    description: ID of the item.
+  - key: date
+    value: <dateTime>
+    description: Analytic of that day.
+  - key: readableMetadataFields
+    value: <boolean>
+    description: If true, the <b>mdfDiff</b>'s internal GUID will be replaced with readable field IDs
+examples: ./.resources/Search in item analytics.resources/examples
+order: 1000

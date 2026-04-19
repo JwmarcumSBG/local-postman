@@ -1,0 +1,24 @@
+$kind: http-example
+name: Invalid syntax in request.
+request:
+  url: "{{baseUrl}}/auxiliary/api/v1/storages/:bucketName/items/:objectKey"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    bucketName: ""
+    objectKey: ""
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

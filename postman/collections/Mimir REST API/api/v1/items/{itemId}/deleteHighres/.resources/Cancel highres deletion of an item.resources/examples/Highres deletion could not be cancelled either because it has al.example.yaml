@@ -1,0 +1,14 @@
+$kind: http-example
+name: Highres deletion could not be cancelled either because it has already been processed or the item was never marked for deletion.
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/deleteHighres"
+  method: DELETE
+  pathVariables:
+    itemId: ""
+response:
+  statusCode: 400
+  statusText: Bad Request
+  body:
+    type: text
+    content: ""
+order: 2000

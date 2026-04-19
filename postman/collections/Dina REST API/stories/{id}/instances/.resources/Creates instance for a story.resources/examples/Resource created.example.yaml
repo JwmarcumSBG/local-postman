@@ -1,0 +1,142 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/stories/:id/instances"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "title": "<string>",
+        "metadata": {
+          "nulla387": "est quis"
+        },
+        "mMetaData": [
+          {
+            "key": "<string>",
+            "value": "<string>"
+          },
+          {
+            "key": "<string>",
+            "value": "<string>"
+          }
+        ],
+        "platformInfo": {
+          "platform": "linear",
+          "platformKind": "<string>",
+          "account": {
+            "accountId": "<string>",
+            "accountTitle": "<string>"
+          }
+        },
+        "templateId": "<string>",
+        "content": {
+          "document": [
+            {
+              "type": "automation",
+              "data": {
+                "templateType": "DVE",
+                "templateVariant": "<string>",
+                "assets": [
+                  {
+                    "mId": "<string>",
+                    "mRefId": "<string>",
+                    "mProvider": "<string>",
+                    "mediaType": "<string>",
+                    "mAssetId": "<string>",
+                    "mosobj": "<string>",
+                    "mTitle": "<string>",
+                    "duration": "<integer>"
+                  },
+                  {
+                    "mId": "<string>",
+                    "mRefId": "<string>",
+                    "mProvider": "<string>",
+                    "mediaType": "<string>",
+                    "mAssetId": "<string>",
+                    "mosobj": "<string>",
+                    "mTitle": "<string>",
+                    "duration": "<integer>"
+                  }
+                ],
+                "itemId": "<string>"
+              }
+            },
+            {
+              "type": "automation",
+              "data": {
+                "templateType": "PACKAGE",
+                "templateVariant": "<string>",
+                "assets": [
+                  {
+                    "mId": "<string>",
+                    "mRefId": "<string>",
+                    "mProvider": "<string>",
+                    "mediaType": "<string>",
+                    "mAssetId": "<string>",
+                    "mosobj": "<string>",
+                    "mTitle": "<string>",
+                    "duration": "<integer>"
+                  },
+                  {
+                    "mId": "<string>",
+                    "mRefId": "<string>",
+                    "mProvider": "<string>",
+                    "mediaType": "<string>",
+                    "mAssetId": "<string>",
+                    "mosobj": "<string>",
+                    "mTitle": "<string>",
+                    "duration": "<integer>"
+                  }
+                ],
+                "itemId": "<string>"
+              }
+            }
+          ]
+        }
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "title": "<string>",
+        "publishingAt": "<dateTime>",
+        "state": "<string>",
+        "createdAt": "<dateTime>",
+        "updatedAt": "<dateTime>",
+        "updatedById": "<string>",
+        "platformInfo": {
+          "platform": "linear",
+          "platformKind": "<string>",
+          "account": {
+            "accountId": "<string>",
+            "accountTitle": "<string>"
+          }
+        },
+        "version": "<integer>",
+        "isPlaceholder": "<boolean>",
+        "metadata": {
+          "fugiat_6f": -10858775.230580926
+        },
+        "mMetaData": [
+          {
+            "key": "<string>",
+            "value": "<string>"
+          },
+          {
+            "key": "<string>",
+            "value": "<string>"
+          }
+        ]
+      }
+order: 1000

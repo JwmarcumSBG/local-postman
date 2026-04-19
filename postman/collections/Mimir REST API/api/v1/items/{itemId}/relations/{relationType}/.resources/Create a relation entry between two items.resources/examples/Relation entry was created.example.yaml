@@ -1,0 +1,43 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/relations/:relationType?readableMetadataFields=<boolean>"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  queryParams:
+    - key: readableMetadataFields
+      value: <boolean>
+      description: If true, the <b>metadata</b> fields' internal GUID will be replaced with readable field IDs
+  pathVariables:
+    itemId: ""
+    relationType: ""
+  body:
+    type: json
+    content: |-
+      {
+        "relatedItemId": "<string>"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "children",
+        "item": {
+          "id": "<string>",
+          "itemState": "deleting",
+          "itemType": "video",
+          "mediaDuration": "<number>",
+          "metadata": {
+            "formData": {
+              "default_title": "<string>"
+            }
+          }
+        }
+      }
+order: 1000

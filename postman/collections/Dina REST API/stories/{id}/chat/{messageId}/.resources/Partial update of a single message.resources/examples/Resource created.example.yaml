@@ -1,0 +1,35 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/stories/:id/chat/:messageId"
+  method: PATCH
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+    messageId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "content": "<string>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "type": "<string>",
+        "content": "<string>",
+        "messageType": "<string>",
+        "createdAt": "<dateTime>",
+        "createdById": "<string>",
+        "updatedAt": "<dateTime>",
+        "updatedById": "<string>"
+      }
+order: 1000

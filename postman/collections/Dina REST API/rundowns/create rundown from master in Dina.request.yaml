@@ -1,0 +1,17 @@
+$kind: http-request
+description: Create new daily rundown from master rundown Dina
+url: "{{baseUrl}}/rundowns"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "id": "<string>",
+      "publishingTime": "<string>",
+      "payloadVersion": 1
+    }
+examples: ./.resources/create rundown from master in Dina.resources/examples
+order: 2000

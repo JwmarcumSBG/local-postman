@@ -1,0 +1,39 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/folders/ancestry"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "ids": "<array>",
+        "type": "<string>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "magna_5c": {
+          "paths": {
+            "anim_3e": [
+              {
+                "id": "<string>",
+                "name": "<string>"
+              },
+              {
+                "id": "<string>",
+                "name": "<string>"
+              }
+            ]
+          }
+        }
+      }
+order: 1000

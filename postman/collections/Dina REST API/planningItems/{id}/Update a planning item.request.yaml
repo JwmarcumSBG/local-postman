@@ -1,0 +1,24 @@
+$kind: http-request
+description: Update a planning item
+url: "{{baseUrl}}/planningItems/:id"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Planning item id
+body:
+  type: json
+  content: |-
+    {
+      "title": "<string>",
+      "metadata": {
+        "ut_1ab": 43945293.374902844,
+        "adipisicing_a75": true,
+        "ad0": "ea labore fugiat e"
+      }
+    }
+examples: ./.resources/Update a planning item.resources/examples
+order: 3000

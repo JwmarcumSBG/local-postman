@@ -1,0 +1,15 @@
+$kind: http-request
+description: Returns a single asset item for this story
+url: "{{baseUrl}}/stories/:id/assets/:assetId"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Story id
+  - key: assetId
+    value: <uuid>
+    description: (Required) asset id
+examples: ./.resources/Get single asset item for this story.resources/examples
+order: 1000

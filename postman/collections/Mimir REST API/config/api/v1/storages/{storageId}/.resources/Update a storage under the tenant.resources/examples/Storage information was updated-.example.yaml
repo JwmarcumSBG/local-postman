@@ -1,0 +1,25 @@
+$kind: http-example
+name: Storage information was updated.
+request:
+  url: "{{baseUrl}}/config/api/v1/storages/:storageId"
+  method: PUT
+  headers:
+    Accept: application/json
+  pathVariables:
+    storageId: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "createdOn": "<dateTime>",
+        "tenantId": "<string>",
+        "name": "<string>",
+        "description": "<string>"
+      }
+order: 1000

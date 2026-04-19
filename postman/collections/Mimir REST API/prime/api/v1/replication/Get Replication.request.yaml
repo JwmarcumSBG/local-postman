@@ -1,0 +1,10 @@
+$kind: http-request
+description: |
+  Retrieve configuration controlling automated replication of content from other
+  Mimir systems.
+url: "{{baseUrl}}/prime/api/v1/replication"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Get Replication.resources/examples
+order: 1000

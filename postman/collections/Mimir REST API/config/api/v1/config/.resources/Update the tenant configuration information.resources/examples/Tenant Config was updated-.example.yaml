@@ -1,0 +1,20 @@
+$kind: http-example
+name: Tenant Config was updated.
+request:
+  url: "{{baseUrl}}/config/api/v1/config"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: "{}"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: "{}"
+order: 1000

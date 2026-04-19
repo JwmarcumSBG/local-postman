@@ -1,0 +1,9 @@
+name: Saga Prod
+values:
+  - key: saga_base_url
+    value: "https://pnqrxq1y5l.execute-api.us-east-1.amazonaws.com/v1"
+    enabled: true
+  - key: saga_api_key
+    value: "qaDmh29FdI58gQujNEzz24Sucptp6uro9vd1gOJG"
+    enabled: true
+color: null

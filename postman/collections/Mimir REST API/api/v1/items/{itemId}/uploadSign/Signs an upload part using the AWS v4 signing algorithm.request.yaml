@@ -1,0 +1,19 @@
+$kind: http-request
+description: |
+  Performs part signing based on the algorithm defined here:
+  https://docs.aws.amazon.com/general/latest/gr/sigv4_signing.html
+url: "{{baseUrl}}/api/v1/items/:itemId/uploadSign?datetime=<string>&to_sign=<string>"
+method: POST
+headers:
+  Accept: application/json
+queryParams:
+  - key: datetime
+    value: <string>
+    description: (Required) Timestamp of the signing request
+  - key: to_sign
+    value: <string>
+    description: (Required) The string to sign
+pathVariables:
+  itemId: ""
+examples: ./.resources/Signs an upload part using the AWS v4 signing algorithm.resources/examples
+order: 1000

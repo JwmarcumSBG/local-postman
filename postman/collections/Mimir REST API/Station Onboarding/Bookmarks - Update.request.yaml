@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{mimirBaseUrl}}/config/api/v1/bookmarks/{{mimir_bookmark_id}}"
+method: PUT
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "path": "{{mimir_bookmark_path}}",
+      "title": "{{mimir_bookmark_title}}",
+      "icon": "{{mimir_bookmark_icon}}",
+      "isFilterBookmark": true,
+      "visibleToGroups": ["{{mimir_group_id}}"]
+    }
+scripts:
+  - type: afterResponse
+    code: pm.test('Status 200', function () { pm.response.to.have.status(200); });
+    language: text/javascript
+order: 6000

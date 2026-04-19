@@ -1,0 +1,34 @@
+$kind: http-request
+name: Get active/inactive/all orders by assignee, owner, or resourceId
+description: Get active/inactive/all orders by assignee, owner, or resourceId
+url: "{{baseUrl}}/orders?limit=<integer>&key=<string>&sortOrder=asc&status=<str\
+  ing>&assigneeId=<string>&ownerId=<string>&resourceId=<string>&spaceId=<string\
+  >&formId=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: limit
+    value: <integer>
+    description: Max number of orders to retrieve.
+  - key: key
+    value: <string>
+    description: Pagination key
+  - key: sortOrder
+    value: asc
+    description: Sort order. Either asc or desc
+  - key: status
+    value: <string>
+  - key: assigneeId
+    value: <string>
+  - key: ownerId
+    value: <string>
+  - key: resourceId
+    value: <string>
+  - key: spaceId
+    value: <string>
+  - key: formId
+    value: <string>
+examples: ./.resources/Get active-inactive-all orders by assignee, owner, or
+  resourceId.resources/examples
+order: 3000

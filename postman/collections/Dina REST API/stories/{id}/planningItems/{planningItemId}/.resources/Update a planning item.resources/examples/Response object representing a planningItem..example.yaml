@@ -1,0 +1,45 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/stories/:id/planningItems/:planningItemId"
+  method: PATCH
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+    planningItemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "title": "<string>",
+        "metadata": {
+          "ut_1ab": 43945293.374902844,
+          "adipisicing_a75": true,
+          "ad0": "ea labore fugiat e"
+        }
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "hostId": "<string>",
+        "hostType": "instance",
+        "type": "block",
+        "mdfId": "<string>",
+        "title": "<string>",
+        "commandId": "<string>",
+        "resourceId": "<string>",
+        "metadata": {
+          "in_99": -18275906.04929559,
+          "culpa_84b": 14392084,
+          "nostrud_3": -3143167
+        }
+      }
+order: 1000

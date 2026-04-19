@@ -1,0 +1,42 @@
+$kind: collection
+description: |
+  # Using the REST API
+
+  To use the API, the user needs to authenticate with an `API KEY` obtained from the Mimir web console.
+
+  Procedure to create an API KEY:
+
+  - Visit the `user settings` page from the profile dropdown.
+  - Create a new API key from the `API Keys` tab under the `user settings` page.
+  - Once obtained, the API KEY can be used in the `x-mimir-cognito-id-token` request header when making REST API requests.
+
+  Example using curl:
+
+  Here's how you would retrieve details about an item with the ID 00112233-4455-6677-8899-aabbccddeeff:
+  ```bash
+    curl 'https://mimir.mjoll.no/api/v1/items/00112233-4455-6677-8899-aabbccddeeff' \
+    -H 'Accept: application/json' \
+    -H 'x-mimir-cognito-id-token: Bearer <your-api-key>'
+  ```
+  (Replace `<your-api-key>` with your actual API key)
+variables:
+  baseUrl: https://us.mjoll.no/api/v1/
+  mimirBaseUrl: https://us.mjoll.no/v1
+  mimir_api_key_header: Bearer <MIMIR_API_KEY>
+  mimir_bookmark_icon: inbox
+  mimir_bookmark_id: ""
+  mimir_bookmark_path: /search-item?searchString=mediaCreatedOn:[-7d to *]
+  mimir_bookmark_title: Station - Incoming
+  mimir_family_name: ""
+  mimir_given_name: ""
+  mimir_group_id: ""
+  mimir_upload_location_id: ""
+  mimir_user_id: ""
+  personId: <string>
+auth:
+  - id: 4d17ce7e-5c5d-4243-8250-f780e47113de
+    type: apikey
+    name: apikey auth
+    credentials:
+      value: "{{mimir_api_key_header}}"
+      key: x-mimir-cognito-id-token

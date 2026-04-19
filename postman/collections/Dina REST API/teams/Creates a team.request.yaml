@@ -1,0 +1,16 @@
+$kind: http-request
+description: Creates a team
+url: "{{baseUrl}}/teams"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "title": "<string>",
+      "description": "<string>"
+    }
+examples: ./.resources/Creates a team.resources/examples
+order: 3000

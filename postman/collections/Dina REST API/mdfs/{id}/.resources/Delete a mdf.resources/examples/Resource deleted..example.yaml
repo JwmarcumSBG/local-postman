@@ -1,0 +1,17 @@
+$kind: http-example
+request:
+  url: https://jnqpz9vemg.execute-api.us-east-1.amazonaws.com/v1/mdfs/:id
+  method: DELETE
+  headers:
+    Accept: application/json
+  pathVariables:
+    id: ""
+response:
+  statusCode: 204
+  statusText: No Content
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: "{}"
+order: 1000

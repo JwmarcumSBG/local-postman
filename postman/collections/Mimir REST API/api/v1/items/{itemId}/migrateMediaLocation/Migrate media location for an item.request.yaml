@@ -1,0 +1,34 @@
+$kind: http-request
+description: |
+  Migrate high-resolution and proxy media for an item to new storage locations. The file path in the new location is expected to be the same as the current high-res or proxy location of the item. This API will verify that the media exists in the new location and also verify the file size for high-resolution media. If migration is successful it'll automatically schedule deletion of the original media if the 'keepSource' property is true <br>
+  NOTE: This API doesn't do any file transfer itself. It only updates the location properties of the item after verifying the file existence.
+url: "{{baseUrl}}/api/v1/items/:itemId/migrateMediaLocation"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item whose media is being migrated.
+body:
+  type: json
+  content: |-
+    {
+      "migrated": [
+        {
+          "type": "highres",
+          "uploadLocationId": "<string>",
+          "expectedFilePath": "<string>",
+          "keepSource": "<boolean>"
+        },
+        {
+          "type": "highres",
+          "uploadLocationId": "<string>",
+          "expectedFilePath": "<string>",
+          "keepSource": "<boolean>"
+        }
+      ]
+    }
+examples: ./.resources/Migrate media location for an item.resources/examples
+order: 1000

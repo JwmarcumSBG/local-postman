@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{baseUrl}}/auth/api/v1/keys/:keyId"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: keyId
+    value: <string>
+    description: (Required) The unique identifier of the key to update
+body:
+  type: json
+  content: |-
+    {
+      "isActive": "<boolean>",
+      "expiryDate": "<string>",
+      "label": "<string>",
+      "maxUnusedDays": "<number>"
+    }
+examples: ./.resources/Update an API key.resources/examples
+order: 1000

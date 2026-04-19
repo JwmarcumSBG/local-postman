@@ -1,0 +1,77 @@
+$kind: http-example
+name: >
+  Response object representing a list of teams. Contains pagination if required.
+
+  See documentation for obtaining a single team for more information about teams
+  itself.
+request:
+  url: "{{baseUrl}}/teams?limit=<integer>&orderBy=createdAt&sortOrder=asc&key=<st\
+    ring>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: limit
+      value: <integer>
+      description: Max number of teams to retrieve. Default 25
+    - key: orderBy
+      value: createdAt
+      description: Sort criteria. Either createdAt or updatedAt. Default is createdAt
+    - key: sortOrder
+      value: asc
+      description: Sort order. Either asc or desc. Default is desc
+    - key: key
+      value: <string>
+      description: Pagination key
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "teams",
+        "timestamp": "<dateTime>",
+        "teams": [
+          {
+            "id": "<string>",
+            "type": "order",
+            "title": "<string>",
+            "description": "<string>",
+            "mdfId": "<string>",
+            "metadata": {
+              "sed_2b2": -56548599
+            },
+            "createdAt": "<dateTime>",
+            "createdById": "<string>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>",
+            "version": "<integer>"
+          },
+          {
+            "id": "<string>",
+            "type": "user",
+            "title": "<string>",
+            "description": "<string>",
+            "mdfId": "<string>",
+            "metadata": {
+              "aute_d": true
+            },
+            "createdAt": "<dateTime>",
+            "createdById": "<string>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>",
+            "version": "<integer>"
+          }
+        ],
+        "pagination": {
+          "lastKey": "<string>",
+          "pageSize": "<integer>",
+          "page": "<integer>",
+          "totalItems": "<integer>",
+          "totalPages": "<integer>"
+        }
+      }
+order: 1000

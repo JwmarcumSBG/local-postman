@@ -1,0 +1,47 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/optionLists"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "name": "<string>",
+        "alternatives": [
+          {
+            "label": "<string>",
+            "value": "<string>"
+          },
+          {
+            "label": "<string>",
+            "value": "<string>"
+          }
+        ],
+        "optionListType": "treeChoice"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "name": "<string>",
+        "alternatives": [
+          {
+            "label": "<string>",
+            "value": "<string>"
+          },
+          {
+            "label": "<string>",
+            "value": "<string>"
+          }
+        ]
+      }
+order: 1000

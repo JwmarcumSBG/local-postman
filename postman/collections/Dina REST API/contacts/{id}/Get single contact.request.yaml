@@ -1,0 +1,12 @@
+$kind: http-request
+description: Get contact for a given contact id
+url: "{{baseUrl}}/contacts/:id"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: "(Required) "
+examples: ./.resources/Get single contact.resources/examples
+order: 1000

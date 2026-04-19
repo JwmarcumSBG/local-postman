@@ -1,0 +1,60 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/rundowns/:id/orders?status=<string>&limit=<integer>&key=<stri\
+    ng>&sortOrder=asc"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: status
+      value: <string>
+    - key: limit
+      value: <integer>
+      description: Max number of orders to retrieve.
+    - key: key
+      value: <string>
+      description: Pagination key
+    - key: sortOrder
+      value: asc
+      description: Sort order. Either asc or desc
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "orders",
+        "timestamp": "<dateTime>",
+        "orders": [
+          {
+            "mId": "<string>",
+            "mResourceId": "<string>",
+            "mType": "<string>",
+            "mOwner": "<string>",
+            "mAssignee": "<string>",
+            "mFormId": "<string>",
+            "mCreatedAt": "<string>",
+            "mCreatedById": "<string>",
+            "metadata": {},
+            "mStatus": "<string>"
+          },
+          {
+            "mId": "<string>",
+            "mResourceId": "<string>",
+            "mType": "<string>",
+            "mOwner": "<string>",
+            "mAssignee": "<string>",
+            "mFormId": "<string>",
+            "mCreatedAt": "<string>",
+            "mCreatedById": "<string>",
+            "metadata": {},
+            "mStatus": "<string>"
+          }
+        ]
+      }
+order: 1000

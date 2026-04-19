@@ -1,0 +1,21 @@
+# Use this workspace to collaborate
+workspace:
+  id: 0b77a327-30ae-47c9-b8b1-5d21046f1f1e
+
+localResources:
+  collections:
+    - ../mimir/mimir_generated_media_locations.postman_collection.json
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../postman/collections/Saga: 52661721-0f6d9bd4-a77b-47df-9257-a8698bb1edc7
+    ../postman/collections/Dina REST API: 52661721-7485c560-1c75-4cd4-a3b6-3a0a7d4aaa40
+    ../postman/collections/Mimir: 52661721-ea59d44d-5eb0-423c-a3c6-29ae32e94d08
+    ../postman/collections/Mimir REST API: 52661721-5b8ca2e0-d9b9-495e-bf80-bcfd1cc054c0
+  environments:
+    ../postman/environments/Mimir Prod.environment.yaml: 52661721-00f6f2b3-2308-4192-b196-ec8bac5af0a9
+    ../postman/environments/Mimir Staging.environment.yaml: 52661721-17b0d4a2-d3d3-442b-9f1e-b9a85858cddf
+    ../postman/environments/Saga Prod.environment.yaml: 52661721-4e9da730-e129-4345-8e23-adfcaa70d49c
+    ../postman/environments/Saga Staging.environment.yaml: 52661721-88a90503-50ed-408c-aa01-b4b3dbd40157

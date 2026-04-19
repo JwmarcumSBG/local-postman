@@ -1,0 +1,22 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/instances/:id/orders/:orderId"
+  method: DELETE
+  headers:
+    Accept: application/json
+  pathVariables:
+    id: ""
+    orderId: ""
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 3000

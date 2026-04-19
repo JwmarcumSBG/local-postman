@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{mimirBaseUrl}}/config/api/v1/bookmarks?version=2"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+queryParams:
+  version: "2"
+body:
+  type: text
+  content: |-
+    {
+      "path": "{{mimir_bookmark_path}}",
+      "title": "{{mimir_bookmark_title}}",
+      "icon": "{{mimir_bookmark_icon}}",
+      "isFilterBookmark": true,
+      "visibleToGroups": ["{{mimir_group_id}}"]
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status 201', function () { pm.response.to.have.status(201); });
+      try { const body = pm.response.json(); if (body && body.id) { pm.collectionVariables.set('mimir_bookmark_id', body.id); } } catch (e) {}
+    language: text/javascript
+order: 5000

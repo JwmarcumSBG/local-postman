@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/folders/:folderId"
+method: POST
+headers:
+  - key: Accept
+    value: application/json
+  - key: x-mimir-cognito-id-token
+    value: Bearer sakm.JbU7wfB6CUD_wZ99nZ8VD.B8Dn1Hea67--g1k_awT1P
+    disabled: true
+pathVariables:
+  - key: folderId
+    value: cdeb8c75-51d1-4cc2-8d3d-ef3956c8a4eb
+    description: (Required) The folder ID
+auth:
+  type: apikey
+  credentials:
+    value: Bearer sakm.JbU7wfB6CUD_wZ99nZ8VD.B8Dn1Hea67--g1k_awT1P
+    in: header
+    key: x-mimir-cognito-id-token
+settings:
+  followAuthorizationHeader: false
+examples: ./.resources/Retrieve a folder entry.resources/examples
+order: 2000

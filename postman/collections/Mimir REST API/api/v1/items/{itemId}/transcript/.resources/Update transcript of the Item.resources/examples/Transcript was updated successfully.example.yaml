@@ -1,0 +1,38 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/transcript"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "timedTranscript": [
+          {
+            "content": "<string>",
+            "startTime": "<number>",
+            "endTime": "<number>"
+          }
+        ],
+        "languageCode": "<string>",
+        "isTranslation": "<boolean>",
+        "translationTargetLanguage": "<string>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "languageCode": "<string>",
+        "timedTranscriptUrl": "<string>",
+        "timedTranslatedTranscriptUrl": "<string>"
+      }
+order: 1000

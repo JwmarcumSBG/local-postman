@@ -1,0 +1,20 @@
+$kind: http-request
+description: Updates a team with given team id
+url: "{{baseUrl}}/teams/:id"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: "(Required) "
+body:
+  type: json
+  content: |-
+    {
+      "title": "<string>",
+      "description": "<string>"
+    }
+examples: ./.resources/Updates single team title, description.resources/examples
+order: 1000

@@ -1,0 +1,44 @@
+$kind: http-request
+description: |
+  Creates an order form for a specific space.
+
+  The payload shall contain an order form definition with the following remarks:
+   - The payload.id (order form id) is optional.
+   - The payload.spaceId is required and shall match the provided path id.
+url: "{{baseUrl}}/spaces/:id/orderforms"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) The space identifier
+body:
+  type: json
+  content: |-
+    {
+      "id": "<string>",
+      "spaceId": "<string>",
+      "mdfId": "<string>",
+      "groupName": "<string>",
+      "subGroupName": "<string>",
+      "types": [
+        "<string>",
+        "<string>"
+      ],
+      "statusAlternatives": [
+        {
+          "id": "<string>",
+          "label": "<string>",
+          "value": "<string>"
+        },
+        {
+          "id": "<string>",
+          "label": "<string>",
+          "value": "<string>"
+        }
+      ]
+    }
+examples: ./.resources/Creates an order form for a specific space.resources/examples
+order: 3000

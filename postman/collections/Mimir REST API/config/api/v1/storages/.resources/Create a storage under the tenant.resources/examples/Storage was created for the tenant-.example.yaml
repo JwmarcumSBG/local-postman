@@ -1,0 +1,32 @@
+$kind: http-example
+name: Storage was created for the tenant.
+request:
+  url: "{{baseUrl}}/config/api/v1/storages"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "name": "<string>",
+        "description": "<string>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "name": "<string>",
+        "description": "<string>",
+        "tenantId": "<string>",
+        "createdOn": "<dateTime>"
+      }
+order: 1000

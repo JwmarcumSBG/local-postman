@@ -1,0 +1,60 @@
+$kind: http-request
+url: "{{baseUrl}}/dailynotes/:id"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) date at which the daily note was created
+body:
+  type: json
+  content: |-
+    {
+      "content": {
+        "document": [
+          {
+            "type": "heading-one",
+            "children": [
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              },
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              }
+            ]
+          },
+          {
+            "type": "heading-three",
+            "children": [
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              },
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              }
+            ]
+          }
+        ]
+      },
+      "type": "<string>"
+    }
+examples: ./.resources/Updates a daily note.resources/examples
+order: 2000

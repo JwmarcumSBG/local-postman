@@ -1,0 +1,146 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/stories/:id"
+  method: PATCH
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "mTitle": "<string>",
+        "mDescription": "<string>",
+        "metadata": {
+          "pariatur7d_": 62234038,
+          "Excepteur_c2c": 38189561,
+          "ad_dc": false,
+          "qui_1": false,
+          "proidenta_1": 95276569.81101558
+        },
+        "assignedMemberIds": [
+          "<string>",
+          "<string>"
+        ],
+        "mPublishingAt": "<string>",
+        "mPublishingEnd": "<string>",
+        "mIcon": "<string>",
+        "content": {
+          "document": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                },
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                }
+              ]
+            },
+            {
+              "type": "block-quote",
+              "children": [
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                },
+                {
+                  "text": "<string>",
+                  "strikeThrough": "<boolean>",
+                  "bold": "<boolean>",
+                  "italic": "<boolean>",
+                  "underline": "<boolean>"
+                }
+              ]
+            }
+          ]
+        }
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "mId": "<string>",
+        "mLastVersion": "<string>",
+        "mCreatedAt": "<dateTime>",
+        "mdfId": "<string>",
+        "mState": "<string>",
+        "mUpdatedAt": "<dateTime>",
+        "mUpdatedById": "<string>",
+        "mDescription": "<string>",
+        "mCreatedById": "<string>",
+        "mPublishingAt": "<dateTime>",
+        "mPublishingEnd": "<dateTime>",
+        "mType": "<string>",
+        "mAssignedMembers": [
+          {
+            "mId": "<string>",
+            "mType": "<string>"
+          },
+          {
+            "mId": "<string>",
+            "mType": "<string>"
+          }
+        ],
+        "metadata": {
+          "ad92": 71475030,
+          "laborum_9": -41868785,
+          "exercitation_9bc": "laborum quis ex",
+          "aliquip_32_": -11766914
+        },
+        "version": "<integer>",
+        "mTitle": "<string>",
+        "mIcon": "<string>",
+        "isRestricted": "<boolean>",
+        "mSyncProviders": [
+          {
+            "provider": "<string>",
+            "mId": "<string>",
+            "mMetaData": [
+              {
+                "key": "<string>",
+                "value": "<string>"
+              },
+              {
+                "key": "<string>",
+                "value": "<string>"
+              }
+            ]
+          },
+          {
+            "provider": "<string>",
+            "mId": "<string>",
+            "mMetaData": [
+              {
+                "key": "<string>",
+                "value": "<string>"
+              },
+              {
+                "key": "<string>",
+                "value": "<string>"
+              }
+            ]
+          }
+        ],
+        "contentUrl": "<string>"
+      }
+order: 1000

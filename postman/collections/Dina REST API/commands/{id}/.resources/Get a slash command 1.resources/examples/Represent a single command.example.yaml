@@ -1,0 +1,38 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/commands/:id"
+  method: PATCH
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "title": "<string>",
+        "command": "<string>",
+        "active": "<boolean>",
+        "color": "<string>",
+        "singleOnly": "<boolean>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "title": "<string>",
+        "mdfId": "<string>",
+        "type": "config",
+        "command": "<string>",
+        "active": "<boolean>",
+        "color": "<string>",
+        "singleOnly": "<boolean>"
+      }
+order: 1000

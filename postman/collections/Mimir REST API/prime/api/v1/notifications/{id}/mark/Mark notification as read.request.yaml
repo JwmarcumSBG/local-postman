@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{baseUrl}}/prime/api/v1/notifications/:id/mark"
+method: POST
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) The ID of the notification to mark as read
+examples: ./.resources/Mark notification as read.resources/examples
+order: 1000

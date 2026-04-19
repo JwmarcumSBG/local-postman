@@ -1,0 +1,36 @@
+$kind: http-example
+name: Invalid syntax in request.
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/upload"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "lockOwnerInstanceId": "<string>",
+        "uploadLocationId": "<string>",
+        "fileName": "<string>",
+        "isMultiPartUpload": "<boolean>",
+        "fileSize": "<number>",
+        "contentType": "<string>",
+        "chunkSize": "<number>"
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

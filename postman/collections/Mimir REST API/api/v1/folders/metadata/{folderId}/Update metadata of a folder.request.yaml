@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/folders/metadata/:folderId"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  folderId: ""
+body:
+  type: json
+  content: |-
+    {
+      "metadataDelta": {
+        "formId": "<string>",
+        "formData": {}
+      }
+    }
+examples: ./.resources/Update metadata of a folder.resources/examples
+order: 1000

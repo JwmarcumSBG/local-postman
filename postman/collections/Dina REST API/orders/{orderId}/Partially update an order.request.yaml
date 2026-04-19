@@ -1,0 +1,22 @@
+$kind: http-request
+description: Partially update an order
+url: "{{baseUrl}}/orders/:orderId"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: orderId
+    value: <uuid>
+    description: "(Required) "
+body:
+  type: json
+  content: |-
+    {
+      "mStatus": "<string>",
+      "mOwner": "<string>",
+      "mAssignee": "<string>",
+      "metadata": {}
+    }
+examples: ./.resources/Partially update an order.resources/examples
+order: 3000

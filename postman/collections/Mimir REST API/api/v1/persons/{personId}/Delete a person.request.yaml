@@ -1,0 +1,13 @@
+$kind: http-request
+description: |
+  Delete a person
+url: "{{baseUrl}}/api/v1/persons/:personId"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  - key: personId
+    value: <string>
+    description: (Required) The identifier string for person.
+examples: ./.resources/Delete a person.resources/examples
+order: 2000

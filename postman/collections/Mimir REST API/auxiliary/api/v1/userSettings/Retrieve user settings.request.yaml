@@ -1,0 +1,10 @@
+$kind: http-request
+description: |
+  Retrieve settings of the user associated with the credentials used to perform
+  the HTTP request.
+url: "{{baseUrl}}/auxiliary/api/v1/userSettings"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Retrieve user settings.resources/examples
+order: 1000

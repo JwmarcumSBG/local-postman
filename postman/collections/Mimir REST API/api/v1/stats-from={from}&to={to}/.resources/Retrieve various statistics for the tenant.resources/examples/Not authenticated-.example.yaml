@@ -1,0 +1,28 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/api/v1/stats?from=<string>&to=<string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: from
+      value: <string>
+      description: From date, inclusive. In yyyy-mm-dd format. If not provided then no lower bound is used.
+    - key: to
+      value: <string>
+      description: To date, inclusive. In yyyy-mm-dd format. Defaults to the current date, and should only be provided if "from" is also specified
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

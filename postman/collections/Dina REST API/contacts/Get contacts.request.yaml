@@ -1,0 +1,26 @@
+$kind: http-request
+description: Returns a list of all contacts. Pagination will apply for large datasets.
+url: "{{baseUrl}}/contacts?limit=<integer>&orderBy=createdAt&sortOrder=asc&key=\
+  <string>&customType=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: limit
+    value: <integer>
+    description: Max number of contacts to retrieve. Default 25
+  - key: orderBy
+    value: createdAt
+    description: Sort criteria. Either createdAt or updatedAt. Default is createdAt
+  - key: sortOrder
+    value: asc
+    description: Sort order. Either asc or desc. Default is desc
+  - key: key
+    value: <string>
+    description: Pagination key
+  - key: customType
+    value: <string>
+    description: Optional filter for customType. Used to for different types of
+      contacts. Requires mdf.customType field
+examples: ./.resources/Get contacts.resources/examples
+order: 2000

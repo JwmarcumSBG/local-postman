@@ -1,0 +1,70 @@
+$kind: http-example
+name: Metering information for the current tenant was retrieved.
+request:
+  url: "{{baseUrl}}/api/v1/metering"
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "meteringInfo": {
+          "Transcoding": {
+            "cost": "<number>",
+            "duration": "<number>",
+            "unit": "<number>",
+            "count": "<number>"
+          },
+          "audioExtraction": {
+            "cost": "<number>",
+            "duration": "<number>",
+            "unit": "<number>",
+            "count": "<number>"
+          },
+          "transcription": {
+            "cost": "<number>",
+            "duration": "<number>",
+            "unit": "<number>",
+            "count": "<number>"
+          },
+          "translation": {
+            "cost": "<number>",
+            "duration": "<number>",
+            "unit": "<number>",
+            "count": "<number>"
+          },
+          "celebrityDetection": {
+            "cost": "<number>",
+            "duration": "<number>",
+            "unit": "<number>",
+            "count": "<number>"
+          },
+          "personDetection": {
+            "cost": "<number>",
+            "duration": "<number>",
+            "unit": "<number>",
+            "count": "<number>"
+          },
+          "labelDetection": {
+            "cost": "<number>",
+            "duration": "<number>",
+            "unit": "<number>",
+            "count": "<number>"
+          },
+          "storage": {
+            "cost": "<number>",
+            "unit": "<number>",
+            "count": "<number>"
+          }
+        },
+        "startDay": "<number>",
+        "endDay": "<number>",
+        "cost": "<number>"
+      }
+order: 1000

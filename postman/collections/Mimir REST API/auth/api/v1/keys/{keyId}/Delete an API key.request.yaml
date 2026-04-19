@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{baseUrl}}/auth/api/v1/keys/:keyId"
+method: DELETE
+pathVariables:
+  - key: keyId
+    value: <string>
+    description: (Required) The unique identifier of the key to delete
+examples: ./.resources/Delete an API key.resources/examples
+order: 2000

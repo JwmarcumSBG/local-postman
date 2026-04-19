@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{mimirBaseUrl}}/auth/api/v1/users/{{mimir_user_id}}"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "groups": ["{{mimir_group_id}}"],
+      "givenName": "{{mimir_given_name}}",
+      "familyName": "{{mimir_family_name}}"
+    }
+scripts:
+  - type: afterResponse
+    code: pm.test('Status 200', function () { pm.response.to.have.status(200); });
+    language: text/javascript
+order: 3000

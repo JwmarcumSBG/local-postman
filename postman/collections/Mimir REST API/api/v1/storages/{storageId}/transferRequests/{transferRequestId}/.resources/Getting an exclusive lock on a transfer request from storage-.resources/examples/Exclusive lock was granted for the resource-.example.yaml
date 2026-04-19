@@ -1,0 +1,30 @@
+$kind: http-example
+name: Exclusive lock was granted for the resource.
+request:
+  url: "{{baseUrl}}/api/v1/storages/:storageId/transferRequests/:transferRequestId"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    storageId: ""
+    transferRequestId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "storageManagerInstanceId": "<string>",
+        "transferState": "<string>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "cutoffTime": "<number>"
+      }
+order: 1000

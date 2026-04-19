@@ -1,0 +1,24 @@
+$kind: http-request
+name: Archives/Unarchives an item
+description: |
+  Archives or unarchives an item entry. Archived items appear under a special folder structure whose
+  root is named 'Archive'. Attempting to archive an item that is already archived or to unarchive
+  an item that is not archived will result in a 409 Conflict response.
+url: "{{baseUrl}}/api/v1/items/:itemId/archive"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item
+body:
+  type: json
+  content: |-
+    {
+      "type": "unarchive",
+      "archivePath": "<string>"
+    }
+examples: ./.resources/Archives-Unarchives an item.resources/examples
+order: 1000

@@ -1,0 +1,131 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId?readableMetadataFields=<boolean>&requiredMetadataVersion=<number>"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  queryParams:
+    - key: readableMetadataFields
+      value: <boolean>
+      description: If true, the <b>metadata</b> fields' internal GUID will be replaced with readable field IDs
+    - key: requiredMetadataVersion
+      value: <number>
+      description: The update will be made on condition that the current item.metadataVersion value matches the provided value. If the precondition check fails, a 409 Conflict response is returned with the response body having error.payload.reason="PreconditionFailed".
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "metadata": {
+          "formId": "<string>",
+          "formData": {}
+        },
+        "metadataDelta": {
+          "formId": "<string>",
+          "formData": {}
+        },
+        "visibleTo": {
+          "level": "tenant",
+          "groups": [
+            "<string>",
+            "<string>"
+          ]
+        },
+        "updatableBy": {
+          "level": "owner",
+          "groups": [
+            "<string>",
+            "<string>"
+          ]
+        },
+        "timedMetadataCurated": "<boolean>",
+        "ingestSourceStorageId": "<string>",
+        "ingestSourceS3Bucket": "<string>",
+        "ingestSourceFullPath": "<string>",
+        "ingest": {
+          "source": {
+            "scheme": "managed-storage",
+            "realm": "<string>",
+            "path": "<string>"
+          }
+        },
+        "webProxyLocation": {
+          "scheme": "external-generated-media",
+          "realm": "<string>",
+          "path": "<string>",
+          "root": "<string>"
+        },
+        "editProxyLocation": {
+          "scheme": "external-generated-media",
+          "realm": "<string>",
+          "path": "<string>",
+          "root": "<string>"
+        },
+        "highresDeletion": {
+          "deletionState": "in-progress",
+          "statusMessage": "<string>",
+          "deletionDate": "<string>"
+        },
+        "webProxyAudioDownMixInfo": {
+          "downMixChannelSets": [
+            [
+              "<integer>",
+              "<integer>"
+            ],
+            [
+              "<integer>",
+              "<integer>"
+            ]
+          ]
+        }
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "description": "<string>",
+        "title": "<string>",
+        "id": "<string>",
+        "celebrityDetectionState": "<string>",
+        "labelDetectionState": "<string>",
+        "personDetectionState": "<string>",
+        "transcriptionState": "<string>",
+        "itemState": "<string>",
+        "labelDetectionBy": "<string>",
+        "personDetectionBy": "<string>",
+        "transcriptionBy": "<string>",
+        "celebrityDetectionBy": "<string>",
+        "labelDetectionEnabled": "<boolean>",
+        "personDetectionEnabled": "<boolean>",
+        "transcriptionEnabled": "<boolean>",
+        "celebrityDetectionEnabled": "<boolean>",
+        "hasAudio": "<boolean>",
+        "mediaType": "<string>",
+        "mediaCreatedOn": "<dateTime>",
+        "mediaDuration": "<number>",
+        "mediaCodec": "<string>",
+        "mediaCodecTag": "<string>",
+        "mediaFrameRate": "<number>",
+        "mediaHeight": "<number>",
+        "mediaWidth": "<number>",
+        "mediaSize": "<number>",
+        "originalFileName": "<string>",
+        "createdBy": "<string>",
+        "thumbnail": "<string>",
+        "highRes": "<string>",
+        "folderParents": "<array>",
+        "proxy": "<string>",
+        "frameCaptureFrequency": {
+          "denominator": "<number>",
+          "numerator": "<number>"
+        },
+        "timecode": "<string>"
+      }
+order: 1000

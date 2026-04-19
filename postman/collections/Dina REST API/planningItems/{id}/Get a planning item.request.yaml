@@ -1,0 +1,12 @@
+$kind: http-request
+description: Returns a planning item
+url: "{{baseUrl}}/planningItems/:id"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Planning item id
+examples: ./.resources/Get a planning item.resources/examples
+order: 2000

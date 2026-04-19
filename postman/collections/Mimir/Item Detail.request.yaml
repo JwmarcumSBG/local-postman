@@ -1,0 +1,7 @@
+$kind: http-request
+url: "https://us.mjoll.no/api/v1/items/{{item_id}}"
+method: GET
+headers:
+  x-mimir-cognito-id-token: Bearer {{api_key}}
+  Accept: application/json
+order: 5000

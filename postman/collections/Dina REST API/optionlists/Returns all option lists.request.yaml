@@ -1,0 +1,17 @@
+$kind: http-request
+description: Get all option lists
+url: "{{baseUrl}}/optionlists?limit=<integer>&key=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: limit
+    value: <integer>
+    description: |
+      Max number of option lists to retrieve.
+      If not specified, will return all option lists.
+  - key: key
+    value: <string>
+    description: Pagination key
+examples: ./.resources/Returns all option lists.resources/examples
+order: 3000

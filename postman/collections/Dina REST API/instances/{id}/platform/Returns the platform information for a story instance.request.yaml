@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{baseUrl}}/instances/:id/platform?refresh=false"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: refresh
+    value: "false"
+    description: If set, will refresh provider information from the third-party provider
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) Instance id (mId)
+examples: ./.resources/Returns the platform information for a story
+  instance.resources/examples
+order: 1000

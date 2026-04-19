@@ -1,0 +1,47 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/timedMetadata"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "items": [
+          {
+            "startMs": "<number>",
+            "endMs": "<number>",
+            "data": {
+              "formId": "<string>",
+              "formData": {}
+            }
+          },
+          {
+            "startMs": "<number>",
+            "endMs": "<number>",
+            "data": {
+              "formId": "<string>",
+              "formData": {}
+            }
+          }
+        ],
+        "description": -65973528.85706069
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 4000

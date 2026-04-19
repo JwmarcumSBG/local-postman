@@ -1,0 +1,38 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/providers/:providerName/member/:id"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    providerName: ""
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "providerDetails": {
+          "id": "<string>",
+          "resourceUrl": "<string>",
+          "resourcePermit": "<boolean>"
+        },
+        "notificationPreferences": {
+          "sita_": "<boolean>",
+          "labore_91": "<boolean>",
+          "reprehenderitc_2": "<boolean>"
+        }
+      }
+response:
+  statusCode: 500
+  statusText: Internal Server Error
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 4000

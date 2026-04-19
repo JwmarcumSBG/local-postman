@@ -1,0 +1,49 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/stories/:id/assets"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "title": "<string>",
+        "itemType": "<string>",
+        "externalId": "<string>"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "type": "rundown",
+        "title": "<string>",
+        "description": "<string>",
+        "mdfId": "<string>",
+        "metadata": {
+          "aute_05": "est fugiat mollit irure nostrud",
+          "in6": false,
+          "laborum_a6": 48524625.436342776,
+          "aute_4": "do nostrud proident"
+        },
+        "createdAt": "<dateTime>",
+        "createdById": "<string>",
+        "updatedAt": "<dateTime>",
+        "updatedById": "<string>",
+        "version": "<integer>",
+        "state": "<string>",
+        "mediaType": "<string>",
+        "itemType": "<string>",
+        "externalId": "<string>",
+        "provider": "<string>"
+      }
+order: 1000

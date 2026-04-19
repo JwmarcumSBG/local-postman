@@ -1,0 +1,9 @@
+$kind: http-request
+name: Get all transfer request.
+description: Get all transfer request of that organization that are active.
+url: "{{baseUrl}}/auxiliary/api/v1/transfers"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Get all transfer request-.resources/examples
+order: 1000

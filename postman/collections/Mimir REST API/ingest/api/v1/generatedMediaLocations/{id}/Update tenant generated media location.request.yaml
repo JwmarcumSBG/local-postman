@@ -1,0 +1,26 @@
+$kind: http-request
+description: |
+  Update tenant generated media location
+url: "{{baseUrl}}/ingest/api/v1/generatedMediaLocations/:id"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) ID of the generated media location
+body:
+  type: json
+  content: |-
+    {
+      "bucketName": "<string>",
+      "accessKey": "<string>",
+      "secretKey": "<string>",
+      "uploadGeneratedMedia": "<boolean>",
+      "deleteEnabled": "<boolean>",
+      "storageProvider": "s3_clone",
+      "sourceEndpoint": "<string>"
+    }
+examples: ./.resources/Update tenant generated media location.resources/examples
+order: 2000

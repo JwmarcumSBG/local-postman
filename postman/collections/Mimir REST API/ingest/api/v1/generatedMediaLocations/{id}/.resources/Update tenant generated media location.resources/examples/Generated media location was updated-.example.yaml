@@ -1,0 +1,39 @@
+$kind: http-example
+name: Generated media location was updated.
+request:
+  url: "{{baseUrl}}/ingest/api/v1/generatedMediaLocations/:id"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: ""
+  body:
+    type: json
+    content: |-
+      {
+        "bucketName": "<string>",
+        "accessKey": "<string>",
+        "secretKey": "<string>",
+        "uploadGeneratedMedia": "<boolean>",
+        "deleteEnabled": "<boolean>",
+        "storageProvider": "s3_clone",
+        "sourceEndpoint": "<string>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "bucketName": "<string>",
+        "pathPrefix": "<string>",
+        "accessKey": "<string>",
+        "secretKey": "<string>",
+        "uploadGeneratedMedia": "<boolean>"
+      }
+order: 1000

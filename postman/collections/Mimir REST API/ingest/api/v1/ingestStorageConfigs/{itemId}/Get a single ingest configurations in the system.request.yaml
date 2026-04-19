@@ -1,0 +1,12 @@
+$kind: http-request
+description: Get a single ingest configurations in the system
+url: "{{baseUrl}}/ingest/api/v1/ingestStorageConfigs/:itemId"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) Unique identifier of the ingest storage configuration to retrieve
+examples: ./.resources/Get a single ingest configurations in the system.resources/examples
+order: 1000

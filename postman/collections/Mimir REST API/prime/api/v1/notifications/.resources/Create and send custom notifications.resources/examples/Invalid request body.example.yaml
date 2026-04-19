@@ -1,0 +1,28 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/prime/api/v1/notifications"
+  method: POST
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "description": "<string>",
+        "email": "<string>",
+        "recipientType": "user-email",
+        "title": "<string>",
+        "validUntilDate": "<string>",
+        "action": {
+          "type": "navigate",
+          "label": "<string>",
+          "url": "<string>"
+        }
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  body:
+    type: text
+    content: ""
+order: 2000

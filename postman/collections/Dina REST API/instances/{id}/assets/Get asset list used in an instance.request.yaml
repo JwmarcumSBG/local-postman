@@ -1,0 +1,13 @@
+$kind: http-request
+description: Returns a list of asset used in instance. At the moment only linear
+  instance is supported
+url: "{{baseUrl}}/instances/:id/assets"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) instance id
+examples: ./.resources/Get asset list used in an instance.resources/examples
+order: 1000

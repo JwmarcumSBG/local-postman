@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{mimirBaseUrl}}/config/api/v1/bookmarks?version=2"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  version: "2"
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status 200', function () { pm.response.to.have.status(200); });
+      try { const body = pm.response.json(); if (Array.isArray(body) && body.length > 0 && body[0].id) { pm.collectionVariables.set('mimir_bookmark_id', body[0].id); } } catch (e) {}
+    language: text/javascript
+order: 4000

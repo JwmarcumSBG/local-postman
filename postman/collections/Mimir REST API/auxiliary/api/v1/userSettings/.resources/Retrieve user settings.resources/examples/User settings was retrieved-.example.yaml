@@ -1,0 +1,63 @@
+$kind: http-example
+name: User settings was retrieved.
+request:
+  url: "{{baseUrl}}/auxiliary/api/v1/userSettings"
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "bookmarks": [
+          {
+            "icon": "<string>",
+            "title": "<string>",
+            "path": "<string>",
+            "folderId": "<string>",
+            "isFilterBookmark": "<boolean>",
+            "itemId": "<string>"
+          },
+          {
+            "icon": "<string>",
+            "title": "<string>",
+            "path": "<string>",
+            "folderId": "<string>",
+            "isFilterBookmark": "<boolean>",
+            "itemId": "<string>"
+          }
+        ],
+        "workFolderId": "<uuid>",
+        "lastSeenChangelogId": "<uuid>",
+        "defaultFilters": [
+          {
+            "isExactSearch": "<boolean>",
+            "token": "<string>",
+            "value": "<string>",
+            "isRecognized": "<boolean>",
+            "isSticky": "<boolean>",
+            "filterKey": "<string>"
+          },
+          {
+            "isExactSearch": "<boolean>",
+            "token": "<string>",
+            "value": "<string>",
+            "isRecognized": "<boolean>",
+            "isSticky": "<boolean>",
+            "filterKey": "<string>"
+          }
+        ],
+        "dismissedNotifications": {
+          "fugiat_85f": {
+            "code": "<string>",
+            "text": "<boolean>"
+          }
+        },
+        "showRenameSubclipDialog": "<boolean>"
+      }
+order: 1000

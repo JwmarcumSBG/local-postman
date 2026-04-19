@@ -1,0 +1,17 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/folders/:folderId/content?id=<string>"
+  method: DELETE
+  queryParams:
+    - key: id
+      value: <string>
+      description: (Required) The ID of this item/subfolder to remove
+  pathVariables:
+    folderId: ""
+response:
+  statusCode: 204
+  statusText: No Content
+  body:
+    type: text
+    content: ""
+order: 1000

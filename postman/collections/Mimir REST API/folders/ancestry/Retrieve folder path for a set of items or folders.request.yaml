@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/folders/ancestry"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "ids": "<array>",
+      "type": "<string>"
+    }
+examples: ./.resources/Retrieve folder path for a set of items or folders.resources/examples
+order: 1000

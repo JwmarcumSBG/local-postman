@@ -1,0 +1,21 @@
+$kind: http-request
+description: |
+  Retrieve various statistics for the tenant. Each returned statistic is
+  given as a single count value for the queried time span.
+url: "{{baseUrl}}/api/v1/stats?from={{from}}&to={{to}}&from=<string>&to=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: from
+    value: "{{from}}"
+  - key: to
+    value: "{{to}}"
+  - key: from
+    value: <string>
+    description: From date, inclusive. In yyyy-mm-dd format. If not provided then no lower bound is used.
+  - key: to
+    value: <string>
+    description: To date, inclusive. In yyyy-mm-dd format. Defaults to the current date, and should only be provided if "from" is also specified
+examples: ./.resources/Retrieve various statistics for the tenant.resources/examples
+order: 1000

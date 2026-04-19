@@ -1,0 +1,17 @@
+$kind: http-request
+description: >
+  Delete an order form for a given space.  Note that any tasks connected to this
+  form are not automatically deleted.
+url: "{{baseUrl}}/spaces/:id/orderforms/:formId"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) The space identifier
+  - key: formId
+    value: <uuid>
+    description: (Required) The order form identifier
+examples: ./.resources/Delete an order form for a given space..resources/examples
+order: 3000

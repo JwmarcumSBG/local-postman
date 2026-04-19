@@ -1,0 +1,8 @@
+$kind: http-request
+description: Get webhooks by REST API
+url: "{{baseUrl}}/webhooks"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Get webhooks.resources/examples
+order: 1000

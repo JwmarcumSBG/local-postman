@@ -1,0 +1,13 @@
+$kind: http-request
+description: |
+  Promotes the item as the latest version in its version history if it was an old item version.
+url: "{{baseUrl}}/api/v1/items/:itemId/versionsHistory"
+method: POST
+headers:
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item
+examples: ./.resources/Promote an item to latest version.resources/examples
+order: 2000

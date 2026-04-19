@@ -1,0 +1,40 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/migrateMediaLocation"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "migrated": [
+          {
+            "type": "highres",
+            "uploadLocationId": "<string>",
+            "expectedFilePath": "<string>",
+            "keepSource": "<boolean>"
+          },
+          {
+            "type": "highres",
+            "uploadLocationId": "<string>",
+            "expectedFilePath": "<string>",
+            "keepSource": "<boolean>"
+          }
+        ]
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "error": "<string>"
+      }
+order: 2000

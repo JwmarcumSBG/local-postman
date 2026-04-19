@@ -1,0 +1,43 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/prime/api/v1/items/:itemId/bundle"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "replica": {
+          "want": {
+            "unnamed": {
+              "pariatur_d": "<boolean>"
+            },
+            "streamFrom": {
+              "aute710": "<number>",
+              "in_1c": "<number>"
+            }
+          },
+          "have": {
+            "schemas": {},
+            "optionLists": {}
+          }
+        }
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 3000

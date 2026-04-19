@@ -1,0 +1,61 @@
+$kind: http-example
+name: Not authenticated.
+request:
+  url: "{{baseUrl}}/prime/api/v1/replication"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "sources": [
+          {
+            "stage": "apac",
+            "after": "<dateTime>",
+            "externallyReplicatedStorages": [
+              {
+                "source": "<string>",
+                "target": "<string>"
+              },
+              {
+                "source": "<string>",
+                "target": "<string>"
+              }
+            ],
+            "secretMimirApiToken": "<string>",
+            "shardCount": "<integer>"
+          },
+          {
+            "stage": "prod",
+            "after": "<dateTime>",
+            "externallyReplicatedStorages": [
+              {
+                "source": "<string>",
+                "target": "<string>"
+              },
+              {
+                "source": "<string>",
+                "target": "<string>"
+              }
+            ],
+            "secretMimirApiToken": "<string>",
+            "shardCount": "<integer>"
+          }
+        ]
+      }
+response:
+  statusCode: 401
+  statusText: Unauthorized
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000

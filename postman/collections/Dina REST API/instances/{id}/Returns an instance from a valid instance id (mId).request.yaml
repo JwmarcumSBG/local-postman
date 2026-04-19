@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{baseUrl}}/instances/:id"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) instance id (mId)
+examples: ./.resources/Returns an instance from a valid instance id
+  (mId).resources/examples
+order: 6000

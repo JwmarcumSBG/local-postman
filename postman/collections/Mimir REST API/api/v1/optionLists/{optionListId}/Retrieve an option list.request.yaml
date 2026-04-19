@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/optionLists/:optionListId"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: optionListId
+    value: <string>
+    description: (Required) The ID of the option model
+examples: ./.resources/Retrieve an option list.resources/examples
+order: 1000

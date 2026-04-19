@@ -1,0 +1,22 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/auth/api/v1/keys"
+  method: POST
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "isActive": "<boolean>",
+        "expiryDate": "<string>",
+        "label": "<string>",
+        "maxUnusedDays": "<number>"
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  body:
+    type: text
+    content: ""
+order: 2000

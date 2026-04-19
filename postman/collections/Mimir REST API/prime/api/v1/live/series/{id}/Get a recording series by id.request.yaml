@@ -1,0 +1,10 @@
+$kind: http-request
+description: A recording series defines a recurring recording, such as a recording happening once a week, and contains the needed information for creating the individual recordings.
+url: "{{baseUrl}}/prime/api/v1/live/series/:id"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  id: ""
+examples: ./.resources/Get a recording series by id.resources/examples
+order: 2000

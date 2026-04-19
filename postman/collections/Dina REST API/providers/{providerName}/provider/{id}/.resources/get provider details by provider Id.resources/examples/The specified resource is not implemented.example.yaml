@@ -1,0 +1,22 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/providers/:providerName/provider/:id"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    providerName: ""
+    id: ""
+response:
+  statusCode: 501
+  statusText: Not Implemented
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 5000

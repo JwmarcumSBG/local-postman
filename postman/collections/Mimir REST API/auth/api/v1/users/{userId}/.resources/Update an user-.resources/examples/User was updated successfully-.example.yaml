@@ -1,0 +1,65 @@
+$kind: http-example
+name: User was updated successfully.
+request:
+  url: "{{baseUrl}}/auth/api/v1/users/:userId"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    userId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "givenName": "<string>",
+        "familyName": "<string>",
+        "accountStatus": "VERIFIED",
+        "groups": [
+          "<string>",
+          "<string>"
+        ],
+        "notListable": "<boolean>",
+        "isDeactivated": "<boolean>"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "email": "<string>",
+        "groups": [
+          "<string>",
+          "<string>"
+        ],
+        "permissions": [
+          "<string>",
+          "<string>"
+        ],
+        "extGroupsHint": [
+          "<string>",
+          "<string>"
+        ],
+        "givenName": "<string>",
+        "familyName": "<string>",
+        "accountStatus": "UNVERIFIED",
+        "createdOn": "<dateTime>",
+        "modifiedOn": "<dateTime>",
+        "isExternal": "<boolean>",
+        "notListable": "<boolean>",
+        "avatar": "<string>",
+        "highResAvatar": "<string>",
+        "groupLabels": [
+          "<string>",
+          "<string>"
+        ],
+        "primaryGroupDefaultUploadLocationId": "<string>",
+        "primaryGroupKeldaIdForConformLocation": "<string>",
+        "isDeactivated": "<boolean>"
+      }
+order: 1000

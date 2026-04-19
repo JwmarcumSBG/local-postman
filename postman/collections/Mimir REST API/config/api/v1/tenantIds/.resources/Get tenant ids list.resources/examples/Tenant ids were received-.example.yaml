@@ -1,0 +1,22 @@
+$kind: http-example
+name: Tenant ids were received.
+request:
+  url: "{{baseUrl}}/config/api/v1/tenantIds"
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "ids": [
+          "<string>",
+          "<string>"
+        ]
+      }
+order: 1000

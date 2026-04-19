@@ -1,0 +1,34 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/mediaSegments/:stereamIds/:signedForMethod/:firstSegmentIndex"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+    stereamIds: ""
+    signedForMethod: ""
+    firstSegmentIndex: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "bpv": {
+          "0": "<string>",
+          "1": "<string>"
+        },
+        "epf": {
+          "0": "<string>",
+          "1": "<string>"
+        },
+        "bpad": {
+          "0": "<string>",
+          "1": "<string>"
+        }
+      }
+order: 1000

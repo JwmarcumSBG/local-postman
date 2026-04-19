@@ -1,0 +1,37 @@
+$kind: http-example
+name: User information was retrieved.
+request:
+  url: "{{baseUrl}}/auth/api/v1/userInfo/users?id=<string>&email=<string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: id
+      value: <string>
+      description: The ID of the user
+    - key: email
+      value: <string>
+      description: The email of the user
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": "<string>",
+          "givenName": "<string>",
+          "familyName": "<string>",
+          "email": "<string>"
+        },
+        {
+          "id": "<string>",
+          "givenName": "<string>",
+          "familyName": "<string>",
+          "email": "<string>"
+        }
+      ]
+order: 1000

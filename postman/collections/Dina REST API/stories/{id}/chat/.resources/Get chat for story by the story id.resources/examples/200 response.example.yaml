@@ -1,0 +1,46 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/stories/:id/chat"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "<string>",
+        "timestamp": "<dateTime>",
+        "chat": [
+          {
+            "id": "<string>",
+            "type": "<string>",
+            "content": "<string>",
+            "messageType": "<string>",
+            "createdAt": "<dateTime>",
+            "createdById": "<string>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>"
+          },
+          {
+            "id": "<string>",
+            "type": "<string>",
+            "content": "<string>",
+            "messageType": "<string>",
+            "createdAt": "<dateTime>",
+            "createdById": "<string>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>"
+          }
+        ],
+        "links": {
+          "self": "<string>"
+        }
+      }
+order: 1000

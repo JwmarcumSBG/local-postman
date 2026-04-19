@@ -1,0 +1,113 @@
+$kind: http-request
+description: Update a schema
+url: "{{baseUrl}}/mdfs/:id"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: "(Required) "
+body:
+  type: json
+  content: |-
+    {
+      "id": "<string>",
+      "label": "<string>",
+      "views": {
+        "default": [
+          {
+            "fieldId": "<string>",
+            "hint": "<string>",
+            "visible": "<boolean>",
+            "label": "<string>"
+          },
+          {
+            "fieldId": "<string>",
+            "hint": "<string>",
+            "visible": "<boolean>",
+            "label": "<string>"
+          }
+        ],
+        "order_form": [
+          {
+            "fieldId": "<string>",
+            "hint": "<string>",
+            "visible": "<boolean>",
+            "label": "<string>"
+          },
+          {
+            "fieldId": "<string>",
+            "hint": "<string>",
+            "visible": "<boolean>",
+            "label": "<string>"
+          }
+        ],
+        "order_grid": [
+          {
+            "fieldId": "<string>",
+            "hint": "<string>",
+            "visible": "<boolean>",
+            "label": "<string>"
+          },
+          {
+            "fieldId": "<string>",
+            "hint": "<string>",
+            "visible": "<boolean>",
+            "label": "<string>"
+          }
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "<string>",
+          "required": "<boolean>",
+          "defaultValue": "<string>",
+          "type": "number",
+          "alternatives": [
+            {
+              "id": "<string>",
+              "label": "<string>",
+              "value": "<string>"
+            },
+            {
+              "id": "<string>",
+              "label": "<string>",
+              "value": "<string>"
+            }
+          ],
+          "constraint": {},
+          "filters": {
+            "non_f": 42631647,
+            "commodo_7e": -79678048,
+            "qui0e": 51149873
+          }
+        },
+        {
+          "fieldId": "<string>",
+          "required": "<boolean>",
+          "defaultValue": "<string>",
+          "type": "user",
+          "alternatives": [
+            {
+              "id": "<string>",
+              "label": "<string>",
+              "value": "<string>"
+            },
+            {
+              "id": "<string>",
+              "label": "<string>",
+              "value": "<string>"
+            }
+          ],
+          "constraint": {},
+          "filters": {
+            "occaecatb62": false,
+            "reprehenderit1e": "proident amet"
+          }
+        }
+      ]
+    }
+examples: ./.resources/Update a schema.resources/examples
+order: 2000

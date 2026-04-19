@@ -1,0 +1,159 @@
+$kind: http-request
+description: |
+  Creates an item entry placeholder with a description of which operations to apply
+  when the item's media file will be uploaded. The request may use the 'sequenceDetails'
+  field to describe the Mimir items this new item was created from. If this is the case,
+  enabling a service like transcription will re-run the service on the uploaded media
+  file; not enabling a service will cause the backend to derive the data from the segments
+  that compose the new item. For instance, disabling transcription for an item made of
+  two segments from existing Mimir items will generate a transcription by combining the
+  cuts of the transcriptions found for the Mimir items the segments were taken from.
+
+  After the creation of the item entry, the next step is to actually upload the media file.
+  In order to do that, it is necessary to first acquire the upload lock of the item to
+  prevent concurrent modifications, which is done by using the item upload endpoint.
+  The response object from this endpoint will include the necessary information
+  to upload either as a single PUT request or as a multipart S3 upload.
+
+  Note that when uploading to an AWS S3 bucket, there is a restriction on the maximum
+  size for a single PUT request. If the file size is lower than 5 gigabytes, the upload may
+  be done with a single PUT towards the upload url. Otherwise, the upload must be done with
+  a multipart S3 upload.
+
+  <h2>Virtual Clip</h2>
+  This endpoint also supports creating virtual clips. A virtual clip is a new Mimir item,
+  but will have a reference to the media of the clip it has been created from. This allows
+  for creating Mimir items based off the same source material, without duplicating the
+  video footage in the storage.
+
+  Example payload to create a virtual clip:
+
+  <pre>
+    {
+      "masterClipId": string,
+      "inPoint": number,
+      "outPoint": number,
+      "title": string,
+      "parentClipId": string,
+      "startOffsetMasterClip": number
+    }
+  </pre>
+
+  <b>Required</b><br/>
+  masterClipId: Mimir itemId of the master clip, from which the virtual clip will be created.<br/>
+  inPoint: TimeCode of selected in-point in milliseconds of the master clip.<br/>
+
+  <b>Optional</b><br/>
+  outPoint: TimeCode of selected out-point in milliseconds of the master clip. If not provided, the end of the master clip will be considered as the outPoint.<br/>
+  title: Title of the new virtual clip item.<br/>
+  parentClipId: If a virtual clip needs to be created from another virtual clip, then "parentClipId" is needed to relate them with each other.
+  Otherwise virtual clip will be shown as children of the master clip.<br/>
+  parentClipId: <br/>
+  folderParents: An array of folder IDs. The newly created virtual clip item will appear in all the given folders instead of the folders where the source item belongs.<br />
+  startOffsetMasterClip: If a virtual clip needs to be created from another virtual clip, then "startOffsetMasterClip"
+  would be the source virtual clip's in-point.<br/>
+  visibleTo: Specify who can view this item.<br/>
+  updatableBy: Specify who can update this item.<br/>
+url: "{{baseUrl}}/api/v1/items?readableMetadataFields=<boolean>"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+queryParams:
+  - key: readableMetadataFields
+    value: <boolean>
+    description: If true, the <b>metadata</b> fields' internal GUID will be replaced with readable field IDs
+body:
+  type: json
+  content: |-
+    {
+      "filename": "<string>",
+      "title": "<string>",
+      "itemType": "clipList",
+      "languageCode": "<string>",
+      "transcriptionService": "<string>",
+      "transcriptionChannels": [
+        "<integer>",
+        "<integer>"
+      ],
+      "transcriptionEnabled": "<boolean>",
+      "celebrityDetectionEnabled": "<boolean>",
+      "labelDetectionEnabled": "<boolean>",
+      "personDetectionEnabled": "<boolean>",
+      "folderParents": null,
+      "visibleTo": {
+        "level": "selected_groups",
+        "groups": [
+          "<string>",
+          "<string>"
+        ]
+      },
+      "updatableBy": {
+        "level": "owner",
+        "groups": [
+          "<string>",
+          "<string>"
+        ]
+      },
+      "parentItemIds": [
+        "<string>",
+        "<string>"
+      ],
+      "sequenceDetails": {
+        "tracks": [
+          {
+            "id": "<string>",
+            "name": "<string>",
+            "mediaType": "video",
+            "clips": [
+              {
+                "start": "<number>",
+                "end": "<number>",
+                "duration": "<number>",
+                "inPoint": "<number>",
+                "outPoint": "<number>",
+                "mimirItemId": "<string>"
+              },
+              {
+                "start": "<number>",
+                "end": "<number>",
+                "duration": "<number>",
+                "inPoint": "<number>",
+                "outPoint": "<number>",
+                "mimirItemId": "<string>"
+              }
+            ]
+          },
+          {
+            "id": "<string>",
+            "name": "<string>",
+            "mediaType": "audio",
+            "clips": [
+              {
+                "start": "<number>",
+                "end": "<number>",
+                "duration": "<number>",
+                "inPoint": "<number>",
+                "outPoint": "<number>",
+                "mimirItemId": "<string>"
+              },
+              {
+                "start": "<number>",
+                "end": "<number>",
+                "duration": "<number>",
+                "inPoint": "<number>",
+                "outPoint": "<number>",
+                "mimirItemId": "<string>"
+              }
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "formId": "<string>",
+        "formData": {}
+      },
+      "itemIdToCopyMetadataFrom": "<string>"
+    }
+examples: ./.resources/Create an Item entry.resources/examples
+order: 4000

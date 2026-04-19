@@ -1,0 +1,13 @@
+$kind: http-request
+name: Get all transfer requests for a particular storage.
+description: Get all transfer requests for a particular storage.
+url: "{{baseUrl}}/api/v1/storages/:storageId/transferRequests"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: storageId
+    value: <string>
+    description: (Required) The identifier string for storage.
+examples: ./.resources/Get all transfer requests for a particular storage-.resources/examples
+order: 3000

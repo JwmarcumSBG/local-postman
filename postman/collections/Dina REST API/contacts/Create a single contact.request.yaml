@@ -1,0 +1,21 @@
+$kind: http-request
+description: Creates an external contact
+url: "{{baseUrl}}/contacts"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "metadata": {
+        "nulla3a": false,
+        "adipisicing23": 54486461.99455026
+      },
+      "id": "<string>",
+      "title": "<string>",
+      "description": "<string>"
+    }
+examples: ./.resources/Create a single contact.resources/examples
+order: 3000

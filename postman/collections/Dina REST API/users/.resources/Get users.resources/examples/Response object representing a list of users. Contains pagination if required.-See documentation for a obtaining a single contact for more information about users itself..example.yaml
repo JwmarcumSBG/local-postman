@@ -1,0 +1,80 @@
+$kind: http-example
+name: >
+  Response object representing a list of users. Contains pagination if required.
+
+  See documentation for a obtaining a single contact for more information about
+  users itself.
+request:
+  url: "{{baseUrl}}/users?limit=<integer>&orderBy=createdAt&sortOrder=asc&key=<st\
+    ring>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: limit
+      value: <integer>
+      description: Max number of users to retrieve. Default 25
+    - key: orderBy
+      value: createdAt
+      description: Sort criteria. Either createdAt or updatedAt. Default is createdAt
+    - key: sortOrder
+      value: asc
+      description: Sort order. Either asc or desc. Default is desc
+    - key: key
+      value: <string>
+      description: Pagination key
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "users",
+        "timestamp": "<dateTime>",
+        "users": [
+          {
+            "id": "<string>",
+            "type": "team",
+            "title": "<string>",
+            "description": "<string>",
+            "mdfId": "<string>",
+            "metadata": {
+              "proident__b0": "consequat ad do",
+              "Excepteur_23": 70798492.97256616
+            },
+            "createdAt": "<dateTime>",
+            "createdById": "<string>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>",
+            "version": "<integer>"
+          },
+          {
+            "id": "<string>",
+            "type": "story",
+            "title": "<string>",
+            "description": "<string>",
+            "mdfId": "<string>",
+            "metadata": {
+              "nulla_e3": true,
+              "eiusmod1": -68589937,
+              "non_6": 69182615
+            },
+            "createdAt": "<dateTime>",
+            "createdById": "<string>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>",
+            "version": "<integer>"
+          }
+        ],
+        "pagination": {
+          "lastKey": "<string>",
+          "pageSize": "<integer>",
+          "page": "<integer>",
+          "totalItems": "<integer>",
+          "totalPages": "<integer>"
+        }
+      }
+order: 1000

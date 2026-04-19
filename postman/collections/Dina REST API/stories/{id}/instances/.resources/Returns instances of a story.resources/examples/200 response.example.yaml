@@ -1,0 +1,91 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/stories/:id/instances?limit=<integer>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: limit
+      value: <integer>
+      description: Max number of instances to retrieve
+  pathVariables:
+    id: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "instances": [
+          {
+            "id": "<string>",
+            "title": "<string>",
+            "publishingAt": "<dateTime>",
+            "state": "<string>",
+            "createdAt": "<dateTime>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>",
+            "platformInfo": {
+              "platform": "cms",
+              "platformKind": "<string>",
+              "account": {
+                "accountId": "<string>",
+                "accountTitle": "<string>"
+              }
+            },
+            "version": "<integer>",
+            "isPlaceholder": "<boolean>",
+            "metadata": {
+              "incididuntd9": false,
+              "mollite": 26723117.18194078
+            },
+            "mMetaData": [
+              {
+                "key": "<string>",
+                "value": "<string>"
+              },
+              {
+                "key": "<string>",
+                "value": "<string>"
+              }
+            ]
+          },
+          {
+            "id": "<string>",
+            "title": "<string>",
+            "publishingAt": "<dateTime>",
+            "state": "<string>",
+            "createdAt": "<dateTime>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>",
+            "platformInfo": {
+              "platform": "linear",
+              "platformKind": "<string>",
+              "account": {
+                "accountId": "<string>",
+                "accountTitle": "<string>"
+              }
+            },
+            "version": "<integer>",
+            "isPlaceholder": "<boolean>",
+            "metadata": {
+              "commodo6e": 7833427.942203388
+            },
+            "mMetaData": [
+              {
+                "key": "<string>",
+                "value": "<string>"
+              },
+              {
+                "key": "<string>",
+                "value": "<string>"
+              }
+            ]
+          }
+        ]
+      }
+order: 1000

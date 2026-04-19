@@ -1,0 +1,20 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/items/:itemId/version"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    itemId: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>"
+      }
+order: 1000

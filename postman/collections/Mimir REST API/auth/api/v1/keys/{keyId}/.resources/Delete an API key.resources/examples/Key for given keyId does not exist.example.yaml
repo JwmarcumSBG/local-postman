@@ -1,0 +1,13 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/auth/api/v1/keys/:keyId"
+  method: DELETE
+  pathVariables:
+    keyId: ""
+response:
+  statusCode: 404
+  statusText: Not Found
+  body:
+    type: text
+    content: ""
+order: 2000

@@ -1,0 +1,45 @@
+$kind: http-request
+description: |
+  Get person information
+url: "{{baseUrl}}/api/v1/persons/{{personId}}?from={{from}}&isFuzzy={{isFuzzy}}&itemsPerPage={{itemsPerPage}}&rangeEnd={{rangeEnd}}&rangeStart={{rangeStart}}&searchString={{searchString}}&timeZone={{timeZone}}&itemsPerPage=<number>&from=<number>&searchString=<string>&rangeStart=<number>&timeZone=<string>&isFuzzy=<boolean>&folderId=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: from
+    value: "{{from}}"
+  - key: isFuzzy
+    value: "{{isFuzzy}}"
+  - key: itemsPerPage
+    value: "{{itemsPerPage}}"
+  - key: rangeEnd
+    value: "{{rangeEnd}}"
+  - key: rangeStart
+    value: "{{rangeStart}}"
+  - key: searchString
+    value: "{{searchString}}"
+  - key: timeZone
+    value: "{{timeZone}}"
+  - key: itemsPerPage
+    value: <number>
+    description: (Required) Number of items should be returned per page.
+  - key: from
+    value: <number>
+    description: (Required) Start number of the page
+  - key: searchString
+    value: <string>
+    description: (Required) Actual Search String.
+  - key: rangeStart
+    value: <number>
+    description: A number that determines if the start number of the page
+  - key: timeZone
+    value: <string>
+    description: time zone of the client
+  - key: isFuzzy
+    value: <boolean>
+    description: A boolean that indicates if the search should run as fuzzy or not.
+  - key: folderId
+    value: <string>
+    description: The id of the folder in which the search should perform.
+examples: ./.resources/Get person information.resources/examples
+order: 1000

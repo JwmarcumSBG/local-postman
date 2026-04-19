@@ -1,0 +1,42 @@
+name: Mimir Prod
+values:
+  - key: base_url
+    value: https://us.mjoll.no/api/v1
+    enabled: true
+  - key: api_key
+    value: sakm.JviIsPUVZER9oCK4HX7rZ.UA82ucjIxUZCgwR0CIF4w
+    enabled: true
+  - key: folder_id
+    value: ""
+    enabled: true
+  - key: item_id
+    value: ""
+    enabled: true
+  - key: provider_folder_abc
+    value: ""
+    enabled: true
+  - key: ingest_config_id
+    value: ""
+    enabled: true
+  - key: mimir_upload_location_id
+    value: 5bbb5420-fbd3-4ba9-a178-8ed4da29daac
+    enabled: true
+  - key: mimir_upload_bucket
+    value: mimir-upload-prod-news-1973-us-east-1
+    enabled: true
+  - key: mimir_upload_src_key
+    value: upload/03_FOX/run-fSow4utVPaWbbRiX-plan-log_8710e2d3-485a-4183-aae3-a46a6576f903.txt
+    enabled: true
+  - key: mimir_upload_file_name
+    value: run-fSow4utVPaWbbRiX-plan-log_8710e2d3-485a-4183-aae3-a46a6576f903.txt
+    enabled: true
+  - key: mimir_upload_title
+    value: run-fSow4utVPaWbbRiX plan log
+    enabled: true
+  - key: mimir_upload_content_type
+    value: text/plain
+    enabled: true
+  - key: mimir_upload_signed_url
+    value: ""
+    enabled: true
+color: null

@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{baseUrl}}/stories/:id/sync"
+method: GET
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Story id
+examples: ./.resources/Returns the synchronize properties for a story.resources/examples
+order: 1000

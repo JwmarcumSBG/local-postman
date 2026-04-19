@@ -1,0 +1,40 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/orderforms/:formId"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    formId: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<string>",
+        "spaceId": "<string>",
+        "mdfId": "<string>",
+        "groupName": "<string>",
+        "subGroupName": "<string>",
+        "types": [
+          "<string>",
+          "<string>"
+        ],
+        "statusAlternatives": [
+          {
+            "id": "<string>",
+            "label": "<string>",
+            "value": "<string>"
+          },
+          {
+            "id": "<string>",
+            "label": "<string>",
+            "value": "<string>"
+          }
+        ]
+      }
+order: 1000

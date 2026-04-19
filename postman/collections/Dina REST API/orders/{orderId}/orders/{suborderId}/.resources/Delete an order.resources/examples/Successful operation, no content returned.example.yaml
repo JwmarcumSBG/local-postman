@@ -1,0 +1,14 @@
+$kind: http-example
+request:
+  url: https://jnqpz9vemg.execute-api.us-east-1.amazonaws.com/v1/orders/:orderId/orders/:suborderId
+  method: DELETE
+  pathVariables:
+    orderId: ""
+    suborderId: ""
+response:
+  statusCode: 204
+  statusText: No Content
+  body:
+    type: text
+    content: ""
+order: 1000

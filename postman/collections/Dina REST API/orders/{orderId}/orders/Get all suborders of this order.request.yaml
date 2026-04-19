@@ -1,0 +1,19 @@
+$kind: http-request
+description: Get all suborders of this order
+url: "{{baseUrl}}/orders/:orderId/orders?limit=<integer>&key=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: limit
+    value: <integer>
+    description: Max number of orders to retrieve.
+  - key: key
+    value: <string>
+    description: Pagination key
+pathVariables:
+  - key: orderId
+    value: <uuid>
+    description: (Required) order id
+examples: ./.resources/Get all suborders of this order.resources/examples
+order: 2000

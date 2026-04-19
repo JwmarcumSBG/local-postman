@@ -1,0 +1,54 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/webhooks"
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "webhooks",
+        "timestamp": "<dateTime>",
+        "webhooks": [
+          {
+            "id": "<string>",
+            "type": "config",
+            "active": "<boolean>",
+            "endpoint": "<string>",
+            "title": "<string>",
+            "types": [
+              "story",
+              "instance"
+            ],
+            "createdAt": "<dateTime>",
+            "createdById": "<string>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>"
+          },
+          {
+            "id": "<string>",
+            "type": "config",
+            "active": "<boolean>",
+            "endpoint": "<string>",
+            "title": "<string>",
+            "types": [
+              "rundown",
+              "rundown"
+            ],
+            "createdAt": "<dateTime>",
+            "createdById": "<string>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>"
+          }
+        ],
+        "links": {
+          "self": "<string>"
+        }
+      }
+order: 1000

@@ -1,0 +1,28 @@
+$kind: http-request
+name: Update an user.
+description: Update an user with specified identifier string.
+url: "{{baseUrl}}/auth/api/v1/users/:userId"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: userId
+    value: <string>
+    description: (Required) The user identifier.
+body:
+  type: json
+  content: |-
+    {
+      "givenName": "<string>",
+      "familyName": "<string>",
+      "accountStatus": "VERIFIED",
+      "groups": [
+        "<string>",
+        "<string>"
+      ],
+      "notListable": "<boolean>",
+      "isDeactivated": "<boolean>"
+    }
+examples: ./.resources/Update an user-.resources/examples
+order: 1000

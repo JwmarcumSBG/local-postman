@@ -1,0 +1,32 @@
+$kind: http-example
+name: Create transcription language settings for the tenant.
+request:
+  url: "{{baseUrl}}/config/api/v1/config/transcriptionLanguageSettings"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: "{}"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "total": "<number>",
+        "_embedded": {
+          "collection": [
+            {
+              "languageCode": "<string>",
+              "transcriptionService": "<string>",
+              "label": "<string>"
+            }
+          ]
+        }
+      }
+order: 1000

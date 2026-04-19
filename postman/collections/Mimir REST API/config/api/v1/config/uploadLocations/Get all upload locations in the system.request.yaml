@@ -1,0 +1,8 @@
+$kind: http-request
+description: Get all upload locations in the system
+url: "{{baseUrl}}/config/api/v1/config/uploadLocations"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Get all upload locations in the system.resources/examples
+order: 1000

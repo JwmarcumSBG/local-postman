@@ -1,0 +1,8 @@
+$kind: http-request
+description: Get all ingest configurations in the system
+url: "{{baseUrl}}/ingest/api/v1/ingestStorageConfigs"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Get all ingest configurations in the system.resources/examples
+order: 2000

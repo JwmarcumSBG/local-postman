@@ -1,0 +1,10 @@
+$kind: http-request
+description: |
+  Retrieve all system bookmarks that are visible to current user.
+  Users who are part of a group with ManageSystemBookmarks permission can see all system bookmarks.
+url: "{{baseUrl}}/config/api/v1/bookmarks"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Retrieve all visible system bookmarks.resources/examples
+order: 2000

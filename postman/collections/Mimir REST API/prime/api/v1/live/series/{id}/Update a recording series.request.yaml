@@ -1,0 +1,24 @@
+$kind: http-request
+url: "{{baseUrl}}/prime/api/v1/live/series/:id"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  id: ""
+body:
+  type: json
+  content: |-
+    {
+      "recurrenceSchedule": {},
+      "metadataTemplate": {},
+      "activeFrom": "<string>",
+      "activeTo": "<string>",
+      "recordingParams": {
+        "durationMs": "<number>",
+        "ingestFrom": {},
+        "outputSettings": {}
+      }
+    }
+examples: ./.resources/Update a recording series.resources/examples
+order: 3000

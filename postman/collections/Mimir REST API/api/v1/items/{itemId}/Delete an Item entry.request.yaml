@@ -1,0 +1,26 @@
+$kind: http-request
+description: |
+  Delete an item entry with specified identifier string
+url: "{{baseUrl}}/api/v1/items/:itemId?immediate=<string>&promoteNewVersion=<string>"
+method: DELETE
+headers:
+  Accept: application/json
+queryParams:
+  - key: immediate
+    value: <string>
+    description: |
+      If true, indicates that the item should be deleted immediately. Otherwise,
+      the item is sent to the recycle bin where it will stay until purge or restoration.
+      Note that it is not permitted to delete permanently an item if there are virtual
+      clips that have been created from it.
+  - key: promoteNewVersion
+    value: <string>
+    description: |
+      If true, indicates that if the item has version history and item is the current leading version then
+      the item will be deleted and newest version will be promoted as new leading version.
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item
+examples: ./.resources/Delete an Item entry.resources/examples
+order: 22000

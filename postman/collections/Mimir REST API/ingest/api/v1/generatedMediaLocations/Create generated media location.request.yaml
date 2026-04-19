@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{baseUrl}}/ingest/api/v1/generatedMediaLocations"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "bucketName": "<string>",
+      "pathPrefix": "<string>",
+      "accessKey": "<string>",
+      "secretKey": "<string>",
+      "backup": "<boolean>",
+      "autoCreateItems": "<boolean>",
+      "uploadGeneratedMedia": "<boolean>",
+      "deleteEnabled": "<boolean>",
+      "storageProvider": "s3_clone",
+      "sourceEndpoint": "<string>"
+    }
+examples: ./.resources/Create generated media location.resources/examples
+order: 3000

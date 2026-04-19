@@ -1,0 +1,12 @@
+$kind: http-request
+description: Delete a slash command
+url: "{{baseUrl}}/commands/:id"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: <uuid>
+    description: (Required) Slash command id
+examples: ./.resources/Delete a slash command.resources/examples
+order: 3000

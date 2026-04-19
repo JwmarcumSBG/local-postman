@@ -1,0 +1,42 @@
+name: Mimir Staging
+values:
+  - key: base_url
+    value: https://us.mjoll.no/api/v1
+    enabled: true
+  - key: api_key
+    value: sakm.6ofboLFwyYQr7LGJGwW2H.8jp5CMGkEbsbKmoNejyhh
+    enabled: true
+  - key: folder_id
+    value: ""
+    enabled: true
+  - key: item_id
+    value: ""
+    enabled: true
+  - key: provider_folder_abc
+    value: ""
+    enabled: true
+  - key: provider_folder_fox
+    value: ""
+    enabled: true
+  - key: provider_folder_cnn
+    value: ""
+    enabled: true
+  - key: provider_folder_cbs
+    value: ""
+    enabled: true
+  - key: provider_folder_nbc
+    value: ""
+    enabled: true
+  - key: days_threshold
+    value: ""
+    enabled: true
+  - key: chunk_days
+    value: ""
+    enabled: true
+  - key: root_folder_id
+    value: ""
+    enabled: true
+  - key: ingest_config_id
+    value: ""
+    enabled: true
+color: null

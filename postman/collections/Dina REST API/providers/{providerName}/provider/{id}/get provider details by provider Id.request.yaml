@@ -1,0 +1,15 @@
+$kind: http-request
+description: get provider details of a given provider id and provider name
+url: "{{baseUrl}}/providers/:providerName/provider/:id"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: providerName
+    value: <string>
+    description: "(Required) "
+  - key: id
+    value: <string>
+    description: "(Required) "
+examples: ./.resources/get provider details by provider Id.resources/examples
+order: 1000

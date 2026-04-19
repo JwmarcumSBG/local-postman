@@ -1,0 +1,25 @@
+$kind: http-request
+description: Get orders for this instance
+url: "{{baseUrl}}/instances/:id/orders?limit=<integer>&key=<string>&sortOrder=a\
+  sc&status=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: limit
+    value: <integer>
+    description: Max number of orders to retrieve.
+  - key: key
+    value: <string>
+    description: Pagination key
+  - key: sortOrder
+    value: asc
+    description: Sort order. Either asc or desc
+  - key: status
+    value: <string>
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) Instance id
+examples: ./.resources/Get orders for this instance.resources/examples
+order: 3000

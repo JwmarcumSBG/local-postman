@@ -1,0 +1,44 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/templates"
+  method: GET
+  headers:
+    Accept: application/json
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "contentTemplates",
+        "timestamp": "<dateTime>",
+        "contentTemplates": [
+          {
+            "id": "<uuid>",
+            "folderId": "<uuid>",
+            "title": "<string>",
+            "platformInfo": {
+              "platform": "linear",
+              "platformKind": "<string>"
+            },
+            "type": "contentTemplates"
+          },
+          {
+            "id": "<uuid>",
+            "folderId": "<uuid>",
+            "title": "<string>",
+            "platformInfo": {
+              "platform": "cms",
+              "platformKind": "<string>"
+            },
+            "type": "contentTemplates"
+          }
+        ],
+        "links": {
+          "self": "<string>"
+        }
+      }
+order: 1000

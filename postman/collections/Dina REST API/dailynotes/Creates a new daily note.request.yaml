@@ -1,0 +1,58 @@
+$kind: http-request
+description: Create a daily note with rest api
+url: "{{baseUrl}}/dailynotes"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "content": {
+        "document": [
+          {
+            "type": "heading-four",
+            "children": [
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              },
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              }
+            ]
+          },
+          {
+            "type": "heading-two",
+            "children": [
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              },
+              {
+                "text": "<string>",
+                "strikeThrough": "<boolean>",
+                "bold": "<boolean>",
+                "italic": "<boolean>",
+                "underline": "<boolean>"
+              }
+            ]
+          }
+        ]
+      },
+      "type": "<string>",
+      "date": "<string>"
+    }
+examples: ./.resources/Creates a new daily note.resources/examples
+order: 2000

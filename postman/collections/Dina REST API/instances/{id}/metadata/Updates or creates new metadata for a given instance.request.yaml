@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/instances/:id/metadata"
+method: PUT
+headers:
+  Content-Type: application/json
+pathVariables:
+  - key: id
+    value: <string>
+    description: (Required) Instance id (mId)
+body:
+  type: json
+  content: "{}"
+examples: ./.resources/Updates or creates new metadata for a given
+  instance.resources/examples
+order: 2000

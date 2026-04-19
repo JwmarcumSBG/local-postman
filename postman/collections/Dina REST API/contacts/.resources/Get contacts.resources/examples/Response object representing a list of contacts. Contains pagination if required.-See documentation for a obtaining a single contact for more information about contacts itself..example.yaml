@@ -1,0 +1,83 @@
+$kind: http-example
+name: >
+  Response object representing a list of contacts. Contains pagination if
+  required.
+
+  See documentation for a obtaining a single contact for more information about
+  contacts itself.
+request:
+  url: "{{baseUrl}}/contacts?limit=<integer>&orderBy=createdAt&sortOrder=asc&key=\
+    <string>&customType=<string>"
+  method: GET
+  headers:
+    Accept: application/json
+  queryParams:
+    - key: limit
+      value: <integer>
+      description: Max number of contacts to retrieve. Default 25
+    - key: orderBy
+      value: createdAt
+      description: Sort criteria. Either createdAt or updatedAt. Default is createdAt
+    - key: sortOrder
+      value: asc
+      description: Sort order. Either asc or desc. Default is desc
+    - key: key
+      value: <string>
+      description: Pagination key
+    - key: customType
+      value: <string>
+      description: Optional filter for customType. Used to for different types of
+        contacts. Requires mdf.customType field
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "contacts",
+        "timestamp": "<dateTime>",
+        "contacts": [
+          {
+            "id": "<string>",
+            "type": "note",
+            "title": "<string>",
+            "description": "<string>",
+            "mdfId": "<string>",
+            "metadata": {
+              "in8_b": -9315529.37801236,
+              "reprehenderit4": -83437326
+            },
+            "createdAt": "<dateTime>",
+            "createdById": "<string>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>",
+            "version": "<integer>"
+          },
+          {
+            "id": "<string>",
+            "type": "mdf",
+            "title": "<string>",
+            "description": "<string>",
+            "mdfId": "<string>",
+            "metadata": {
+              "occaecat_7f2": -73814738.06016833
+            },
+            "createdAt": "<dateTime>",
+            "createdById": "<string>",
+            "updatedAt": "<dateTime>",
+            "updatedById": "<string>",
+            "version": "<integer>"
+          }
+        ],
+        "pagination": {
+          "lastKey": "<string>",
+          "pageSize": "<integer>",
+          "page": "<integer>",
+          "totalItems": "<integer>",
+          "totalPages": "<integer>"
+        }
+      }
+order: 1000

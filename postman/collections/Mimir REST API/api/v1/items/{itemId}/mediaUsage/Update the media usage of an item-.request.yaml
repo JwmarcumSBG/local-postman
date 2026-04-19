@@ -1,0 +1,20 @@
+$kind: http-request
+name: Update the media usage of an item.
+description: This API endpoint allows you to update an item's media usage to reflect when and where the media was last used. At the time of accessing this API, this endpoint will set a UTC date on the "lastUsedOn" attribute.
+url: "{{baseUrl}}/api/v1/items/:itemId/mediaUsage"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item
+body:
+  type: json
+  content: |-
+    {
+      "lastUsedWorkflow": "import"
+    }
+examples: ./.resources/Update the media usage of an item-.resources/examples
+order: 1000

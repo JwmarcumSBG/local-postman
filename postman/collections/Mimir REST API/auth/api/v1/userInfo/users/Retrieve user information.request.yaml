@@ -1,0 +1,16 @@
+$kind: http-request
+description: |
+  Retrieve information about a specific user, or all users if no query parameter is provided.
+url: "{{baseUrl}}/auth/api/v1/userInfo/users?id=<string>&email=<string>"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: id
+    value: <string>
+    description: The ID of the user
+  - key: email
+    value: <string>
+    description: The email of the user
+examples: ./.resources/Retrieve user information.resources/examples
+order: 1000

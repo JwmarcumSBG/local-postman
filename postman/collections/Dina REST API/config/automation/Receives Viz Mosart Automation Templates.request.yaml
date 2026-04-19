@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{baseUrl}}/config/automation"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: "{}"
+examples: ./.resources/Receives Viz Mosart Automation Templates.resources/examples
+order: 1000

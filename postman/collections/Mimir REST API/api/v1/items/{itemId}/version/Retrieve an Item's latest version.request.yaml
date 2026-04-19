@@ -1,0 +1,13 @@
+$kind: http-request
+description: |
+  Retrieve an item's latest version with specified identifier string
+url: "{{baseUrl}}/api/v1/items/:itemId/version"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: itemId
+    value: <string>
+    description: (Required) The ID of the item
+examples: ./.resources/Retrieve an Item's latest version.resources/examples
+order: 1000

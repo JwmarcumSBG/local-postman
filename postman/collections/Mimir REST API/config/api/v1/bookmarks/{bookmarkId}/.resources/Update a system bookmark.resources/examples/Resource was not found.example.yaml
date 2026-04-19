@@ -1,0 +1,34 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/config/api/v1/bookmarks/:bookmarkId"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    bookmarkId: ""
+  body:
+    type: json
+    content: |-
+      {
+        "title": "<string>",
+        "icon": "<string>",
+        "visibleToGroups": [
+          "<string>",
+          "<string>"
+        ]
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 5000

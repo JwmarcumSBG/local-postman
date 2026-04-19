@@ -1,0 +1,59 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/providers/:providerName/config"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    providerName: ""
+  body:
+    type: json
+    content: >-
+      {
+        "properties": {
+          "irure_01": "<string>",
+          "anim_e1": "<string>"
+        },
+        "notificationSchema": [
+          {
+            "title": "<string>",
+            "key": "<string>",
+            "value": "<boolean>",
+            "subPreferences": [
+              {
+                "value": "<Circular reference to #/components/schemas/ProviderNotificationSchema detected>"
+              },
+              {
+                "value": "<Circular reference to #/components/schemas/ProviderNotificationSchema detected>"
+              }
+            ]
+          },
+          {
+            "title": "<string>",
+            "key": "<string>",
+            "value": "<boolean>",
+            "subPreferences": [
+              {
+                "value": "<Circular reference to #/components/schemas/ProviderNotificationSchema detected>"
+              },
+              {
+                "value": "<Circular reference to #/components/schemas/ProviderNotificationSchema detected>"
+              }
+            ]
+          }
+        ]
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "code": "<string>",
+        "message": "<string>"
+      }
+order: 3000

@@ -1,0 +1,50 @@
+$kind: http-request
+description: update provider details of a given member id and provider name
+url: "{{baseUrl}}/providers/:providerName/config"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: providerName
+    value: <string>
+    description: "(Required) "
+body:
+  type: json
+  content: >-
+    {
+      "properties": {
+        "irure_01": "<string>",
+        "anim_e1": "<string>"
+      },
+      "notificationSchema": [
+        {
+          "title": "<string>",
+          "key": "<string>",
+          "value": "<boolean>",
+          "subPreferences": [
+            {
+              "value": "<Circular reference to #/components/schemas/ProviderNotificationSchema detected>"
+            },
+            {
+              "value": "<Circular reference to #/components/schemas/ProviderNotificationSchema detected>"
+            }
+          ]
+        },
+        {
+          "title": "<string>",
+          "key": "<string>",
+          "value": "<boolean>",
+          "subPreferences": [
+            {
+              "value": "<Circular reference to #/components/schemas/ProviderNotificationSchema detected>"
+            },
+            {
+              "value": "<Circular reference to #/components/schemas/ProviderNotificationSchema detected>"
+            }
+          ]
+        }
+      ]
+    }
+examples: ./.resources/update provider config details.resources/examples
+order: 2000

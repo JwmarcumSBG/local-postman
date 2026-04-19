@@ -1,0 +1,8 @@
+$kind: http-request
+description: Returns a list of all commands
+url: "{{baseUrl}}/commands"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Get commands.resources/examples
+order: 2000

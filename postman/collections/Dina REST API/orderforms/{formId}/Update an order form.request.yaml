@@ -1,0 +1,43 @@
+$kind: http-request
+description: >
+  Update an order form.
+          
+  The payload shall contain a order form definition with the following remarks:
+     - The payload.id (order form id) is required and shall match the provided path formId.
+url: "{{baseUrl}}/orderforms/:formId"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: formId
+    value: <uuid>
+    description: (Required) The order form identifier
+body:
+  type: json
+  content: |-
+    {
+      "id": "<string>",
+      "spaceId": "<string>",
+      "mdfId": "<string>",
+      "groupName": "<string>",
+      "subGroupName": "<string>",
+      "types": [
+        "<string>",
+        "<string>"
+      ],
+      "statusAlternatives": [
+        {
+          "id": "<string>",
+          "label": "<string>",
+          "value": "<string>"
+        },
+        {
+          "id": "<string>",
+          "label": "<string>",
+          "value": "<string>"
+        }
+      ]
+    }
+examples: ./.resources/Update an order form.resources/examples
+order: 2000

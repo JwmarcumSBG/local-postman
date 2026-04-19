@@ -1,0 +1,72 @@
+$kind: http-example
+name: Invalid syntax in request.
+request:
+  url: "{{baseUrl}}/auxiliary/api/v1/userSettings"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "bookmarks": [
+          {
+            "icon": "<string>",
+            "title": "<string>",
+            "path": "<string>",
+            "folderId": "<string>",
+            "isFilterBookmark": "<boolean>",
+            "itemId": "<string>"
+          },
+          {
+            "icon": "<string>",
+            "title": "<string>",
+            "path": "<string>",
+            "folderId": "<string>",
+            "isFilterBookmark": "<boolean>",
+            "itemId": "<string>"
+          }
+        ],
+        "workFolderId": "<uuid>",
+        "lastSeenChangelogId": "<uuid>",
+        "defaultFilters": [
+          {
+            "isExactSearch": "<boolean>",
+            "token": "<string>",
+            "value": "<string>",
+            "isRecognized": "<boolean>",
+            "isSticky": "<boolean>",
+            "filterKey": "<string>"
+          },
+          {
+            "isExactSearch": "<boolean>",
+            "token": "<string>",
+            "value": "<string>",
+            "isRecognized": "<boolean>",
+            "isSticky": "<boolean>",
+            "filterKey": "<string>"
+          }
+        ],
+        "dismissedNotifications": {
+          "fugiat_85f": {
+            "code": "<string>",
+            "text": "<boolean>"
+          }
+        },
+        "showRenameSubclipDialog": "<boolean>"
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "statusCode": "<integer>",
+        "message": "<string>",
+        "developerMessage": "<string>"
+      }
+order: 2000
