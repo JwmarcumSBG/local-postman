@@ -1,0 +1,10 @@
+$kind: http-request
+name: MDF - List All
+url: "{{saga_base_url}}/mdfs"
+method: GET
+headers:
+  - name: x-api-key
+    value: "{{saga_api_key}}"
+  - name: Content-Type
+    value: application/json
+order: 2000
